@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "config_path": "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/configs/acl_qwen25_7b_2wiki_500.yaml",
+  "config_sha256": "6e48727a34235cbbaf1f3090c244aff1608556096285edd8520e19d267b0723a",
+  "data_path": "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/data/external_2wiki_500.jsonl",
+  "data_sha256": "c5656ce27a1d4dd6db17bb43d7d3856f0749360624eb0cf1b733242941117252",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "model_dtype": "float16",
+  "seed": 13,
+  "random_seed": 0,
+  "max_examples": 500,
+  "max_examples_per_category": null,
+  "methods": [
+    "risk_guided_suffix_closure_k1",
+    "risk_guided_suffix_closure_k2",
+    "actual_recompute::risk_guided_suffix_closure_k1",
+    "actual_recompute::risk_guided_suffix_closure_k2"
+  ],
+  "selector_artifact": null,
+  "selector_artifact_sha256": null
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "checks": {
+    "fresh_exit_zero": true,
+    "matching_resume_exit_zero": true,
+    "mismatched_resume_rejected": true,
+    "matching_resume_preserved_output_bytes": true,
+    "matching_resume_preserved_manifest_bytes": true,
+    "mismatched_resume_preserved_output_bytes": true,
+    "mismatched_resume_preserved_manifest_bytes": true,
+    "one_unique_output_row": true,
+    "schema_version_4": true,
+    "implementation_hashes_present_and_current": true,
+    "model_commit_present": true,
+    "tokenizer_fingerprint_present": true,
+    "runtime_provenance_complete": true,
+    "pythonhashseed_is_0": true,
+    "no_invalid_provenance_marker": true,
+    "num_failed_rows_is_0": true
+  },
+  "fresh_and_post_resume_outputs_sha256": "b114daa6343ef8f740d6cb77a8776f5152bc3c087f1cd9fd04a11230d70ad1a7",
+  "fresh_and_post_resume_manifest_sha256": "e30c71b2bdd6cf0f0ba4a7b02a2a5a185ed4fb5b327e1ca99d8ef24cc744eda9",
+  "fresh_returncode": 0,
+  "matching_resume_returncode": 0,
+  "mismatched_resume_returncode": 1,
+  "mismatch_error": "resume manifest mismatch; use the original inputs/options or a new results directory",
+  "matching_parameters": {
+    "max_examples": 1,
+    "methods": [
+      "actual_recompute::risk_guided_suffix_closure_k1"
+    ],
+    "random_seed": 0
+  },
+  "mismatched_parameter": {
+    "max_examples": 2
+  }
+}

@@ -1,0 +1,10 @@
+method,repair_kind,num_examples,qa_answer_equivalence_to_fresh_reference,raw_answer_exact_to_fresh_reference,token_sequence_equivalence_to_fresh_reference,changed_from_fresh_and_gold_wrong_rate,avg_first_token_kl_to_fresh_reference,top1_match_to_fresh_reference,avg_patched_context_ratio,avg_patched_document_token_ratio
+oracle_kv_drift_token_local_p0p2,donor_copy,2,0.5,0.5,0.5,0.5,1.6873535215854645,0.5,0.19414930788496804,0.19984288185189136
+oracle_kv_drift_token_local_p0p6,donor_copy,2,1.0,1.0,1.0,0.0,0.4439712553357822,1.0,0.5825576389820655,0.5996448922533792
+oracle_kv_drift_token_local_same_budget_as_risk_suffix_k1,donor_copy,2,0.5,0.5,0.5,0.5,2.0593175888061523,0.5,0.2241176651460262,0.2310266138299511
+prefix_conditioned_composition,none,2,0.0,0.0,0.0,1.0,8.659542083740234,0.0,0.0,0.0
+random_positions_oracle_full_kv_donor_p0p2,donor_copy,2,0.5,0.5,0.5,0.5,2.8849485516548157,0.5,0.19414930788496804,0.19984288185189136
+random_positions_oracle_full_kv_donor_p0p6,donor_copy,2,0.5,0.5,0.5,0.5,1.3525081872940063,0.5,0.5825576389820655,0.5996448922533792
+random_positions_oracle_full_kv_donor_same_budget_as_risk_suffix_k1,donor_copy,2,0.0,0.0,0.0,1.0,3.548616886138916,0.0,0.2241176651460262,0.2310266138299511
+risk_suffix_k1_actual_recompute,actual_recompute,2,0.5,0.5,0.5,0.5,0.9326186329126358,0.5,0.2241176651460262,0.2310266138299511
+risk_suffix_k1_oracle_donor_copy,donor_copy,2,0.5,0.5,0.5,0.5,0.7993329912424088,0.5,0.2241176651460262,0.2310266138299511

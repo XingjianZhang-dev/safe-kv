@@ -1,0 +1,10 @@
+panel,label,method_key,answer_preservation,n,source,numbers_id
+left,Hotpot prefix,prefix_conditioned_naive_global,0.566,272,SUB/results/acl_qwen25_7b_hotpotqa_suffix_main_500/answer_eval_metrics.csv (full_prefill gold_exact_match == True),C1
+left,Hotpot risk K2,risk_guided_suffix_closure_k2,1.000,272,SUB/results/acl_qwen25_7b_hotpotqa_suffix_main_500/answer_eval_metrics.csv (full_prefill gold_exact_match == True),C1
+left,2Wiki prefix,prefix_conditioned_naive_global,0.518,226,SUB/results/acl_qwen25_7b_2wiki_suffix_main_500/answer_eval_metrics.csv (full_prefill gold_exact_match == True),C2
+left,2Wiki risk K2,risk_guided_suffix_closure_k2,0.991,226,SUB/results/acl_qwen25_7b_2wiki_suffix_main_500/answer_eval_metrics.csv (full_prefill gold_exact_match == True),C2
+right,Prefix,prefix_conditioned_naive_global,0.312,250,SUB/results/acl_mistral7b_noisy_suffix_250_balanced/answer_eval_summary.json,X7
+right,Query K1,query_similarity_suffix_closure_k1,0.908,250,SUB/results/acl_mistral7b_noisy_suffix_250_balanced/answer_eval_summary.json,X1
+right,Risk K1,risk_guided_suffix_closure_k1,0.852,250,SUB/results/acl_mistral7b_noisy_suffix_250_balanced/answer_eval_summary.json,X2
+right,Hybrid K1,hybrid_query_risk_union_suffix_k1,0.928,250,SUB/results/acl_mistral7b_noisy_suffix_250_balanced/answer_eval_summary.json,X3
+right,Risk K2,risk_guided_suffix_closure_k2,0.996,250,SUB/results/acl_mistral7b_noisy_suffix_250_balanced/answer_eval_summary.json,X5

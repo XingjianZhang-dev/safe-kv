@@ -1,0 +1,52 @@
+{
+  "source": "results/acl_qwen25_7b_hotpotqa_suffix_main_500/answer_eval_outputs.jsonl",
+  "candidate_methods": [
+    "random_suffix_closure_k2_seeded",
+    "query_similarity_suffix_closure_k2",
+    "risk_guided_suffix_closure_k1",
+    "risk_guided_suffix_closure_k2"
+  ],
+  "target_budgets": [
+    0.82,
+    0.89,
+    0.95
+  ],
+  "num_splits": 200,
+  "calibration_fraction": 0.3,
+  "seed": 13,
+  "aggregate": [
+    {
+      "target_budget": 0.82,
+      "num_splits": 200,
+      "selection_counts": "{\"random_suffix_closure_k2_seeded\": 146, \"risk_guided_suffix_closure_k1\": 36, \"risk_guided_suffix_closure_k2\": 18}",
+      "mean_test_answer_equivalence": 0.9402142857142857,
+      "ci_low_test_answer_equivalence": 0.9057142857142857,
+      "ci_high_test_answer_equivalence": 0.9971428571428571,
+      "mean_test_changed_wrong_rate": 0.05154285714285714,
+      "mean_test_patch_ratio": 0.8418810623583868,
+      "mean_test_avg_kl": 0.24701109905266233
+    },
+    {
+      "target_budget": 0.89,
+      "num_splits": 200,
+      "selection_counts": "{\"query_similarity_suffix_closure_k2\": 83, \"random_suffix_closure_k2_seeded\": 32, \"risk_guided_suffix_closure_k1\": 85}",
+      "mean_test_answer_equivalence": 0.9677,
+      "ci_low_test_answer_equivalence": 0.9057142857142857,
+      "ci_high_test_answer_equivalence": 0.9971428571428571,
+      "mean_test_changed_wrong_rate": 0.028071428571428574,
+      "mean_test_patch_ratio": 0.8764968305257106,
+      "mean_test_avg_kl": 0.10265308361749642
+    },
+    {
+      "target_budget": 0.95,
+      "num_splits": 200,
+      "selection_counts": "{\"risk_guided_suffix_closure_k1\": 166, \"risk_guided_suffix_closure_k2\": 34}",
+      "mean_test_answer_equivalence": 0.9957571428571428,
+      "ci_low_test_answer_equivalence": 0.9942857142857143,
+      "ci_high_test_answer_equivalence": 1.0,
+      "mean_test_changed_wrong_rate": 0.004242857142857143,
+      "mean_test_patch_ratio": 0.9011292494421553,
+      "mean_test_avg_kl": 0.009567337885735485
+    }
+  ]
+}

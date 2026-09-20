@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "reference_results_dir": "/workspace/safekv_acl_submission_files/rebuttal_experiments/actual_vs_copy_2wiki_500_l40s_v2",
+  "example_id": "2wiki_34c3dd940bde11eba7f7acde48001122",
+  "method": "actual_recompute::risk_guided_suffix_closure_k1",
+  "num_rows": 1,
+  "fields_compared_excluding_method": 25,
+  "num_differences": 0,
+  "note": "The final schema-v4 runner exactly matches the corresponding pre-hardening row on every serialized field; provenance hardening did not change the numerical path."
+}

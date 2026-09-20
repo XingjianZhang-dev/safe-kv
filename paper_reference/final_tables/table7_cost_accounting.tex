@@ -1,0 +1,37 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{ccccccc}
+\toprule
+Model & Dataset & Method & AnsEq & Wrong & Patch & Est. saving \\
+\midrule
+qwen05 & diagnostic\_noisy & Oracle doc patch & 0.90 & 0.06 & 0.42 & 0.58 \\
+qwen05 & diagnostic\_noisy & Prefix-conditioned & 0.69 & 0.23 & 0.00 & 1.00 \\
+qwen05 & diagnostic\_noisy & Random K2 & 0.83 & 0.11 & 0.54 & 0.46 \\
+qwen05 & diagnostic\_noisy & Gate .60 & 0.81 & 0.14 & 0.28 & 0.72 \\
+qwen15 & diagnostic\_noisy & Oracle doc patch & 0.89 & 0.10 & 0.42 & 0.58 \\
+qwen15 & diagnostic\_noisy & Prefix-conditioned & 0.74 & 0.20 & 0.00 & 1.00 \\
+qwen15 & diagnostic\_noisy & Random K2 & 0.86 & 0.08 & 0.54 & 0.46 \\
+qwen15 & diagnostic\_noisy & Gate .60 & 0.84 & 0.13 & 0.28 & 0.72 \\
+qwen05 & external\_multihop & Oracle doc patch & 0.47 & 0.47 & 0.42 & 0.58 \\
+qwen05 & external\_multihop & Prefix-conditioned & 0.41 & 0.49 & 0.00 & 1.00 \\
+qwen05 & external\_multihop & Random K2 & 0.55 & 0.39 & 0.39 & 0.61 \\
+qwen05 & external\_multihop & Gate .60 & 0.48 & 0.45 & 0.42 & 0.58 \\
+qwen15 & external\_multihop & Oracle doc patch & 0.64 & 0.31 & 0.42 & 0.58 \\
+qwen15 & external\_multihop & Prefix-conditioned & 0.44 & 0.48 & 0.00 & 1.00 \\
+qwen15 & external\_multihop & Random K2 & 0.64 & 0.31 & 0.39 & 0.61 \\
+qwen15 & external\_multihop & Gate .60 & 0.63 & 0.32 & 0.42 & 0.58 \\
+smollm17 & diagnostic\_noisy & Oracle doc patch & 0.89 & 0.07 & 0.42 & 0.58 \\
+smollm17 & diagnostic\_noisy & Prefix-conditioned & 0.68 & 0.24 & 0.00 & 1.00 \\
+smollm17 & diagnostic\_noisy & Random K2 & 0.84 & 0.12 & 0.54 & 0.46 \\
+smollm17 & diagnostic\_noisy & Gate .60 & 0.81 & 0.15 & 0.28 & 0.72 \\
+smollm17 & external\_multihop & Oracle doc patch & 0.57 & 0.40 & 0.42 & 0.58 \\
+smollm17 & external\_multihop & Prefix-conditioned & 0.52 & 0.44 & 0.00 & 1.00 \\
+smollm17 & external\_multihop & Random K2 & 0.60 & 0.34 & 0.39 & 0.61 \\
+smollm17 & external\_multihop & Gate .60 & 0.56 & 0.42 & 0.42 & 0.58 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Cost accounting with recomputation-budget proxies. These are not measured serving-latency results.}
+\label{tab:cost}\end{table*}

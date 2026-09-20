@@ -1,0 +1,48 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{cccccc}
+\toprule
+model & split & method & answer equivalence & changed wrong & patch ratio \\
+\midrule
+qwen05 & clean & Entity K2 & 0.97 & 1 & 0.54 \\
+qwen05 & clean & Full & 1.00 & 0 & 0.00 \\
+qwen05 & clean & Oracle doc & 0.97 & 1 & 0.46 \\
+qwen05 & clean & Prefix-cond. & 0.85 & 14 & 0.00 \\
+qwen05 & clean & Query K2 & 0.97 & 1 & 0.54 \\
+qwen05 & clean & Random K2 & 0.96 & 3 & 0.53 \\
+qwen05 & clean & Risk K2 & 0.97 & 1 & 0.55 \\
+qwen05 & clean & Gate .45 & 0.98 & 1 & 0.36 \\
+qwen05 & clean & Gate .60 & 0.92 & 7 & 0.11 \\
+qwen05 & noisy & Entity K2 & 0.90 & 7 & 0.55 \\
+qwen05 & noisy & Full & 1.00 & 0 & 0.00 \\
+qwen05 & noisy & Oracle doc & 0.90 & 6 & 0.42 \\
+qwen05 & noisy & Prefix-cond. & 0.69 & 23 & 0.00 \\
+qwen05 & noisy & Query K2 & 0.89 & 7 & 0.55 \\
+qwen05 & noisy & Random K2 & 0.83 & 11 & 0.54 \\
+qwen05 & noisy & Risk K2 & 0.86 & 11 & 0.55 \\
+qwen05 & noisy & Gate .45 & 0.86 & 10 & 0.54 \\
+qwen05 & noisy & Gate .60 & 0.81 & 14 & 0.28 \\
+qwen15 & clean & Entity K2 & 0.96 & 3 & 0.54 \\
+qwen15 & clean & Full & 1.00 & 0 & 0.00 \\
+qwen15 & clean & Oracle doc & 0.96 & 3 & 0.46 \\
+qwen15 & clean & Prefix-cond. & 0.88 & 11 & 0.00 \\
+qwen15 & clean & Query K2 & 0.96 & 3 & 0.54 \\
+qwen15 & clean & Random K2 & 0.93 & 6 & 0.53 \\
+qwen15 & clean & Gate .45 & 0.96 & 3 & 0.36 \\
+qwen15 & clean & Gate .60 & 0.92 & 6 & 0.11 \\
+qwen15 & noisy & Entity K2 & 0.92 & 6 & 0.55 \\
+qwen15 & noisy & Full & 1.00 & 0 & 0.00 \\
+qwen15 & noisy & Oracle doc & 0.89 & 10 & 0.42 \\
+qwen15 & noisy & Prefix-cond. & 0.74 & 20 & 0.00 \\
+qwen15 & noisy & Query K2 & 0.92 & 6 & 0.55 \\
+qwen15 & noisy & Random K2 & 0.86 & 8 & 0.54 \\
+qwen15 & noisy & Gate .45 & 0.92 & 6 & 0.54 \\
+qwen15 & noisy & Gate .60 & 0.84 & 13 & 0.28 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Full synthetic answer-level table.}
+\label{tab:app-synthetic}
+\end{table*}

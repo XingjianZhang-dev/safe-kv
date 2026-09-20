@@ -1,0 +1,322 @@
+[
+  {
+    "selector": "query",
+    "threshold": 0.5,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.868,
+      "gold_exact_match": 0.864,
+      "gold_token_f1": 0.8706002886002886,
+      "answer_contains_gold_rate": 0.88,
+      "answer_changed_from_full_rate": 0.132,
+      "answer_changed_but_gold_correct_count": 8,
+      "answer_changed_and_gold_wrong_count": 25,
+      "avg_patched_doc_count": 13.644,
+      "avg_patched_token_count": 533.864,
+      "avg_patched_token_ratio": 0.6797998235124736,
+      "avg_first_token_kl": 0.7902499041744355,
+      "top1_match_rate": 0.876
+    }
+  },
+  {
+    "selector": "query",
+    "threshold": 0.55,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.868,
+      "gold_exact_match": 0.864,
+      "gold_token_f1": 0.8706002886002886,
+      "answer_contains_gold_rate": 0.88,
+      "answer_changed_from_full_rate": 0.132,
+      "answer_changed_but_gold_correct_count": 8,
+      "answer_changed_and_gold_wrong_count": 25,
+      "avg_patched_doc_count": 13.644,
+      "avg_patched_token_count": 533.864,
+      "avg_patched_token_ratio": 0.6797998235124736,
+      "avg_first_token_kl": 0.7902499041744355,
+      "top1_match_rate": 0.876
+    }
+  },
+  {
+    "selector": "query",
+    "threshold": 0.6,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.856,
+      "gold_exact_match": 0.852,
+      "gold_token_f1": 0.8586002886002887,
+      "answer_contains_gold_rate": 0.868,
+      "answer_changed_from_full_rate": 0.144,
+      "answer_changed_but_gold_correct_count": 8,
+      "answer_changed_and_gold_wrong_count": 28,
+      "avg_patched_doc_count": 12.036,
+      "avg_patched_token_count": 474.696,
+      "avg_patched_token_ratio": 0.5998590128902277,
+      "avg_first_token_kl": 0.9381798044346388,
+      "top1_match_rate": 0.864
+    }
+  },
+  {
+    "selector": "query",
+    "threshold": 0.65,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.856,
+      "gold_exact_match": 0.852,
+      "gold_token_f1": 0.8586002886002887,
+      "answer_contains_gold_rate": 0.868,
+      "answer_changed_from_full_rate": 0.144,
+      "answer_changed_but_gold_correct_count": 8,
+      "answer_changed_and_gold_wrong_count": 28,
+      "avg_patched_doc_count": 11.412,
+      "avg_patched_token_count": 452.244,
+      "avg_patched_token_ratio": 0.569773259569243,
+      "avg_first_token_kl": 0.9405809217377309,
+      "top1_match_rate": 0.864
+    }
+  },
+  {
+    "selector": "query",
+    "threshold": 0.7,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.744,
+      "gold_exact_match": 0.756,
+      "gold_token_f1": 0.7573939393939394,
+      "answer_contains_gold_rate": 0.756,
+      "answer_changed_from_full_rate": 0.256,
+      "answer_changed_but_gold_correct_count": 6,
+      "answer_changed_and_gold_wrong_count": 58,
+      "avg_patched_doc_count": 6.576,
+      "avg_patched_token_count": 261.468,
+      "avg_patched_token_ratio": 0.3418564888740763,
+      "avg_first_token_kl": 3.106272100699923,
+      "top1_match_rate": 0.752
+    }
+  },
+  {
+    "selector": "query",
+    "threshold": 0.75,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.604,
+      "gold_exact_match": 0.6,
+      "gold_token_f1": 0.6013939393939394,
+      "answer_contains_gold_rate": 0.6,
+      "answer_changed_from_full_rate": 0.396,
+      "answer_changed_but_gold_correct_count": 1,
+      "answer_changed_and_gold_wrong_count": 98,
+      "avg_patched_doc_count": 4.4,
+      "avg_patched_token_count": 177.808,
+      "avg_patched_token_ratio": 0.22996026756433963,
+      "avg_first_token_kl": 4.93239193444188,
+      "top1_match_rate": 0.64
+    }
+  },
+  {
+    "selector": "query",
+    "threshold": 0.8,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.604,
+      "gold_exact_match": 0.6,
+      "gold_token_f1": 0.6013939393939394,
+      "answer_contains_gold_rate": 0.6,
+      "answer_changed_from_full_rate": 0.396,
+      "answer_changed_but_gold_correct_count": 1,
+      "answer_changed_and_gold_wrong_count": 98,
+      "avg_patched_doc_count": 4.4,
+      "avg_patched_token_count": 177.808,
+      "avg_patched_token_ratio": 0.22996026756433963,
+      "avg_first_token_kl": 4.93239193444188,
+      "top1_match_rate": 0.64
+    }
+  },
+  {
+    "selector": "query",
+    "threshold": 0.85,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.536,
+      "gold_exact_match": 0.544,
+      "gold_token_f1": 0.5608065268065268,
+      "answer_contains_gold_rate": 0.568,
+      "answer_changed_from_full_rate": 0.464,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 114,
+      "avg_patched_doc_count": 2.0,
+      "avg_patched_token_count": 86.396,
+      "avg_patched_token_ratio": 0.10997187156431676,
+      "avg_first_token_kl": 5.062725556804162,
+      "top1_match_rate": 0.576
+    }
+  },
+  {
+    "selector": "risk",
+    "threshold": 0.5,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.888,
+      "gold_exact_match": 0.856,
+      "gold_token_f1": 0.8701212121212121,
+      "answer_contains_gold_rate": 0.892,
+      "answer_changed_from_full_rate": 0.112,
+      "answer_changed_but_gold_correct_count": 4,
+      "answer_changed_and_gold_wrong_count": 24,
+      "avg_patched_doc_count": 13.94,
+      "avg_patched_token_count": 547.384,
+      "avg_patched_token_ratio": 0.6993450023199144,
+      "avg_first_token_kl": 0.5240077874799063,
+      "top1_match_rate": 0.908
+    }
+  },
+  {
+    "selector": "risk",
+    "threshold": 0.55,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.888,
+      "gold_exact_match": 0.856,
+      "gold_token_f1": 0.8701212121212121,
+      "answer_contains_gold_rate": 0.892,
+      "answer_changed_from_full_rate": 0.112,
+      "answer_changed_but_gold_correct_count": 4,
+      "answer_changed_and_gold_wrong_count": 24,
+      "avg_patched_doc_count": 13.94,
+      "avg_patched_token_count": 547.384,
+      "avg_patched_token_ratio": 0.6993450023199144,
+      "avg_first_token_kl": 0.5240077874799063,
+      "top1_match_rate": 0.908
+    }
+  },
+  {
+    "selector": "risk",
+    "threshold": 0.6,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.872,
+      "gold_exact_match": 0.84,
+      "gold_token_f1": 0.8564069264069265,
+      "answer_contains_gold_rate": 0.88,
+      "answer_changed_from_full_rate": 0.128,
+      "answer_changed_but_gold_correct_count": 4,
+      "answer_changed_and_gold_wrong_count": 28,
+      "avg_patched_doc_count": 12.184,
+      "avg_patched_token_count": 483.056,
+      "avg_patched_token_ratio": 0.612482893431411,
+      "avg_first_token_kl": 0.6566306911894906,
+      "top1_match_rate": 0.896
+    }
+  },
+  {
+    "selector": "risk",
+    "threshold": 0.65,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.868,
+      "gold_exact_match": 0.844,
+      "gold_token_f1": 0.8577402597402597,
+      "answer_contains_gold_rate": 0.88,
+      "answer_changed_from_full_rate": 0.132,
+      "answer_changed_but_gold_correct_count": 5,
+      "answer_changed_and_gold_wrong_count": 28,
+      "avg_patched_doc_count": 11.492,
+      "avg_patched_token_count": 458.188,
+      "avg_patched_token_ratio": 0.5790813282315611,
+      "avg_first_token_kl": 0.6574422145092818,
+      "top1_match_rate": 0.896
+    }
+  },
+  {
+    "selector": "risk",
+    "threshold": 0.7,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.748,
+      "gold_exact_match": 0.752,
+      "gold_token_f1": 0.7604069264069264,
+      "answer_contains_gold_rate": 0.768,
+      "answer_changed_from_full_rate": 0.252,
+      "answer_changed_but_gold_correct_count": 4,
+      "answer_changed_and_gold_wrong_count": 59,
+      "avg_patched_doc_count": 6.784,
+      "avg_patched_token_count": 273.432,
+      "avg_patched_token_ratio": 0.35773335265339395,
+      "avg_first_token_kl": 2.8797454891137644,
+      "top1_match_rate": 0.772
+    }
+  },
+  {
+    "selector": "risk",
+    "threshold": 0.75,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.584,
+      "gold_exact_match": 0.58,
+      "gold_token_f1": 0.5884069264069265,
+      "answer_contains_gold_rate": 0.596,
+      "answer_changed_from_full_rate": 0.416,
+      "answer_changed_but_gold_correct_count": 1,
+      "answer_changed_and_gold_wrong_count": 103,
+      "avg_patched_doc_count": 4.404,
+      "avg_patched_token_count": 184.252,
+      "avg_patched_token_ratio": 0.23876002656015133,
+      "avg_first_token_kl": 4.745794618046429,
+      "top1_match_rate": 0.628
+    }
+  },
+  {
+    "selector": "risk",
+    "threshold": 0.8,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.584,
+      "gold_exact_match": 0.58,
+      "gold_token_f1": 0.5884069264069265,
+      "answer_contains_gold_rate": 0.596,
+      "answer_changed_from_full_rate": 0.416,
+      "answer_changed_but_gold_correct_count": 1,
+      "answer_changed_and_gold_wrong_count": 103,
+      "avg_patched_doc_count": 4.404,
+      "avg_patched_token_count": 184.252,
+      "avg_patched_token_ratio": 0.23876002656015133,
+      "avg_first_token_kl": 4.745794618046429,
+      "top1_match_rate": 0.628
+    }
+  },
+  {
+    "selector": "risk",
+    "threshold": 0.85,
+    "summary": {
+      "num_rows": 250,
+      "num_distinct_examples": 250,
+      "answer_equivalence_to_full_prefill": 0.488,
+      "gold_exact_match": 0.492,
+      "gold_token_f1": 0.520061938061938,
+      "answer_contains_gold_rate": 0.528,
+      "answer_changed_from_full_rate": 0.512,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 126,
+      "avg_patched_doc_count": 2.0,
+      "avg_patched_token_count": 96.788,
+      "avg_patched_token_ratio": 0.12378409206423091,
+      "avg_first_token_kl": 5.0384530137875085,
+      "top1_match_rate": 0.54
+    }
+  }
+]

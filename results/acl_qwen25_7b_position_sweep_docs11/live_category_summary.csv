@@ -1,0 +1,5 @@
+method,category,num_rows,answer_equivalence,gold_em,gold_f1,changed_wrong,patch_ratio,avg_kl
+full_prefill,single_evidence,77,1.0,1.0,1.0,0.0,0.0,0.0
+oracle_evidence_doc_patch,single_evidence,76,1.0,1.0,1.0,0.0,0.15166658176346062,4.433523472351609e-05
+prefix_conditioned_naive_global,single_evidence,76,1.0,1.0,1.0,0.0,0.0,9.512825230428845e-05
+random_doc_patch_k2_seeded,single_evidence,76,1.0,1.0,1.0,0.0,0.17859908601662067,1.730721034391045e-05

@@ -1,0 +1,222 @@
+[
+  {
+    "model": "qwen05_external",
+    "subsets": [
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "all_external",
+        "n_examples": 100,
+        "base_changed_count": 59,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "full_prefill_gold_exact_match",
+        "n_examples": 25,
+        "base_changed_count": 12,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "full_prefill_answer_contains_gold",
+        "n_examples": 35,
+        "base_changed_count": 19,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "full_prefill_gold_f1_ge_0.5",
+        "n_examples": 36,
+        "base_changed_count": 19,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "full_prefill_gold_f1_ge_0.8",
+        "n_examples": 26,
+        "base_changed_count": 12,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "all_external",
+        "n_examples": 50,
+        "base_changed_count": 30,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "full_prefill_gold_exact_match",
+        "n_examples": 10,
+        "base_changed_count": 4,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "full_prefill_answer_contains_gold",
+        "n_examples": 15,
+        "base_changed_count": 7,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "full_prefill_gold_f1_ge_0.5",
+        "n_examples": 15,
+        "base_changed_count": 8,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "full_prefill_gold_f1_ge_0.8",
+        "n_examples": 10,
+        "base_changed_count": 4,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "all_external",
+        "n_examples": 50,
+        "base_changed_count": 29,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "full_prefill_gold_exact_match",
+        "n_examples": 15,
+        "base_changed_count": 8,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "full_prefill_answer_contains_gold",
+        "n_examples": 20,
+        "base_changed_count": 12,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "full_prefill_gold_f1_ge_0.5",
+        "n_examples": 21,
+        "base_changed_count": 11,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "full_prefill_gold_f1_ge_0.8",
+        "n_examples": 16,
+        "base_changed_count": 8,
+        "small_n_warning": false
+      }
+    ]
+  },
+  {
+    "model": "qwen15_external",
+    "subsets": [
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "all_external",
+        "n_examples": 100,
+        "base_changed_count": 56,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "full_prefill_gold_exact_match",
+        "n_examples": 41,
+        "base_changed_count": 22,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "full_prefill_answer_contains_gold",
+        "n_examples": 45,
+        "base_changed_count": 22,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "full_prefill_gold_f1_ge_0.5",
+        "n_examples": 50,
+        "base_changed_count": 25,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "all_external",
+        "quality_subset": "full_prefill_gold_f1_ge_0.8",
+        "n_examples": 45,
+        "base_changed_count": 24,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "all_external",
+        "n_examples": 50,
+        "base_changed_count": 26,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "full_prefill_gold_exact_match",
+        "n_examples": 15,
+        "base_changed_count": 9,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "full_prefill_answer_contains_gold",
+        "n_examples": 18,
+        "base_changed_count": 9,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "full_prefill_gold_f1_ge_0.5",
+        "n_examples": 19,
+        "base_changed_count": 11,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_2wiki",
+        "quality_subset": "full_prefill_gold_f1_ge_0.8",
+        "n_examples": 16,
+        "base_changed_count": 10,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "all_external",
+        "n_examples": 50,
+        "base_changed_count": 30,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "full_prefill_gold_exact_match",
+        "n_examples": 26,
+        "base_changed_count": 13,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "full_prefill_answer_contains_gold",
+        "n_examples": 27,
+        "base_changed_count": 13,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "full_prefill_gold_f1_ge_0.5",
+        "n_examples": 31,
+        "base_changed_count": 14,
+        "small_n_warning": false
+      },
+      {
+        "dataset_split": "external_hotpotqa",
+        "quality_subset": "full_prefill_gold_f1_ge_0.8",
+        "n_examples": 29,
+        "base_changed_count": 14,
+        "small_n_warning": false
+      }
+    ]
+  }
+]

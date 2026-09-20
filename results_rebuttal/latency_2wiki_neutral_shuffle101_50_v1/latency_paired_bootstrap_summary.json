@@ -1,0 +1,89 @@
+{
+  "scope": "paired nonparametric bootstrap over examples after taking each example/method median across repeats; repeats are not independent units",
+  "bootstrap_replicates": 5000,
+  "seed": 13,
+  "num_examples": 50,
+  "input_latency_trace_sha256": "0977cbafb6c70d2515e275923e92c508bc239f9d7a0278919233e0f6dff0c420",
+  "validation_report_sha256": "c60e8bc51a483b7a6567ba9a8020d44751ff3f4864e4b00fceca0ce70248fadd",
+  "bootstrap_script_sha256": "0b79eb2f5ce522e3dafd1b0a2d542e63a55b19b21a677b09ccead82bf404343c",
+  "method_summary": [
+    {
+      "method": "full_prefill",
+      "num_examples": 50,
+      "paired_example_speedup_median": 1.0,
+      "paired_example_speedup_median_ci95_low": 1.0,
+      "paired_example_speedup_median_ci95_high": 1.0,
+      "paired_example_time_saved_s_median": 0.0,
+      "paired_example_time_saved_s_median_ci95_low": 0.0,
+      "paired_example_time_saved_s_median_ci95_high": 0.0,
+      "fraction_examples_faster_than_full": 0.0,
+      "fraction_examples_faster_ci95_low": 0.0,
+      "fraction_examples_faster_ci95_high": 0.0
+    },
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "num_examples": 50,
+      "paired_example_speedup_median": 0.6859947862530146,
+      "paired_example_speedup_median_ci95_low": 0.6360128782317939,
+      "paired_example_speedup_median_ci95_high": 0.7387730241381929,
+      "paired_example_time_saved_s_median": -0.02880903333425522,
+      "paired_example_time_saved_s_median_ci95_low": -0.033978354185819626,
+      "paired_example_time_saved_s_median_ci95_high": -0.02565884869545698,
+      "fraction_examples_faster_than_full": 0.04,
+      "fraction_examples_faster_ci95_low": 0.0,
+      "fraction_examples_faster_ci95_high": 0.1
+    },
+    {
+      "method": "prefix_query",
+      "num_examples": 50,
+      "paired_example_speedup_median": 1.9123799869561195,
+      "paired_example_speedup_median_ci95_low": 1.8141965453907425,
+      "paired_example_speedup_median_ci95_high": 2.048920205617078,
+      "paired_example_time_saved_s_median": 0.031460790894925594,
+      "paired_example_time_saved_s_median_ci95_low": 0.028058680705726147,
+      "paired_example_time_saved_s_median_ci95_high": 0.03482748381793499,
+      "fraction_examples_faster_than_full": 1.0,
+      "fraction_examples_faster_ci95_low": 1.0,
+      "fraction_examples_faster_ci95_high": 1.0
+    },
+    {
+      "method": "query_suffix_k1",
+      "num_examples": 50,
+      "paired_example_speedup_median": 0.6911354076476814,
+      "paired_example_speedup_median_ci95_low": 0.6425527596563428,
+      "paired_example_speedup_median_ci95_high": 0.7411442829844783,
+      "paired_example_time_saved_s_median": -0.028252629563212395,
+      "paired_example_time_saved_s_median_ci95_low": -0.03315112926065922,
+      "paired_example_time_saved_s_median_ci95_high": -0.023808063007891178,
+      "fraction_examples_faster_than_full": 0.04,
+      "fraction_examples_faster_ci95_low": 0.0,
+      "fraction_examples_faster_ci95_high": 0.1
+    },
+    {
+      "method": "risk_suffix_k1",
+      "num_examples": 50,
+      "paired_example_speedup_median": 0.7223459929749269,
+      "paired_example_speedup_median_ci95_low": 0.6779242054668002,
+      "paired_example_speedup_median_ci95_high": 0.8112521701841517,
+      "paired_example_time_saved_s_median": -0.024709545075893402,
+      "paired_example_time_saved_s_median_ci95_low": -0.02947763167321682,
+      "paired_example_time_saved_s_median_ci95_high": -0.01573324017226696,
+      "fraction_examples_faster_than_full": 0.1,
+      "fraction_examples_faster_ci95_low": 0.02,
+      "fraction_examples_faster_ci95_high": 0.2
+    },
+    {
+      "method": "risk_suffix_k2",
+      "num_examples": 50,
+      "paired_example_speedup_median": 0.6678289513735998,
+      "paired_example_speedup_median_ci95_low": 0.6252281593744915,
+      "paired_example_speedup_median_ci95_high": 0.7095526886608559,
+      "paired_example_time_saved_s_median": -0.03365914057940245,
+      "paired_example_time_saved_s_median_ci95_low": -0.03697020187973976,
+      "paired_example_time_saved_s_median_ci95_high": -0.030110828578472137,
+      "fraction_examples_faster_than_full": 0.02,
+      "fraction_examples_faster_ci95_low": 0.0,
+      "fraction_examples_faster_ci95_high": 0.06
+    }
+  ]
+}

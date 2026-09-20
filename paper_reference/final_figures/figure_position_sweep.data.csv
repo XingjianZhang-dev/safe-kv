@@ -1,0 +1,21 @@
+series,method_key,position,answer_preservation,source,numbers_id
+prefix comp.,prefix_conditioned_naive_global,first,0.420,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P1
+prefix comp.,prefix_conditioned_naive_global,early,0.480,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P1
+prefix comp.,prefix_conditioned_naive_global,middle,0.720,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P1
+prefix comp.,prefix_conditioned_naive_global,late,0.700,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P1
+prefix comp.,prefix_conditioned_naive_global,last,0.840,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P1
+oracle doc patch,oracle_evidence_doc_patch,first,0.420,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P2
+oracle doc patch,oracle_evidence_doc_patch,early,0.940,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P2
+oracle doc patch,oracle_evidence_doc_patch,middle,0.960,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P2
+oracle doc patch,oracle_evidence_doc_patch,late,0.900,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P2
+oracle doc patch,oracle_evidence_doc_patch,last,0.980,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P2
+oracle suffix repair,oracle_evidence_doc_suffix_closure_patch,first,1.000,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P3
+oracle suffix repair,oracle_evidence_doc_suffix_closure_patch,early,1.000,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P3
+oracle suffix repair,oracle_evidence_doc_suffix_closure_patch,middle,0.980,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P3
+oracle suffix repair,oracle_evidence_doc_suffix_closure_patch,late,0.940,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P3
+oracle suffix repair,oracle_evidence_doc_suffix_closure_patch,last,0.980,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P3
+random suffix K1,random_suffix_closure_k1_seeded,first,0.960,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P5
+random suffix K1,random_suffix_closure_k1_seeded,early,0.940,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P5
+random suffix K1,random_suffix_closure_k1_seeded,middle,0.960,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P5
+random suffix K1,random_suffix_closure_k1_seeded,late,0.980,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P5
+random suffix K1,random_suffix_closure_k1_seeded,last,0.980,SUB/results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv,P5

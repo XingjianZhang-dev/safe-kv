@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "config_path": "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/configs/acl_qwen25_7b_2wiki_500.yaml",
+  "config_sha256": "6e48727a34235cbbaf1f3090c244aff1608556096285edd8520e19d267b0723a",
+  "data_path": "/workspace/safekv_acl_submission_files/rebuttal_experiments/data/2wiki_zero_shuffle101.jsonl",
+  "data_sha256": "ce1163f1a6dbdfc487da4e9c0971b630c006e41e4f5061c2bff69b2da72a4c5a",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "model_commit_hash": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "tokenizer_commit_hash": null,
+  "tokenizer_sha256": "34df425ff3e06352c65de085d6d5594c7102518e6a2a71779e91d4ee1884b112",
+  "model_dtype": "float16",
+  "resolved_torch_dtype": "float16",
+  "actual_device": "cuda",
+  "attention_implementation": "sdpa",
+  "runtime": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "cuda_runtime": "12.8",
+    "cudnn": 91002,
+    "gpu": "NVIDIA L40S",
+    "cuda_device_capability": [
+      8,
+      9
+    ],
+    "sdpa_flash_enabled": true,
+    "sdpa_mem_efficient_enabled": true,
+    "sdpa_math_enabled": true
+  },
+  "implementation_sha256": {
+    "scripts/run_answer_eval.py": "ed596f815a8f39aec475bcf14742e752a95f269f136932e19a394e97525ed469",
+    "safekv/answer_eval.py": "88091b1c5425ed723d0e28b59e5680e09a25685b1f84aa0b130444f65c13ba07",
+    "safekv/cache_ops.py": "f5aa1dfbf11896aa6adae9c3ead3746f82c9bf14ff224701a5374b3a8c1ea86b",
+    "safekv/config.py": "1bd1d730f8c751037f672cc3ec31139940bd1d62f0681729df3ba34289710a1a",
+    "safekv/data_schema.py": "a00b534919f372bb99ab8ab457de56252065433c325f2c5d6373338e61eda066",
+    "safekv/doc_selector.py": "76e65fc672e90f4c9768e19b9e6f2cd4ac84a4ced1187253a03590751b5cb28c",
+    "safekv/full_prefill.py": "9be8a25fe646f46e57b8d2787494673ddd2b7c3d66738c460ba05c1d86db42cf",
+    "safekv/generation.py": "c78bddef26eb4e700f15b8e42077bb8a60319d239861307a2c5828211dc00d33",
+    "safekv/learned_selector.py": "4209e24739498463b8ffabbd138c31be963a82e51293633d654d5d33eb8aed7f",
+    "safekv/metrics.py": "ab07b2ecd709294d6eed020b6ab94aba0f1b8ac47503fe27b72a40c3aa0e5f17",
+    "safekv/modeling.py": "0935340c68c898cba15439d30e36faef6c58f3e7f48bba84c57c57f1b55c0875",
+    "safekv/naive_composition.py": "91c2037f8b846e35804810aa8d346c8f90eeb011984807c49969cbda932a836b",
+    "safekv/patch_granularity.py": "6e3e8ac3db007bec4ee98d4352bbe71a0c2c0ac7f561661229176f166608dc04",
+    "safekv/patch_recompute.py": "1796fc59157bcdff3285597424b289116901022e9f05d8e097d16948160d48b8",
+    "safekv/prompting.py": "48a8eb271696ce8aaeaf6e2d183974d5a05fa49ab1daccd4c072e3d68c854b88"
+  },
+  "answer_generation_mode": "manual_position_ids",
+  "seed": 13,
+  "random_seed": 0,
+  "max_examples": 100,
+  "max_examples_per_category": null,
+  "methods": [
+    "all_document_patch",
+    "actual_recompute::all_document_patch"
+  ],
+  "selector_artifact": null,
+  "selector_artifact_sha256": null
+}

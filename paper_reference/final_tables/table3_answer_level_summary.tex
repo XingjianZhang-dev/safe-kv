@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{cccccccc}
+\toprule
+Model & Split & Base & Oracle & Query/Entity & Gate .60 & Random K2 & Wrong changes \\
+\midrule
+Qwen0.5B & clean & 0.85 & 0.97 & 0.97/0.97 & 0.92 & 0.96 & 14 \\
+Qwen0.5B & noisy & 0.69 & 0.90 & 0.89/0.90 & 0.81 & 0.83 & 23 \\
+Qwen1.5B & clean & 0.88 & 0.96 & 0.96/0.96 & 0.92 & 0.93 & 11 \\
+Qwen1.5B & noisy & 0.74 & 0.89 & 0.92/0.92 & 0.84 & 0.86 & 20 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Answer-level preservation on controlled diagnostics. Values are exact answer equivalence to full prefill except the final column, which counts base-composed answers that changed from full prefill and were gold-wrong. Document-level repair reduces changed behavior, especially in noisy diagnostics, while random K2 remains a strong required control.}
+\label{tab:answer-summary}
+\end{table*}

@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{ccccccccc}
+\toprule
+Model & Full EM & Full F1 & Base & Oracle & Query & Entity & Gate & Random \\
+\midrule
+Qwen0.5B & 0.25 & 0.36 & 0.41 & 0.47 & 0.50 & 0.50 & 0.48 & 0.55 \\
+Qwen1.5B & 0.41 & 0.50 & 0.44 & 0.64 & 0.62 & 0.62 & 0.63 & 0.64 \\
+SmolLM2 & 0.25 & 0.35 & 0.52 & 0.57 & 0.58 & 0.55 & 0.56 & 0.60 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{External HotpotQA/2Wiki sanity results. External data confirms answer drift and partial repair, but random K2 remains competitive.}
+\label{tab:external}\end{table*}

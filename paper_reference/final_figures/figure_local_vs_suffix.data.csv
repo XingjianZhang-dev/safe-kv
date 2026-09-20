@@ -1,0 +1,7 @@
+label,method_key,recomputed_context_ratio,answer_preservation,source,numbers_id
+Prefix,prefix_conditioned_naive_global,0.0000,0.350,SUB/results/acl_qwen25_7b_2wiki_downstream_window_100/answer_eval_summary.json,W1
+Doc K1,risk_guided_doc_patch_k1,0.2259,0.380,SUB/results/acl_qwen25_7b_2wiki_downstream_window_100/answer_eval_summary.json,W2
+w2,risk_guided_downstream_w2_k1,0.4187,0.450,SUB/results/acl_qwen25_7b_2wiki_downstream_window_100/answer_eval_summary.json,W3
+w3,risk_guided_downstream_w3_k1,0.5861,0.570,SUB/results/acl_qwen25_7b_2wiki_downstream_window_100/answer_eval_summary.json,W4
+w4,risk_guided_downstream_w4_k1,0.7286,0.790,SUB/results/acl_qwen25_7b_2wiki_downstream_window_100/answer_eval_summary.json,W5
+Suffix K1,risk_guided_suffix_closure_k1,0.7930,0.970,SUB/results/acl_qwen25_7b_2wiki_downstream_window_100/answer_eval_summary.json,W6

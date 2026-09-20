@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrr}
+\toprule
+Workload (examples $\times$ repeats) & Query K1 & Risk K1 & Risk K2 & Hybrid K1 \\
+\midrule
+HotpotQA, original order (50 ex.\ $\times$ 25) & 0.109 / 0.161 & 1.129 / 1.553 & 1.135 / 1.558 & 1.267 / 1.745 \\
+2Wiki, original order (50 ex.\ $\times$ 25) & 0.111 / 0.190 & 1.110 / 2.030 & 1.163 / 2.091 & 1.225 / 2.240 \\
+2Wiki, score-neutral shuffled (50 ex.\ $\times$ 25) & 0.104 / 0.171 & 1.103 / 2.049 & 1.107 / 2.074 & 1.220 / 2.253 \\
+$N{=}16$ nested, $p{=}1$ (50 ex.\ $\times$ 25) & 0.108 / 0.113 & 0.912 / 0.934 & 0.918 / 0.954 & 1.039 / 1.069 \\
+Noise64 (67 documents) (50 ex.\ $\times$ 25) & 0.424 / 0.462 & 3.306 / 3.629 & 3.343 / 3.688 & 3.788 / 4.124 \\
+\midrule
+HotpotQA-500, gold-first (500 $\times$ 20) & 0.121 / 0.181 & 1.170 / 1.782 & 1.184 / 1.800 & --- \\
+2Wiki-500, gold-first (500 $\times$ 20) & 0.105 / 0.197 & 1.041 / 2.079 & 1.053 / 2.125 & --- \\
+Noise64, 67 docs (40 $\times$ 20) & 0.424 / 0.633 & 3.394 / 3.798 & 3.420 / 3.631 & --- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{CPU cost of the paper's selectors in milliseconds (median / p95). The timed region is feature computation, weighted scoring and top-$K$ selection for one selector call on the host CPU (x86\_64; CPU model not recorded); the suffix start is a single minimum over the selected positions and is timed only inside the end-to-end measurements of Table~\ref{tab:app-lat-full}, which include it. Upper block: inside the five L40S latency runs, median and p95 over the 50 per-example medians of 25 repeats. Lower block: the separate selector-only audit on the same host, median and p95 over all calls (Hybrid K1 was not timed there). These numbers bound selector overhead only; they say nothing about answer quality or end-to-end serving cost.}
+\label{tab:app-plan}
+\end{table*}

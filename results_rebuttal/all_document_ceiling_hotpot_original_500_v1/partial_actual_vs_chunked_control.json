@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "num_examples": 500,
+  "num_partial_methods": 2,
+  "num_failures": 0,
+  "failures": [],
+  "one_shot_reference_mismatch_count": 0,
+  "chunked_all_document_positive_control": {
+    "normalized_exact_to_one_shot_rate": 1.0,
+    "postprocessed_string_exact_to_one_shot_rate": 1.0,
+    "generated_token_exact_to_one_shot_rate": 1.0,
+    "mean_patched_token_ratio": 0.9658823807537263
+  },
+  "partial_method_summaries": [
+    {
+      "method": "actual_recompute::risk_guided_suffix_closure_k1",
+      "num_examples": 500,
+      "normalized_exact_to_one_shot_rate": 0.998,
+      "postprocessed_string_exact_to_one_shot_rate": 0.998,
+      "generated_token_exact_to_one_shot_rate": 0.998,
+      "normalized_exact_to_chunked_all_document_rate": 0.998,
+      "postprocessed_string_exact_to_chunked_all_document_rate": 0.998,
+      "generated_token_exact_to_chunked_all_document_rate": 0.998,
+      "mean_patched_token_ratio": 0.8916160607421009
+    },
+    {
+      "method": "actual_recompute::risk_guided_suffix_closure_k2",
+      "num_examples": 500,
+      "normalized_exact_to_one_shot_rate": 1.0,
+      "postprocessed_string_exact_to_one_shot_rate": 1.0,
+      "generated_token_exact_to_one_shot_rate": 1.0,
+      "normalized_exact_to_chunked_all_document_rate": 1.0,
+      "postprocessed_string_exact_to_chunked_all_document_rate": 1.0,
+      "generated_token_exact_to_chunked_all_document_rate": 1.0,
+      "mean_patched_token_ratio": 0.9477929112319956
+    }
+  ]
+}

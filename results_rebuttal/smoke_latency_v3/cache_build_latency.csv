@@ -1,0 +1,3 @@
+example_id,prompt_length,context_length,query_length,wall_time_s,baseline_cuda_memory_mb,peak_cuda_memory_mb,incremental_peak_cuda_memory_mb
+2wiki_34c3dd940bde11eba7f7acde48001122,962,928,34,0.21383342519402504,14627.51123046875,14832.5859375,205.07470703125
+2wiki_a1c37dc40bdd11eba7f7acde48001122,800,771,29,0.19748088717460632,14627.51123046875,14805.29736328125,177.7861328125

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "num_rows": 2000,
+  "expected_rows": 2000,
+  "num_examples": 500,
+  "num_failures": 0,
+  "failures": [],
+  "method_summaries": [
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "num_examples": 500,
+      "same_generated_answer_rate": 1.0,
+      "same_generated_tokens_rate": 1.0,
+      "same_normalized_preservation_flag_rate": 1.0,
+      "same_patch_ratio_rate": 1.0,
+      "same_patch_count_rate": 1.0,
+      "same_selected_docs_rate": 1.0,
+      "donor_normalized_exact_rate": 0.998,
+      "actual_normalized_exact_rate": 0.998,
+      "donor_postprocessed_string_exact_rate": 0.998,
+      "actual_postprocessed_string_exact_rate": 0.998,
+      "donor_generated_token_exact_rate": 0.998,
+      "actual_generated_token_exact_rate": 0.998
+    },
+    {
+      "method": "risk_guided_suffix_closure_k2",
+      "num_examples": 500,
+      "same_generated_answer_rate": 1.0,
+      "same_generated_tokens_rate": 1.0,
+      "same_normalized_preservation_flag_rate": 1.0,
+      "same_patch_ratio_rate": 1.0,
+      "same_patch_count_rate": 1.0,
+      "same_selected_docs_rate": 1.0,
+      "donor_normalized_exact_rate": 1.0,
+      "actual_normalized_exact_rate": 1.0,
+      "donor_postprocessed_string_exact_rate": 1.0,
+      "actual_postprocessed_string_exact_rate": 1.0,
+      "donor_generated_token_exact_rate": 1.0,
+      "actual_generated_token_exact_rate": 1.0
+    }
+  ]
+}

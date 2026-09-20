@@ -1,0 +1,9 @@
+method,num_examples,recall,precision,any_hit,exact_set,avg_selected_docs,avg_suffix_doc_ratio
+query_similarity_doc_patch_k1,500,0.3965,0.878,0.878,0.002,1.0,0.8574285714285714
+query_similarity_doc_patch_k2,500,0.6565,0.74,0.972,0.376,2.0,0.9335428571428572
+risk_guided_doc_patch_k1,500,0.4455,0.996,0.996,0.0,1.0,0.8841142857142857
+risk_guided_doc_patch_k2,500,0.8175,0.92,0.998,0.638,2.0,0.9687428571428571
+learned_doc_patch_k1,500,0.0,0.0,0.0,0.0,1.0,0.37285714285714283
+learned_doc_patch_k2,500,0.0,0.0,0.0,0.0,2.0,0.4904
+random_doc_patch_k1_seeded,500,0.1595,0.368,0.368,0.002,1.0,0.5588571428571429
+random_doc_patch_k2_seeded,500,0.412,0.47,0.788,0.098,2.0,0.8091428571428572

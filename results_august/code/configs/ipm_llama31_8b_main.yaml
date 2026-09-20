@@ -1,0 +1,65 @@
+seed: 20260821
+
+model:
+  name: "/root/autodl-tmp/models/Meta-Llama-3.1-8B-Instruct-modelscope"
+  dtype: "float16"
+  device: "cuda"
+  trust_remote_code: false
+
+data:
+  path: "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_natural_test.jsonl"
+  max_examples_per_category: null
+
+generation:
+  max_new_tokens: 32
+  do_sample: false
+  temperature: 0.0
+  stop_on_newline: true
+  stop_strings: ["Human:", "[Document", "Question:", "Answer:"]
+  prefill_mode: "manual_position_ids"
+
+experiment:
+  prompt_format: "chat_rag"
+  cache_position_mode: "global"
+  budgets: [0.10, 0.20, 0.40, 0.60, 0.80]
+  methods:
+    - full_prefill
+    - prefix_conditioned_naive_global
+    - oracle_evidence_doc_patch
+    - oracle_evidence_doc_suffix_closure_patch
+    - risk_guided_doc_patch_k1
+    - risk_guided_doc_patch_k2
+    - risk_guided_suffix_closure_k1
+    - risk_guided_suffix_closure_k2
+    - actual_local_recompute::risk_guided_doc_patch_k1
+    - actual_local_recompute::risk_guided_doc_patch_k2
+    - actual_local_recompute::risk_guided_downstream_w1_k1
+    - actual_local_recompute::risk_guided_downstream_w2_k1
+    - actual_local_recompute::risk_guided_downstream_w4_k1
+    - actual_local_recompute::risk_guided_downstream_w8_k1
+    - actual_recompute::risk_guided_suffix_closure_k1
+    - actual_recompute::risk_guided_suffix_closure_k2
+    - actual_recompute::query_similarity_suffix_closure_k1
+    - actual_recompute::query_similarity_suffix_closure_k2
+    - actual_recompute::oracle_evidence_doc_suffix_closure_patch
+    - actual_local_recompute::random_doc_patch_k1_seeded
+    - actual_recompute::random_suffix_closure_k1_seeded
+
+prompt:
+  boundary_window_tokens: 8
+  adaptive_boundary_window: true
+
+risk:
+  similarity_backend: "tfidf"
+  weights:
+    retrieval_score: 0.25
+    query_similarity: 0.30
+    entity_overlap: 0.20
+    conflict_indicator: 0.15
+    cross_doc_shared_entity: 0.10
+
+recompute:
+  selection_unit: "span"
+  expand_window_tokens: 4
+  allow_budget_overshoot: true
+  max_budget_overshoot_ratio: 0.03

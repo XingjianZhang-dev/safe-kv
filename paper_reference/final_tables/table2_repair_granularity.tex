@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{cccc}
+\toprule
+Repair unit & KL & Top-1 & Patch ratio \\
+\midrule
+Base & 0.207 & 0.90 & 0.00 \\
+Span & 0.232 & 0.91 & 0.14 \\
+Span+16 & 0.204 & 0.92 & 0.24 \\
+S+C suffix & 0.180 & 0.96 & 0.22 \\
+Matched random & 0.150 & 0.95 & 0.22 \\
+Oracle doc & 0.090 & 0.97 & 0.46 \\
+Full-doc sanity & 0.000 & 1.00 & 0.89 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Repair granularity comparison. Patch ratio is the fraction of prompt/document tokens recomputed. Document-level repair is coherent; isolated span/window/suffix repair is weaker and often close to matched random patching.}
+\label{tab:granularity}
+\end{table}

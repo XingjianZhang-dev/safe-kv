@@ -1,0 +1,91 @@
+{
+  "calibration_size": 300,
+  "conditions": [
+    "natural",
+    "shuffle",
+    "bm25",
+    "dense"
+  ],
+  "dataset": "hotpotqa",
+  "dense_model": "BAAI/bge-base-en-v1.5",
+  "dense_model_load_source": "/root/autodl-tmp/models/bge-base-en-v1.5-modelscope",
+  "dense_revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+  "gold_labels_used_for_ranking": false,
+  "num_source_examples": 7405,
+  "num_valid_examples": 7405,
+  "outputs": {
+    "bm25:calibration": {
+      "max_evidence_rank": 10,
+      "mean_document_count": 9.956666666666667,
+      "mean_evidence_rank": 3.16,
+      "num_examples": 300,
+      "path": "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_bm25_calibration.jsonl",
+      "sha256": "d4268824895c5065868d3b43827b0b7d810636beb596e3c977f2f52d4094d9d5"
+    },
+    "bm25:test": {
+      "max_evidence_rank": 10,
+      "mean_document_count": 9.948,
+      "mean_evidence_rank": 3.229,
+      "num_examples": 500,
+      "path": "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_bm25_test.jsonl",
+      "sha256": "eb1c81637d04f9d14e786da34722cb71f217f9c7b2becdf22d1029cfddf56ba4"
+    },
+    "dense:calibration": {
+      "max_evidence_rank": 10,
+      "mean_document_count": 9.956666666666667,
+      "mean_evidence_rank": 2.1216666666666666,
+      "num_examples": 300,
+      "path": "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_dense_calibration.jsonl",
+      "sha256": "6c07a33e86866fa14fb62e9cd60e119b94d4243f34412d42ad50dfbbae3704b5"
+    },
+    "dense:test": {
+      "max_evidence_rank": 10,
+      "mean_document_count": 9.948,
+      "mean_evidence_rank": 2.126,
+      "num_examples": 500,
+      "path": "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_dense_test.jsonl",
+      "sha256": "3ac97c341aa4af7816e35e06e12a97c4e5cb3ab85ad93e2a3bbec0617c539237"
+    },
+    "natural:calibration": {
+      "max_evidence_rank": 10,
+      "mean_document_count": 9.956666666666667,
+      "mean_evidence_rank": 5.45,
+      "num_examples": 300,
+      "path": "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_natural_calibration.jsonl",
+      "sha256": "9b3c186b496ed9bd81dbbc2e6b90ca20ae291352c6f8d1f70067de4d0d1053ce"
+    },
+    "natural:test": {
+      "max_evidence_rank": 10,
+      "mean_document_count": 9.948,
+      "mean_evidence_rank": 5.389,
+      "num_examples": 500,
+      "path": "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_natural_test.jsonl",
+      "sha256": "30c74a2d313c95174f28ac8b41e668211e35f0e5c94c0553c1ca3e9dfa87d8c7"
+    },
+    "shuffle:calibration": {
+      "max_evidence_rank": 10,
+      "mean_document_count": 9.956666666666667,
+      "mean_evidence_rank": 5.508333333333334,
+      "num_examples": 300,
+      "path": "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_shuffle_calibration.jsonl",
+      "sha256": "722bcd446cb09d90802a1fe6bc35ec3976da4ff83cc5346380eda8df3714a334"
+    },
+    "shuffle:test": {
+      "max_evidence_rank": 10,
+      "mean_document_count": 9.948,
+      "mean_evidence_rank": 5.422,
+      "num_examples": 500,
+      "path": "/root/autodl-tmp/safekv_ipm_journal/datasets/ipm_v1/hotpotqa_shuffle_test.jsonl",
+      "sha256": "46a0d655177e5a7f1a2b7e08c42ccfcfe0a0caa602353ebe05c77898d6f1ef7d"
+    }
+  },
+  "rejection_counts": {},
+  "schema_version": 1,
+  "seed": 20260821,
+  "source_license": "CC-BY-SA-4.0",
+  "source_path": "/root/autodl-tmp/safekv_ipm_journal/raw_data/hotpotqa_distractor_validation.parquet",
+  "source_revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+  "source_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+  "source_url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa",
+  "test_size": 500
+}

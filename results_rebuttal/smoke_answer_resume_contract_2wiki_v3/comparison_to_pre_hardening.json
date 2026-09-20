@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "reference_results_dir": "/workspace/safekv_acl_submission_files/rebuttal_experiments/actual_vs_copy_2wiki_500_l40s_v2",
+  "num_rows": 1,
+  "fields_compared": 25,
+  "num_differences": 0,
+  "note": "Current schema-v3 answer runner exactly matches the corresponding pre-hardening row on every serialized field."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "num_latency_rows": 24,
+  "expected_latency_rows": 24,
+  "num_selector_rows": 8,
+  "num_cache_build_rows": 2,
+  "num_failures": 0,
+  "failures": [],
+  "input_artifact_sha256": {
+    "latency_trace.csv": "ce603405c7ca65e24eb3fc382d50289d5ca50c4c4b6a8c76209f3d08e9e30cae",
+    "selector_latency.csv": "691bf40d271410d155b317858d54e09a2ac679bc4f4d2f1d65bcea2b91f4bbaa",
+    "cache_build_latency.csv": "323a7b0e2bc79b374e582e7f22855cdc71613ade454859d43693ab1aed26b17d",
+    "latency_trace_summary.json": "3a9c6dbe21f44cd4726cd7762d756aaa0dd714f3051d15e21aad4635c77caded"
+  },
+  "validator_script_path": "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/code/scripts/validate_rebuttal_latency_results.py",
+  "validator_script_sha256": "34945ac3a8178ef84aa0359493da6f2baf5343b95d2ca9842a5b3c38be464879"
+}

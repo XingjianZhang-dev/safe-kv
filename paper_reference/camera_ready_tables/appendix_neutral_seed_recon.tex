@@ -1,0 +1,42 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrr}
+\toprule
+Data & Method & seed 101 & seed 202 & seed 303 \\
+\midrule
+HotpotQA & Risk suffix K1 & 0.81 / 0.78 / 0.579 & 0.85 / 0.85 / 0.564 & 0.83 / 0.83 / 0.549 \\
+HotpotQA & Hybrid suffix K1 & 0.92 / 0.90 / 0.739 & 0.91 / 0.91 / 0.721 & 0.90 / 0.90 / 0.712 \\
+HotpotQA & Query suffix K2 & 0.97 / 0.96 / 0.880 & 0.97 / 0.97 / 0.869 & 0.94 / 0.94 / 0.847 \\
+HotpotQA & Risk suffix K2 & 0.90 / 0.89 / 0.780 & 0.92 / 0.92 / 0.751 & 0.93 / 0.93 / 0.755 \\
+\midrule
+2Wiki & Risk suffix K1 & 0.72 / 0.71 / 0.622 & 0.79 / 0.77 / 0.612 & 0.81 / 0.79 / 0.632 \\
+2Wiki & Hybrid suffix K1 & 0.81 / 0.80 / 0.710 & 0.88 / 0.87 / 0.733 & 0.84 / 0.82 / 0.698 \\
+2Wiki & Query suffix K2 & 0.93 / 0.92 / 0.854 & 0.96 / 0.95 / 0.870 & 0.97 / 0.97 / 0.867 \\
+2Wiki & Risk suffix K2 & 0.89 / 0.88 / 0.801 & 0.91 / 0.89 / 0.798 & 0.93 / 0.92 / 0.803 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Per-seed values behind Table~\ref{tab:actual-forwarding}(b): normalized answer preservation / generated-token exact / mean recomputed context fraction for each score-neutral shuffled order seed (100 examples each, actual forwarding, one NVIDIA L40S).}
+\label{tab:app-neutral-seed}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrrr}
+\toprule
+Data & Method & Donor ans.\ eq. & Actual ans.\ eq. & Same generated answer & Donor token exact & Actual token exact \\
+\midrule
+HotpotQA-500 & Risk suffix K1 & 0.998 & 0.998 & 1.000 & 0.998 & 0.998 \\
+HotpotQA-500 & Risk suffix K2 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+2Wiki-500 & Risk suffix K1 & 0.978 & 0.966 & 0.966 & 0.972 & 0.958 \\
+2Wiki-500 & Risk suffix K2 & 0.992 & 0.984 & 0.986 & 0.990 & 0.980 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Same-run donor-copy versus actual-forwarding reconciliation on the original gold-evidence-first inputs (500 examples each; identical selected documents and patch ratios in every row; validator passed). This rerun used PyTorch~2.8.0+cu128 on one NVIDIA L40S, whereas Table~\ref{tab:external-main} was produced under PyTorch~2.4.1+cu124; the donor-copy 2Wiki values here (0.978/0.992) therefore differ slightly from the submitted 0.970/0.984 although inputs, selections and patch counts are byte-identical. The audited cause is FP16/SDPA near-tie sensitivity across runtime versions, not a code, data or selector change.}
+\label{tab:app-recon}
+\end{table*}

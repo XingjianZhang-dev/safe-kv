@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{HotpotQA} & \multicolumn{3}{c}{2Wiki} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & Eq. & Tok. & Rec. & Eq. & Tok. & Rec. \\
+\midrule
+\multicolumn{7}{l}{\emph{(a) Gold-evidence-first construction, $N=500$}} \\
+Risk K1 & 0.998 & 0.998 & 0.892 & 0.966 & 0.958 & 0.813 \\
+Risk K2 & 1.000 & 1.000 & 0.948 & 0.984 & 0.980 & 0.929 \\
+\midrule
+\multicolumn{7}{l}{\emph{(b) Score-neutral shuffled order, 3 seeds $\times$ 100 (means)}} \\
+Risk K1 & 0.830 & 0.820 & 0.564 & 0.773 & 0.757 & 0.622 \\
+Hybrid K1 & 0.910 & 0.903 & 0.724 & 0.843 & 0.830 & 0.714 \\
+Query K2 & 0.960 & 0.957 & 0.865 & 0.953 & 0.947 & 0.863 \\
+Risk K2 & 0.917 & 0.913 & 0.762 & 0.910 & 0.897 & 0.801 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Actual suffix forwarding with Qwen2.5-7B-Instruct (the selected contiguous suffix is re-run through the model from the retained composed prefix; no donor-cache copying). All rows are suffix repair (``Risk K1'' = risk suffix K1, etc.). Eq.\ is normalized answer preservation relative to full prefill; Tok.\ is generated-token-sequence equality; Rec.\ is the mean fraction of context tokens re-forwarded. Panel (a) uses the same gold-evidence-first inputs as Table~\ref{tab:external-main}, so the two tables differ only in protocol (changed-wrong counts: 1/0 on HotpotQA, 12/5 on 2Wiki for K1/K2). Panel (b) removes the construction cues: every retrieval score is zero and documents are shuffled with order seeds 101/202/303 (100 examples each); values are means over seeds, per-seed values in Table~\ref{tab:app-neutral-seed}. Random suffix and query suffix K1 were not run under shuffled order. One NVIDIA L40S, PyTorch~2.8.0.}
+\label{tab:actual-forwarding}
+\end{table}

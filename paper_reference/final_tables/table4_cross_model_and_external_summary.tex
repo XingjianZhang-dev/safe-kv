@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{cccccc}
+\toprule
+Model & Data & Full EM & Base Eq. & Best repair Eq. & Random K2 Eq. \\
+\midrule
+Qwen0.5B & Noisy diag. & 0.83 & 0.69 & 0.90 & 0.83 \\
+Qwen1.5B & Noisy diag. & 0.83 & 0.74 & 0.92 & 0.86 \\
+SmolLM2 & Noisy diag. & 0.64 & 0.68 & 0.94 & 0.84 \\
+Qwen0.5B & External & 0.25 & 0.41 & 0.50 & 0.55 \\
+Qwen1.5B & External & 0.41 & 0.44 & 0.64 & 0.64 \\
+SmolLM2 & External & 0.25 & 0.52 & 0.58 & 0.60 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Cross-model and external sanity summary. Eq. denotes answer equivalence to full prefill. External data confirms drift is not synthetic-only, but random K2 remains competitive and gold quality is noisy.}
+\label{tab:cross-external}
+\end{table*}

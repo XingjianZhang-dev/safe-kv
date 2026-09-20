@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrr}
+\toprule
+Method / document-token budget & 0.20 & 0.30 & 0.45 & 0.60 & Risk-K1-matched \\
+\midrule
+Prefix-comp. & 0.390 & 0.390 & 0.390 & 0.390 & --- \\
+Oracle KV-drift token-local (donor copy) & 0.630 & 0.620 & 0.700 & 0.830 & 0.820 \\
+Random positions, oracle full-KV donor & 0.450 & 0.490 & 0.570 & 0.630 & 0.690 \\
+Risk suffix K1, actual forwarding & --- & --- & --- & --- & 0.720 \\
+Risk suffix K1, donor copy & --- & --- & --- & --- & 0.770 \\
+Context ratio & 0.192 & 0.288 & 0.432 & 0.576 & 0.622 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Full-reference-informed token-local diagnostic on 2Wiki, score-neutral shuffled order (seed 101), 100 examples. Token positions are ranked by the K/V drift between the composed cache and the full-prefill cache, and the selected K/V states are donor-copied from the full-prefill cache; both steps use the reference, so this diagnostic is nondeployable and is \emph{not} Cache-Craft or a proxy for it. Values are normalized answer preservation. At the Risk-K1-matched context cost the oracle-local minus actual-Risk-K1 paired difference is +0.10 [0.01, 0.20] (generated-token exact: +0.09 [0.00, 0.19]), a descriptive interval without multiple-comparison correction.}
+\label{tab:app-oracle-local}
+\end{table*}

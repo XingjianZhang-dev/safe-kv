@@ -1,0 +1,7 @@
+left_method,right_method,metric,delta_left_minus_right,ci_low,ci_high,bootstrap_p_left_le_right,n_examples
+risk_guided_suffix_closure_k1,actual_recompute::risk_guided_suffix_closure_k1,answer_equivalence,0.2,0.06000000000000005,0.33999999999999997,0.0022,50
+risk_guided_suffix_closure_k1,actual_recompute::risk_guided_suffix_closure_k1,gold_em,0.15999999999999998,0.020000000000000018,0.3,0.017,50
+risk_guided_suffix_closure_k1,actual_recompute::risk_guided_suffix_closure_k1,gold_f1,0.1036017316017317,-0.002077922077922012,0.21168917748917762,0.027,50
+risk_guided_suffix_closure_k1,actual_recompute::risk_guided_suffix_closure_k1,changed_wrong_rate,-0.18000000000000005,-0.31999999999999995,-0.05999999999999994,0.998,50
+risk_guided_suffix_closure_k1,actual_recompute::risk_guided_suffix_closure_k1,patch_ratio,0.0,0.0,0.0,1.0,50
+risk_guided_suffix_closure_k1,actual_recompute::risk_guided_suffix_closure_k1,avg_kl,-1.279128741940366,-2.236081137273478,-0.4234499961803619,0.9986,50

@@ -1,0 +1,19 @@
+{
+  "input": "data/external_hotpotqa_500.jsonl",
+  "output": "../rebuttal_experiments/data/hotpot_zero.jsonl",
+  "retrieval_mode": "zero",
+  "shuffle_seed": null,
+  "max_documents": null,
+  "num_examples": 500,
+  "document_count_distribution": {
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 497
+  },
+  "earliest_evidence_position_distribution": {
+    "0": 500
+  },
+  "mean_earliest_evidence_position": 0,
+  "perfect_gold_score_separation_rate": 0.0
+}

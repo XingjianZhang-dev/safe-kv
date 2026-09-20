@@ -1,0 +1,21 @@
+{
+  "input": "data/external_2wiki_500.jsonl",
+  "output": "../rebuttal_experiments/data/2wiki_zero_shuffle101.jsonl",
+  "retrieval_mode": "zero",
+  "shuffle_seed": 101,
+  "max_documents": null,
+  "num_examples": 500,
+  "document_count_distribution": {
+    "5": 395,
+    "7": 105
+  },
+  "earliest_evidence_position_distribution": {
+    "0": 224,
+    "1": 136,
+    "2": 93,
+    "3": 46,
+    "4": 1
+  },
+  "mean_earliest_evidence_position": 0.928,
+  "perfect_gold_score_separation_rate": 0.0
+}

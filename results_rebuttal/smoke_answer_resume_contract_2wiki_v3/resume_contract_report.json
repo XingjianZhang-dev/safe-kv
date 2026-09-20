@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": {
+    "fresh_exit_zero": true,
+    "matching_resume_exit_zero": true,
+    "mismatched_resume_rejected": true,
+    "matching_resume_preserved_output_bytes": true,
+    "mismatched_resume_preserved_output_bytes": true,
+    "one_unique_output_row": true,
+    "schema_v2_or_newer": true,
+    "implementation_hashes_present": true,
+    "model_commit_present": true,
+    "tokenizer_fingerprint_present": true
+  },
+  "fresh_outputs_sha256": "b114daa6343ef8f740d6cb77a8776f5152bc3c087f1cd9fd04a11230d70ad1a7",
+  "matching_resume_outputs_sha256": "b114daa6343ef8f740d6cb77a8776f5152bc3c087f1cd9fd04a11230d70ad1a7",
+  "mismatched_resume_outputs_sha256": "b114daa6343ef8f740d6cb77a8776f5152bc3c087f1cd9fd04a11230d70ad1a7",
+  "manifest_sha256": "83586c036cd27dcd8fa45f83d34a73699f42343eb63fe28fef5e380dde118dd0",
+  "fresh_returncode": 0,
+  "matching_resume_returncode": 0,
+  "mismatched_resume_returncode": 1
+}

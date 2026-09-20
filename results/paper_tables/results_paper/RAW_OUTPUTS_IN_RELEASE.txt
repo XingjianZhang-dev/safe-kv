@@ -1,0 +1,6 @@
+Raw per-example output file(s) of this run are not stored in git (size). They are in the GitHub release
+asset safe-kv-raw-outputs-v1.0.0.tar.gz (release tag v1.0.0); `bash scripts/fetch_raw_outputs.sh` restores them into this directory.
+The summary files next to this note are what the paper's tables and figures are built from.
+
+name	size_bytes	sha256
+heldout_gate_calibration_outputs.jsonl	102938449	6128f104d1bab9b7f8bf1c1ec62e7e9613851fca8ea6acca1ab1bb07febf4829

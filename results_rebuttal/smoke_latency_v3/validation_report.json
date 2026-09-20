@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "num_latency_rows": 24,
+  "expected_latency_rows": 24,
+  "num_selector_rows": 8,
+  "num_cache_build_rows": 2,
+  "num_failures": 0,
+  "failures": []
+}

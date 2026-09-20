@@ -1,0 +1,9 @@
+method,category,num_rows,answer_equivalence,gold_em,gold_f1,changed_wrong,patch_ratio,avg_kl
+all_document_patch,multi_hop,17,1.0,1.0,1.0,0.0,0.8827662906701821,6.755222138650648e-06
+all_document_patch,single_evidence,20,1.0,1.0,1.0,0.0,0.8925528830792091,2.1824005656031348e-09
+full_prefill,multi_hop,18,1.0,1.0,1.0,0.0,0.0,0.0
+full_prefill,single_evidence,20,1.0,1.0,1.0,0.0,0.0,0.0
+oracle_evidence_doc_patch,multi_hop,18,0.8888888888888888,0.8888888888888888,0.9047619047619047,0.1111111111111111,0.5660758373543606,0.35248819656691843
+oracle_evidence_doc_patch,single_evidence,20,0.95,0.95,0.95,0.05,0.2748952857766317,0.4083994864626468
+prefix_conditioned_naive_global,multi_hop,18,0.2222222222222222,0.2222222222222222,0.2222222222222222,0.7777777777777778,0.0,9.920512725097979
+prefix_conditioned_naive_global,single_evidence,20,0.85,0.85,0.85,0.15,0.0,0.8370444229245371

@@ -1,0 +1,87 @@
+{
+  "method_level": {
+    "full_prefill_forward": {
+      "n": 10,
+      "avg_wall_time_s": 0.24171122461557387,
+      "avg_peak_cuda_memory_mb": 16463.508642578126,
+      "avg_patched_token_ratio": 0.0
+    },
+    "oracle_doc_patch_query_forward": {
+      "n": 10,
+      "avg_wall_time_s": 0.02815895676612854,
+      "avg_peak_cuda_memory_mb": 15878.993505859375,
+      "avg_patched_token_ratio": 0.025264949655024415
+    },
+    "oracle_doc_patch_replace": {
+      "n": 10,
+      "avg_wall_time_s": 0.002012723684310913,
+      "avg_peak_cuda_memory_mb": 15829.84765625,
+      "avg_patched_token_ratio": 0.025264949655024415
+    },
+    "prefix_conditioned_context_build": {
+      "n": 10,
+      "avg_wall_time_s": 2.0176157750189305,
+      "avg_peak_cuda_memory_mb": 16176.1927734375,
+      "avg_patched_token_ratio": 0.0
+    },
+    "prefix_conditioned_query_forward": {
+      "n": 10,
+      "avg_wall_time_s": 0.02842128202319145,
+      "avg_peak_cuda_memory_mb": 15987.782666015624,
+      "avg_patched_token_ratio": 0.0
+    },
+    "query_suffix_k1_recompute_plus_query": {
+      "n": 10,
+      "avg_wall_time_s": 0.15856758654117584,
+      "avg_peak_cuda_memory_mb": 16389.803173828124,
+      "avg_patched_token_ratio": 0.574140928328016
+    },
+    "query_suffix_k2_recompute_plus_query": {
+      "n": 10,
+      "avg_wall_time_s": 0.17588670179247856,
+      "avg_peak_cuda_memory_mb": 16454.7453125,
+      "avg_patched_token_ratio": 0.6706292449802532
+    },
+    "random_k2_patch_query_forward": {
+      "n": 10,
+      "avg_wall_time_s": 0.02815706208348274,
+      "avg_peak_cuda_memory_mb": 15878.889208984376,
+      "avg_patched_token_ratio": 0.03021116857702581
+    },
+    "random_k2_patch_replace": {
+      "n": 10,
+      "avg_wall_time_s": 0.0032178625464439393,
+      "avg_peak_cuda_memory_mb": 15843.15107421875,
+      "avg_patched_token_ratio": 0.03021116857702581
+    },
+    "random_suffix_k1_recompute_plus_query": {
+      "n": 10,
+      "avg_wall_time_s": 0.15516983047127725,
+      "avg_peak_cuda_memory_mb": 16381.8767578125,
+      "avg_patched_token_ratio": 0.5704509830439684
+    },
+    "random_suffix_k2_recompute_plus_query": {
+      "n": 10,
+      "avg_wall_time_s": 0.17880626395344734,
+      "avg_peak_cuda_memory_mb": 16466.932421875,
+      "avg_patched_token_ratio": 0.6919466735083668
+    },
+    "risk_suffix_k1_recompute_plus_query": {
+      "n": 10,
+      "avg_wall_time_s": 0.1581326298415661,
+      "avg_peak_cuda_memory_mb": 16390.044775390626,
+      "avg_patched_token_ratio": 0.574140928328016
+    },
+    "risk_suffix_k2_recompute_plus_query": {
+      "n": 10,
+      "avg_wall_time_s": 0.19955183565616608,
+      "avg_peak_cuda_memory_mb": 16538.09140625,
+      "avg_patched_token_ratio": 0.7907829791805092
+    }
+  },
+  "config_path": "configs/acl_qwen25_7b_diagnostic_1000_noisy.yaml",
+  "dataset_path": "data/noise_sweep_64_50.jsonl",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "num_examples": 10,
+  "metrics_csv": "results/acl_qwen25_7b_noise64_latency_suffix_10/latency_metrics.csv"
+}

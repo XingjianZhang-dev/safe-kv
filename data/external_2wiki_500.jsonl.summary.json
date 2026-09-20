@@ -1,0 +1,17 @@
+{
+  "dataset": "2wiki",
+  "category": "external_2wiki",
+  "seed": 13,
+  "requested_n": 500,
+  "num_examples": 500,
+  "total_records_seen": 12576,
+  "num_skipped": 65,
+  "skip_reasons": {
+    "yes_no_answer": 65
+  },
+  "yes_no_answers_removed": 65,
+  "avg_documents": 5.42,
+  "avg_evidence_documents": 2.416,
+  "min_documents": 5,
+  "max_documents": 7
+}

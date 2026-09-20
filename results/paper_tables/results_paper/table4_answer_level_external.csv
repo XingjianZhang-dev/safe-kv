@@ -1,0 +1,15 @@
+model,split,method,n,answer_equivalence,answer_equivalence_ci_low,answer_equivalence_ci_high,gold_em,gold_f1,changed_wrong,patch_ratio
+qwen05,external,entity_overlap_doc_patch_k2,100,0.5,0.41,0.6,0.23,0.31018404634581104,43,0.41496986051597967
+qwen05,external,full_prefill,100,1.0,1.0,1.0,0.25,0.3573598803157626,0,0.0
+qwen05,external,oracle_evidence_doc_patch,100,0.47,0.37,0.57,0.22,0.30711744192626544,47,0.41591738855942856
+qwen05,external,prefix_conditioned_naive_global,100,0.41,0.32,0.51,0.23,0.33063997821350755,49,0.0
+qwen05,external,query_similarity_doc_patch_k2,100,0.5,0.41,0.6,0.22,0.31569016332251626,43,0.4469515635290854
+qwen05,external,random_doc_patch_k2_seeded,100,0.55,0.45,0.65,0.24,0.34168186443186443,39,0.38660468875769566
+qwen05,external,safe_gate_t0.60,100,0.48,0.38,0.57,0.22,0.3136272458478341,45,0.42495344279159114
+qwen15,external,entity_overlap_doc_patch_k2,100,0.62,0.52,0.71,0.34,0.42492424242424237,33,0.41496986051597967
+qwen15,external,full_prefill,100,1.0,1.0,1.0,0.41,0.49930600118835405,0,0.0
+qwen15,external,oracle_evidence_doc_patch,100,0.64,0.54,0.73,0.35,0.449246838129191,31,0.41591738855942856
+qwen15,external,prefix_conditioned_naive_global,100,0.44,0.33,0.54,0.27,0.36190043290043283,48,0.0
+qwen15,external,query_similarity_doc_patch_k2,100,0.62,0.52,0.71,0.34,0.4231436635260163,32,0.4469515635290854
+qwen15,external,random_doc_patch_k2_seeded,100,0.64,0.54,0.73,0.36,0.4616782106782106,31,0.38660468875769566
+qwen15,external,safe_gate_t0.60,100,0.63,0.53,0.72,0.34,0.43729445717681,32,0.42495344279159114

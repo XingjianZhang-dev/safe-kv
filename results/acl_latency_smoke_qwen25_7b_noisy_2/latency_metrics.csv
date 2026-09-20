@@ -1,0 +1,15 @@
+example_id,category,method,prompt_length,context_cache_length,query_length,patched_token_count,patched_token_ratio,wall_time_s,peak_cuda_memory_mb
+single_0000_noisy,single_evidence,full_prefill_forward,248,0,27,0,0.0,0.4813726022839546,14664.830078125
+single_0000_noisy,single_evidence,prefix_conditioned_context_build,248,221,27,0,0.0,0.19892346858978271,14723.26806640625
+single_0000_noisy,single_evidence,prefix_conditioned_query_forward,248,221,27,0,0.0,0.026607319712638855,14696.53515625
+single_0000_noisy,single_evidence,oracle_doc_patch_replace,248,221,27,50,0.22624434389140272,0.0018058866262435913,14694.87109375
+single_0000_noisy,single_evidence,oracle_doc_patch_query_forward,248,221,27,50,0.22624434389140272,0.029800429940223694,14716.4521484375
+single_0000_noisy,single_evidence,random_k2_patch_replace,248,221,27,118,0.5339366515837104,0.0030346885323524475,14706.4130859375
+single_0000_noisy,single_evidence,random_k2_patch_query_forward,248,221,27,118,0.5339366515837104,0.02658683806657791,14716.4521484375
+single_0001_noisy,single_evidence,full_prefill_forward,250,0,27,0,0.0,0.03241831064224243,14783.55859375
+single_0001_noisy,single_evidence,prefix_conditioned_context_build,250,223,27,0,0.0,0.11346432566642761,14774.25927734375
+single_0001_noisy,single_evidence,prefix_conditioned_query_forward,250,223,27,0,0.0,0.02709823101758957,14730.8525390625
+single_0001_noisy,single_evidence,oracle_doc_patch_replace,250,223,27,61,0.273542600896861,0.0017954856157302856,14707.2509765625
+single_0001_noisy,single_evidence,oracle_doc_patch_query_forward,250,223,27,61,0.273542600896861,0.02703063189983368,14717.3994140625
+single_0001_noisy,single_evidence,random_k2_patch_replace,250,223,27,138,0.6188340807174888,0.003004796802997589,14707.904296875
+single_0001_noisy,single_evidence,random_k2_patch_query_forward,250,223,27,138,0.6188340807174888,0.027340389788150787,14717.3994140625

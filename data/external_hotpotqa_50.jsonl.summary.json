@@ -1,0 +1,17 @@
+{
+  "dataset": "hotpotqa",
+  "category": "external_hotpotqa",
+  "seed": 13,
+  "requested_n": 50,
+  "num_examples": 50,
+  "total_records_seen": 7405,
+  "num_skipped": 5,
+  "skip_reasons": {
+    "yes_no_answer": 5
+  },
+  "yes_no_answers_removed": 5,
+  "avg_documents": 5.0,
+  "avg_evidence_documents": 2.0,
+  "min_documents": 5,
+  "max_documents": 5
+}

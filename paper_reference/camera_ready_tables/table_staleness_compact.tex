@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{5}{c}{mismatch probability $p$} & \\
+\cmidrule(lr){2-6}
+ & 0 & 0.25 & 0.5 & 0.75 & 1 & Recomp. \\
+\midrule
+\multicolumn{7}{l}{\emph{No repair, by document count $N$}} \\
+1 & 100.0 & 100.0 & 100.0 & 100.0 & 100.0 \\
+2 & 100.0 & 100.0 & 100.0 & 100.0 & 100.0 \\
+4 & 100.0 & 100.0 & 100.0 & 100.0 & 100.0 \\
+8 & 100.0 & 99.3 & 99.3 & 99.3 & 100.0 \\
+16 & 100.0 & 92.0 & 92.7 & 94.0 & 80.0 \\
+\midrule
+\multicolumn{7}{l}{\emph{Repair policies at $N=16$ (actual forwarding)}} \\
+Query doc K1 & 100.0 & 92.0 & 92.7 & 96.0 & 84.0 & 5.5 \\
+Query w4 K1 & 100.0 & 91.3 & 93.3 & 95.3 & 96.0 & 24.0 \\
+Query suffix K1 & 100.0 & 100.0 & 100.0 & 100.0 & 100.0 & 89.8 \\
+Risk suffix K1 & 100.0 & 96.7 & 98.0 & 98.7 & 98.0 & 68.6 \\
+Risk suffix K2 & 100.0 & 98.0 & 99.3 & 100.0 & 100.0 & 79.6 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Staleness probability $\times$ document count: normalized answer preservation (\%) relative to the all-fresh reference on a controlled single-evidence benchmark with $N$ documents (nested from the Noise16 pool, layout seed 101, retrieval scores zero), 50 paired examples, three mismatch-mask seeds. $p$ is the probability that an eligible slice (position $\geq 2$) was encoded from the static prefix instead of its exact preceding history; the query is always recomputed and no selector sees the mask. ``Query doc K1'' and ``Query w4 K1'' are the query doc-only and query window-w4 policies; Recomp.\ is the mean recomputed context fraction at $N{=}16$. Actual forwarding, Qwen2.5-7B-Instruct, one NVIDIA L40S; full grid with clustered intervals in Table~\ref{tab:app-stale-full}.}
+\label{tab:staleness}
+\end{table}

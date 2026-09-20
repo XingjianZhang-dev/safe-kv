@@ -1,0 +1,6 @@
+Raw per-example output file(s) of this run are not stored in git (size). They are in the GitHub release
+asset safe-kv-raw-outputs-v1.0.0.tar.gz (release tag v1.0.0); `bash scripts/fetch_raw_outputs.sh` restores them into this directory.
+The summary files next to this note are what the paper's tables and figures are built from.
+
+name	size_bytes	sha256
+query_attention_local_outputs.jsonl	20677289	9b54ae6ef81353bf0e3e13531685035e8c215b16a8d80ba45f82efaa6596187b

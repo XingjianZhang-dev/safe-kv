@@ -1,0 +1,37 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Method / document-token budget & 0.05 & 0.1 & 0.16 & 0.2 & 0.3 & 0.45 & 0.6 \\
+\midrule
+\multicolumn{8}{l}{\emph{natural order} (prefix-composition 0.330; all-fresh chunked reference 1.000)} \\
+Query-attention local & 0.500 & 0.470 & 0.540 & 0.590 & 0.620 & 0.720 & 0.850 \\
+\quad token exact & 0.490 & 0.460 & 0.520 & 0.590 & 0.620 & 0.720 & 0.840 \\
+Random local, seed 13 & 0.330 & 0.410 & 0.380 & 0.370 & 0.480 & 0.550 & 0.650 \\
+Random local, seed 29 & 0.340 & 0.360 & 0.350 & 0.440 & 0.450 & 0.540 & 0.580 \\
+Random local, seed 47 & 0.350 & 0.360 & 0.360 & 0.420 & 0.420 & 0.500 & 0.540 \\
+Context ratio & 0.049 & 0.098 & 0.157 & 0.196 & 0.294 & 0.441 & 0.589 \\
+\midrule
+\multicolumn{8}{l}{\emph{shuffled order} (prefix-composition 0.430; all-fresh chunked reference 0.990)} \\
+Query-attention local & 0.470 & 0.500 & 0.580 & 0.580 & 0.670 & 0.740 & 0.790 \\
+\quad token exact & 0.440 & 0.500 & 0.560 & 0.560 & 0.650 & 0.730 & 0.780 \\
+Random local, seed 13 & 0.420 & 0.430 & 0.390 & 0.450 & 0.450 & 0.480 & 0.630 \\
+Random local, seed 29 & 0.420 & 0.420 & 0.390 & 0.460 & 0.470 & 0.550 & 0.650 \\
+Random local, seed 47 & 0.420 & 0.420 & 0.450 & 0.440 & 0.450 & 0.580 & 0.540 \\
+Context ratio & 0.049 & 0.098 & 0.157 & 0.196 & 0.294 & 0.441 & 0.589 \\
+\midrule
+\multicolumn{8}{l}{\emph{BM25 order} (prefix-composition 0.300; all-fresh chunked reference 1.000)} \\
+Query-attention local & 0.370 & 0.450 & 0.480 & 0.500 & 0.640 & 0.730 & 0.840 \\
+\quad token exact & 0.370 & 0.450 & 0.470 & 0.490 & 0.640 & 0.730 & 0.840 \\
+Random local, seed 13 & 0.350 & 0.360 & 0.370 & 0.380 & 0.420 & 0.470 & 0.560 \\
+Random local, seed 29 & 0.320 & 0.330 & 0.410 & 0.380 & 0.460 & 0.530 & 0.530 \\
+Random local, seed 47 & 0.350 & 0.340 & 0.360 & 0.380 & 0.440 & 0.500 & 0.520 \\
+Context ratio & 0.049 & 0.098 & 0.157 & 0.196 & 0.294 & 0.441 & 0.589 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Operational query-attention token-local baseline: full budget curves on HotpotQA (100 examples per order), actual forwarding, Qwen2.5-7B-Instruct, one RTX PRO 6000 Blackwell GPU. Values are normalized answer preservation relative to the all-fresh chunked reference (token-sequence exact shown for the query-attention rows); Context ratio is the recomputed context-token fraction at each document-token budget. Random local uses equal-budget random spans with seeds 13/29/47. The dense-retrieval order run was incomplete (74/100 examples) and is not reported.}
+\label{tab:app-local-full}
+\end{table*}

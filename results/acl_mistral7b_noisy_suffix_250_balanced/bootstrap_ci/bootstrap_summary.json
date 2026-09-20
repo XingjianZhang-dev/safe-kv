@@ -1,0 +1,614 @@
+{
+  "source": "results/acl_mistral7b_noisy_suffix_250_balanced/answer_eval_outputs.jsonl",
+  "n_examples": 250,
+  "num_bootstrap": 5000,
+  "seed": 13,
+  "ci": 0.95,
+  "methods": [
+    "prefix_conditioned_naive_global",
+    "query_similarity_suffix_closure_k1",
+    "risk_guided_suffix_closure_k1",
+    "hybrid_query_risk_union_suffix_k1",
+    "query_similarity_suffix_closure_k2",
+    "random_suffix_closure_k2_seeded",
+    "risk_guided_suffix_closure_k2"
+  ],
+  "pairs": [
+    [
+      "hybrid_query_risk_union_suffix_k1",
+      "query_similarity_suffix_closure_k1"
+    ],
+    [
+      "hybrid_query_risk_union_suffix_k1",
+      "risk_guided_suffix_closure_k1"
+    ],
+    [
+      "query_similarity_suffix_closure_k2",
+      "hybrid_query_risk_union_suffix_k1"
+    ],
+    [
+      "random_suffix_closure_k2_seeded",
+      "hybrid_query_risk_union_suffix_k1"
+    ]
+  ],
+  "method_ci": [
+    {
+      "method": "prefix_conditioned_naive_global",
+      "metric": "answer_equivalence",
+      "point": 0.312,
+      "ci_low": 0.256,
+      "ci_high": 0.368,
+      "n_examples": 250
+    },
+    {
+      "method": "prefix_conditioned_naive_global",
+      "metric": "gold_em",
+      "point": 0.204,
+      "ci_low": 0.156,
+      "ci_high": 0.256,
+      "n_examples": 250
+    },
+    {
+      "method": "prefix_conditioned_naive_global",
+      "metric": "gold_f1",
+      "point": 0.4528386724386725,
+      "ci_low": 0.4104959018759019,
+      "ci_high": 0.49465669552669556,
+      "n_examples": 250
+    },
+    {
+      "method": "prefix_conditioned_naive_global",
+      "metric": "changed_wrong_rate",
+      "point": 0.644,
+      "ci_low": 0.584,
+      "ci_high": 0.7,
+      "n_examples": 250
+    },
+    {
+      "method": "prefix_conditioned_naive_global",
+      "metric": "patch_ratio",
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_examples": 250
+    },
+    {
+      "method": "prefix_conditioned_naive_global",
+      "metric": "avg_kl",
+      "point": 1.2614414514197778,
+      "ci_low": 0.9545166659049055,
+      "ci_high": 1.590176425166765,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k1",
+      "metric": "answer_equivalence",
+      "point": 0.908,
+      "ci_low": 0.872,
+      "ci_high": 0.944,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k1",
+      "metric": "gold_em",
+      "point": 0.392,
+      "ci_low": 0.332,
+      "ci_high": 0.452,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k1",
+      "metric": "gold_f1",
+      "point": 0.6160888888888888,
+      "ci_low": 0.5729475396825398,
+      "ci_high": 0.6565394444444445,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k1",
+      "metric": "changed_wrong_rate",
+      "point": 0.072,
+      "ci_low": 0.04,
+      "ci_high": 0.104,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k1",
+      "metric": "patch_ratio",
+      "point": 0.6794463934322599,
+      "ci_low": 0.6446417211721361,
+      "ci_high": 0.7146981824356449,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k1",
+      "metric": "avg_kl",
+      "point": 0.07493659717809006,
+      "ci_low": 0.020858215847083236,
+      "ci_high": 0.15025466413275135,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "metric": "answer_equivalence",
+      "point": 0.852,
+      "ci_low": 0.808,
+      "ci_high": 0.892,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "metric": "gold_em",
+      "point": 0.376,
+      "ci_low": 0.316,
+      "ci_high": 0.436,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "metric": "gold_f1",
+      "point": 0.6065307359307359,
+      "ci_low": 0.5632563492063493,
+      "ci_high": 0.6468013852813852,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "metric": "changed_wrong_rate",
+      "point": 0.124,
+      "ci_low": 0.084,
+      "ci_high": 0.168,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "metric": "patch_ratio",
+      "point": 0.6682913535940912,
+      "ci_low": 0.635170037082836,
+      "ci_high": 0.7015022147788408,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "metric": "avg_kl",
+      "point": 0.08007423938938059,
+      "ci_low": 0.0255921946725099,
+      "ci_high": 0.15542435835724042,
+      "n_examples": 250
+    },
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "answer_equivalence",
+      "point": 0.928,
+      "ci_low": 0.896,
+      "ci_high": 0.956,
+      "n_examples": 250
+    },
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "gold_em",
+      "point": 0.388,
+      "ci_low": 0.328,
+      "ci_high": 0.448,
+      "n_examples": 250
+    },
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "gold_f1",
+      "point": 0.6126698412698413,
+      "ci_low": 0.5692740476190475,
+      "ci_high": 0.6535442063492063,
+      "n_examples": 250
+    },
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "changed_wrong_rate",
+      "point": 0.056,
+      "ci_low": 0.028,
+      "ci_high": 0.088,
+      "n_examples": 250
+    },
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "patch_ratio",
+      "point": 0.7902867613325617,
+      "ci_low": 0.7598885016408679,
+      "ci_high": 0.8199841488739151,
+      "n_examples": 250
+    },
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "avg_kl",
+      "point": 0.07184175786356997,
+      "ci_low": 0.017592776341283697,
+      "ci_high": 0.1471335683722526,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k2",
+      "metric": "answer_equivalence",
+      "point": 0.996,
+      "ci_low": 0.988,
+      "ci_high": 1.0,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k2",
+      "metric": "gold_em",
+      "point": 0.392,
+      "ci_low": 0.332,
+      "ci_high": 0.452,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k2",
+      "metric": "gold_f1",
+      "point": 0.6121904761904762,
+      "ci_low": 0.5685194444444446,
+      "ci_high": 0.6539073015873016,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k2",
+      "metric": "changed_wrong_rate",
+      "point": 0.004,
+      "ci_low": 0.0,
+      "ci_high": 0.012,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k2",
+      "metric": "patch_ratio",
+      "point": 0.8720161482203591,
+      "ci_low": 0.8499799157421182,
+      "ci_high": 0.8933873710499575,
+      "n_examples": 250
+    },
+    {
+      "method": "query_similarity_suffix_closure_k2",
+      "metric": "avg_kl",
+      "point": 4.42520397929087e-05,
+      "ci_low": 2.0322049481839507e-05,
+      "ci_high": 7.904867769021381e-05,
+      "n_examples": 250
+    },
+    {
+      "method": "random_suffix_closure_k2_seeded",
+      "metric": "answer_equivalence",
+      "point": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n_examples": 250
+    },
+    {
+      "method": "random_suffix_closure_k2_seeded",
+      "metric": "gold_em",
+      "point": 0.392,
+      "ci_low": 0.332,
+      "ci_high": 0.452,
+      "n_examples": 250
+    },
+    {
+      "method": "random_suffix_closure_k2_seeded",
+      "metric": "gold_f1",
+      "point": 0.6121904761904762,
+      "ci_low": 0.5685194444444446,
+      "ci_high": 0.6539073015873016,
+      "n_examples": 250
+    },
+    {
+      "method": "random_suffix_closure_k2_seeded",
+      "metric": "changed_wrong_rate",
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n_examples": 250
+    },
+    {
+      "method": "random_suffix_closure_k2_seeded",
+      "metric": "patch_ratio",
+      "point": 0.8498595008440188,
+      "ci_low": 0.8276957729896952,
+      "ci_high": 0.8721751671983844,
+      "n_examples": 250
+    },
+    {
+      "method": "random_suffix_closure_k2_seeded",
+      "metric": "avg_kl",
+      "point": 4.755548971358436e-05,
+      "ci_low": 1.7630321501139705e-05,
+      "ci_high": 9.060991631437904e-05,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k2",
+      "metric": "answer_equivalence",
+      "point": 0.996,
+      "ci_low": 0.988,
+      "ci_high": 1.0,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k2",
+      "metric": "gold_em",
+      "point": 0.392,
+      "ci_low": 0.332,
+      "ci_high": 0.452,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k2",
+      "metric": "gold_f1",
+      "point": 0.6121904761904762,
+      "ci_low": 0.5685194444444446,
+      "ci_high": 0.6539073015873016,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k2",
+      "metric": "changed_wrong_rate",
+      "point": 0.004,
+      "ci_low": 0.0,
+      "ci_high": 0.012,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k2",
+      "metric": "patch_ratio",
+      "point": 0.8792271854265383,
+      "ci_low": 0.8581709307996777,
+      "ci_high": 0.8995396034815041,
+      "n_examples": 250
+    },
+    {
+      "method": "risk_guided_suffix_closure_k2",
+      "metric": "avg_kl",
+      "point": 0.00010779652635372727,
+      "ci_low": 1.4786668544342699e-05,
+      "ci_high": 0.0002892908475031061,
+      "n_examples": 250
+    }
+  ],
+  "pairwise_delta_ci": [
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "query_similarity_suffix_closure_k1",
+      "metric": "answer_equivalence",
+      "delta_left_minus_right": 0.020000000000000018,
+      "ci_low": 0.0040000000000000036,
+      "ci_high": 0.039999999999999925,
+      "bootstrap_p_left_le_right": 0.0062,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "query_similarity_suffix_closure_k1",
+      "metric": "gold_em",
+      "delta_left_minus_right": -0.0040000000000000036,
+      "ci_low": -0.01200000000000001,
+      "ci_high": 0.0,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "query_similarity_suffix_closure_k1",
+      "metric": "gold_f1",
+      "delta_left_minus_right": -0.003419047619047544,
+      "ci_low": -0.007304761904761925,
+      "ci_high": -0.00040000000000006697,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "query_similarity_suffix_closure_k1",
+      "metric": "changed_wrong_rate",
+      "delta_left_minus_right": -0.015999999999999993,
+      "ci_low": -0.032,
+      "ci_high": -0.003999999999999997,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "query_similarity_suffix_closure_k1",
+      "metric": "patch_ratio",
+      "delta_left_minus_right": 0.11084036790030183,
+      "ci_low": 0.08555996264513674,
+      "ci_high": 0.13816246399241755,
+      "bootstrap_p_left_le_right": 0.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "query_similarity_suffix_closure_k1",
+      "metric": "avg_kl",
+      "delta_left_minus_right": -0.0030948393145200925,
+      "ci_low": -0.0072516981765095535,
+      "ci_high": -0.0006903520648717402,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "risk_guided_suffix_closure_k1",
+      "metric": "answer_equivalence",
+      "delta_left_minus_right": 0.07600000000000007,
+      "ci_low": 0.04799999999999993,
+      "ci_high": 0.1080000000000001,
+      "bootstrap_p_left_le_right": 0.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "risk_guided_suffix_closure_k1",
+      "metric": "gold_em",
+      "delta_left_minus_right": 0.01200000000000001,
+      "ci_low": -0.008000000000000007,
+      "ci_high": 0.03200000000000003,
+      "bootstrap_p_left_le_right": 0.1674,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "risk_guided_suffix_closure_k1",
+      "metric": "gold_f1",
+      "delta_left_minus_right": 0.006139105339105333,
+      "ci_low": -0.005696450216450227,
+      "ci_high": 0.01977738816738812,
+      "bootstrap_p_left_le_right": 0.1814,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "risk_guided_suffix_closure_k1",
+      "metric": "changed_wrong_rate",
+      "delta_left_minus_right": -0.068,
+      "ci_low": -0.1,
+      "ci_high": -0.04,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "risk_guided_suffix_closure_k1",
+      "metric": "patch_ratio",
+      "delta_left_minus_right": 0.12199540773847051,
+      "ci_low": 0.09587366508833962,
+      "ci_high": 0.149431008103567,
+      "bootstrap_p_left_le_right": 0.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "hybrid_query_risk_union_suffix_k1",
+      "right_method": "risk_guided_suffix_closure_k1",
+      "metric": "avg_kl",
+      "delta_left_minus_right": -0.008232481525810617,
+      "ci_low": -0.01872400247378029,
+      "ci_high": -0.0018181718325845752,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "query_similarity_suffix_closure_k2",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "answer_equivalence",
+      "delta_left_minus_right": 0.06799999999999995,
+      "ci_low": 0.040000000000000036,
+      "ci_high": 0.09999999999999998,
+      "bootstrap_p_left_le_right": 0.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "query_similarity_suffix_closure_k2",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "gold_em",
+      "delta_left_minus_right": 0.0040000000000000036,
+      "ci_low": -0.019999999999999962,
+      "ci_high": 0.02799999999999997,
+      "bootstrap_p_left_le_right": 0.4346,
+      "n_examples": 250
+    },
+    {
+      "left_method": "query_similarity_suffix_closure_k2",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "gold_f1",
+      "delta_left_minus_right": -0.00047936507936507944,
+      "ci_low": -0.018337063492063425,
+      "ci_high": 0.016887142857142722,
+      "bootstrap_p_left_le_right": 0.528,
+      "n_examples": 250
+    },
+    {
+      "left_method": "query_similarity_suffix_closure_k2",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "changed_wrong_rate",
+      "delta_left_minus_right": -0.052000000000000005,
+      "ci_low": -0.08,
+      "ci_high": -0.027999999999999997,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "query_similarity_suffix_closure_k2",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "patch_ratio",
+      "delta_left_minus_right": 0.0817293868877974,
+      "ci_low": 0.05436528632103845,
+      "ci_high": 0.11025030300859108,
+      "bootstrap_p_left_le_right": 0.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "query_similarity_suffix_closure_k2",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "avg_kl",
+      "delta_left_minus_right": -0.07179750582377706,
+      "ci_low": -0.14710678293687943,
+      "ci_high": -0.017536995206483018,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "random_suffix_closure_k2_seeded",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "answer_equivalence",
+      "delta_left_minus_right": 0.07199999999999995,
+      "ci_low": 0.04400000000000004,
+      "ci_high": 0.10399999999999998,
+      "bootstrap_p_left_le_right": 0.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "random_suffix_closure_k2_seeded",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "gold_em",
+      "delta_left_minus_right": 0.0040000000000000036,
+      "ci_low": -0.019999999999999962,
+      "ci_high": 0.02799999999999997,
+      "bootstrap_p_left_le_right": 0.4346,
+      "n_examples": 250
+    },
+    {
+      "left_method": "random_suffix_closure_k2_seeded",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "gold_f1",
+      "delta_left_minus_right": -0.00047936507936507944,
+      "ci_low": -0.018337063492063425,
+      "ci_high": 0.016887142857142722,
+      "bootstrap_p_left_le_right": 0.528,
+      "n_examples": 250
+    },
+    {
+      "left_method": "random_suffix_closure_k2_seeded",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "changed_wrong_rate",
+      "delta_left_minus_right": -0.056,
+      "ci_low": -0.088,
+      "ci_high": -0.028,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    },
+    {
+      "left_method": "random_suffix_closure_k2_seeded",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "patch_ratio",
+      "delta_left_minus_right": 0.05957273951145714,
+      "ci_low": 0.02213947803352601,
+      "ci_high": 0.09785815735273731,
+      "bootstrap_p_left_le_right": 0.0006,
+      "n_examples": 250
+    },
+    {
+      "left_method": "random_suffix_closure_k2_seeded",
+      "right_method": "hybrid_query_risk_union_suffix_k1",
+      "metric": "avg_kl",
+      "delta_left_minus_right": -0.07179420237385639,
+      "ci_low": -0.1471146766982796,
+      "ci_high": -0.017511230238828113,
+      "bootstrap_p_left_le_right": 1.0,
+      "n_examples": 250
+    }
+  ]
+}

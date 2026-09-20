@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrr}
+\toprule
+ & Prefix- & Random & Query-attn. \\
+Order & comp. & local & local \\
+\midrule
+natural & 0.330 & 0.590 & 0.850 \\
+shuffled & 0.430 & 0.607 & 0.790 \\
+BM25 & 0.300 & 0.537 & 0.840 \\
+\midrule
+pooled (300) & 0.353 & 0.578 & 0.827 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Operational token-local repair on HotpotQA (100 examples per order; natural, shuffled, and BM25 document orders built without gold labels), Qwen2.5-7B-Instruct, actual forwarding of the selected token spans from the stale composed cache. Query-attn.\ local ranks context tokens by the query's attention over the stale cache and recomputes the top spans within a 60\% document-token budget; Random local recomputes equal-budget random spans (mean over three seeds). Values are normalized answer preservation relative to the all-fresh reference; the recomputed fraction of context tokens is 0.589 in every row. Runs: one NVIDIA RTX PRO 6000 Blackwell GPU, PyTorch~2.8.0. Full budget curves: Table~\ref{tab:app-local-full}.}
+\label{tab:local-operational}
+\end{table}

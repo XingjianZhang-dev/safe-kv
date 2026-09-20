@@ -1,0 +1,624 @@
+{
+  "num_rows": 1100,
+  "category_counts": {
+    "external_2wiki": 100
+  },
+  "method_level": {
+    "full_prefill": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 1.0,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "answer_contains_gold_rate": 0.5,
+      "answer_changed_from_full_rate": 0.0,
+      "answer_changed_but_gold_correct_count": 0,
+      "answer_changed_and_gold_wrong_count": 0,
+      "avg_patched_doc_count": 0.0,
+      "avg_patched_token_count": 0.0,
+      "avg_patched_token_ratio": 0.0,
+      "avg_first_token_kl": 0.0,
+      "top1_match_rate": 1.0
+    },
+    "prefix_conditioned_naive_global": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.35,
+      "gold_exact_match": 0.32,
+      "gold_token_f1": 0.3923141025641026,
+      "answer_contains_gold_rate": 0.4,
+      "answer_changed_from_full_rate": 0.65,
+      "answer_changed_but_gold_correct_count": 8,
+      "answer_changed_and_gold_wrong_count": 57,
+      "avg_patched_doc_count": 0.0,
+      "avg_patched_token_count": 0.0,
+      "avg_patched_token_ratio": 0.0,
+      "avg_first_token_kl": 4.974028117447457,
+      "top1_match_rate": 0.45
+    },
+    "query_similarity_cost_aware_suffix_a0_05": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.82,
+      "gold_exact_match": 0.38,
+      "gold_token_f1": 0.46254901960784317,
+      "answer_contains_gold_rate": 0.45,
+      "answer_changed_from_full_rate": 0.18,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 16,
+      "avg_patched_doc_count": 3.68,
+      "avg_patched_token_count": 439.3,
+      "avg_patched_token_ratio": 0.61450403789975,
+      "avg_first_token_kl": 1.3918072104606356,
+      "top1_match_rate": 0.84
+    },
+    "query_similarity_cost_aware_suffix_a0_10": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.82,
+      "gold_exact_match": 0.38,
+      "gold_token_f1": 0.46254901960784317,
+      "answer_contains_gold_rate": 0.45,
+      "answer_changed_from_full_rate": 0.18,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 16,
+      "avg_patched_doc_count": 3.68,
+      "avg_patched_token_count": 439.3,
+      "avg_patched_token_ratio": 0.61450403789975,
+      "avg_first_token_kl": 1.3918072104606356,
+      "top1_match_rate": 0.84
+    },
+    "query_similarity_cost_aware_suffix_a0_20": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.8,
+      "gold_exact_match": 0.36,
+      "gold_token_f1": 0.44254901960784315,
+      "answer_contains_gold_rate": 0.43,
+      "answer_changed_from_full_rate": 0.2,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 18,
+      "avg_patched_doc_count": 3.57,
+      "avg_patched_token_count": 427.05,
+      "avg_patched_token_ratio": 0.5996915016685002,
+      "avg_first_token_kl": 1.4987383561190992,
+      "top1_match_rate": 0.82
+    },
+    "query_similarity_suffix_closure_k1": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.92,
+      "gold_exact_match": 0.39,
+      "gold_token_f1": 0.4716601307189543,
+      "answer_contains_gold_rate": 0.46,
+      "answer_changed_from_full_rate": 0.08,
+      "answer_changed_but_gold_correct_count": 1,
+      "answer_changed_and_gold_wrong_count": 7,
+      "avg_patched_doc_count": 4.39,
+      "avg_patched_token_count": 531.91,
+      "avg_patched_token_ratio": 0.7541227585696773,
+      "avg_first_token_kl": 0.723253337645238,
+      "top1_match_rate": 0.93
+    },
+    "random_suffix_closure_k1_seeded": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.72,
+      "gold_exact_match": 0.4,
+      "gold_token_f1": 0.477015873015873,
+      "answer_contains_gold_rate": 0.47,
+      "answer_changed_from_full_rate": 0.28,
+      "answer_changed_but_gold_correct_count": 6,
+      "answer_changed_and_gold_wrong_count": 22,
+      "avg_patched_doc_count": 3.21,
+      "avg_patched_token_count": 363.27,
+      "avg_patched_token_ratio": 0.5092863647491508,
+      "avg_first_token_kl": 1.8428146635767286,
+      "top1_match_rate": 0.75
+    },
+    "risk_guided_cost_aware_suffix_a0_05": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.96,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "answer_contains_gold_rate": 0.5,
+      "answer_changed_from_full_rate": 0.04,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 2,
+      "avg_patched_doc_count": 4.55,
+      "avg_patched_token_count": 564.77,
+      "avg_patched_token_ratio": 0.7899642675965063,
+      "avg_first_token_kl": 0.34739409364757656,
+      "top1_match_rate": 0.96
+    },
+    "risk_guided_cost_aware_suffix_a0_10": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.96,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "answer_contains_gold_rate": 0.5,
+      "answer_changed_from_full_rate": 0.04,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 2,
+      "avg_patched_doc_count": 4.54,
+      "avg_patched_token_count": 563.98,
+      "avg_patched_token_ratio": 0.7881439910988105,
+      "avg_first_token_kl": 0.34739409385348613,
+      "top1_match_rate": 0.96
+    },
+    "risk_guided_cost_aware_suffix_a0_20": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.95,
+      "gold_exact_match": 0.41,
+      "gold_token_f1": 0.4952315592903828,
+      "answer_contains_gold_rate": 0.49,
+      "answer_changed_from_full_rate": 0.05,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 3,
+      "avg_patched_doc_count": 4.45,
+      "avg_patched_token_count": 550.59,
+      "avg_patched_token_ratio": 0.7728933158196256,
+      "avg_first_token_kl": 0.46722670704938857,
+      "top1_match_rate": 0.95
+    },
+    "risk_guided_suffix_closure_k1": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.97,
+      "gold_exact_match": 0.41,
+      "gold_token_f1": 0.4952315592903828,
+      "answer_contains_gold_rate": 0.49,
+      "answer_changed_from_full_rate": 0.03,
+      "answer_changed_but_gold_correct_count": 1,
+      "answer_changed_and_gold_wrong_count": 2,
+      "avg_patched_doc_count": 4.58,
+      "avg_patched_token_count": 566.95,
+      "avg_patched_token_ratio": 0.7929906895408386,
+      "avg_first_token_kl": 0.2990551135319635,
+      "top1_match_rate": 0.97
+    }
+  },
+  "category_level": {
+    "full_prefill::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 1.0,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "answer_contains_gold_rate": 0.5,
+      "answer_changed_from_full_rate": 0.0,
+      "answer_changed_but_gold_correct_count": 0,
+      "answer_changed_and_gold_wrong_count": 0,
+      "avg_patched_doc_count": 0.0,
+      "avg_patched_token_count": 0.0,
+      "avg_patched_token_ratio": 0.0,
+      "avg_first_token_kl": 0.0,
+      "top1_match_rate": 1.0
+    },
+    "prefix_conditioned_naive_global::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.35,
+      "gold_exact_match": 0.32,
+      "gold_token_f1": 0.3923141025641026,
+      "answer_contains_gold_rate": 0.4,
+      "answer_changed_from_full_rate": 0.65,
+      "answer_changed_but_gold_correct_count": 8,
+      "answer_changed_and_gold_wrong_count": 57,
+      "avg_patched_doc_count": 0.0,
+      "avg_patched_token_count": 0.0,
+      "avg_patched_token_ratio": 0.0,
+      "avg_first_token_kl": 4.974028117447457,
+      "top1_match_rate": 0.45
+    },
+    "query_similarity_cost_aware_suffix_a0_05::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.82,
+      "gold_exact_match": 0.38,
+      "gold_token_f1": 0.46254901960784317,
+      "answer_contains_gold_rate": 0.45,
+      "answer_changed_from_full_rate": 0.18,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 16,
+      "avg_patched_doc_count": 3.68,
+      "avg_patched_token_count": 439.3,
+      "avg_patched_token_ratio": 0.61450403789975,
+      "avg_first_token_kl": 1.3918072104606356,
+      "top1_match_rate": 0.84
+    },
+    "query_similarity_cost_aware_suffix_a0_10::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.82,
+      "gold_exact_match": 0.38,
+      "gold_token_f1": 0.46254901960784317,
+      "answer_contains_gold_rate": 0.45,
+      "answer_changed_from_full_rate": 0.18,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 16,
+      "avg_patched_doc_count": 3.68,
+      "avg_patched_token_count": 439.3,
+      "avg_patched_token_ratio": 0.61450403789975,
+      "avg_first_token_kl": 1.3918072104606356,
+      "top1_match_rate": 0.84
+    },
+    "query_similarity_cost_aware_suffix_a0_20::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.8,
+      "gold_exact_match": 0.36,
+      "gold_token_f1": 0.44254901960784315,
+      "answer_contains_gold_rate": 0.43,
+      "answer_changed_from_full_rate": 0.2,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 18,
+      "avg_patched_doc_count": 3.57,
+      "avg_patched_token_count": 427.05,
+      "avg_patched_token_ratio": 0.5996915016685002,
+      "avg_first_token_kl": 1.4987383561190992,
+      "top1_match_rate": 0.82
+    },
+    "query_similarity_suffix_closure_k1::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.92,
+      "gold_exact_match": 0.39,
+      "gold_token_f1": 0.4716601307189543,
+      "answer_contains_gold_rate": 0.46,
+      "answer_changed_from_full_rate": 0.08,
+      "answer_changed_but_gold_correct_count": 1,
+      "answer_changed_and_gold_wrong_count": 7,
+      "avg_patched_doc_count": 4.39,
+      "avg_patched_token_count": 531.91,
+      "avg_patched_token_ratio": 0.7541227585696773,
+      "avg_first_token_kl": 0.723253337645238,
+      "top1_match_rate": 0.93
+    },
+    "random_suffix_closure_k1_seeded::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.72,
+      "gold_exact_match": 0.4,
+      "gold_token_f1": 0.477015873015873,
+      "answer_contains_gold_rate": 0.47,
+      "answer_changed_from_full_rate": 0.28,
+      "answer_changed_but_gold_correct_count": 6,
+      "answer_changed_and_gold_wrong_count": 22,
+      "avg_patched_doc_count": 3.21,
+      "avg_patched_token_count": 363.27,
+      "avg_patched_token_ratio": 0.5092863647491508,
+      "avg_first_token_kl": 1.8428146635767286,
+      "top1_match_rate": 0.75
+    },
+    "risk_guided_cost_aware_suffix_a0_05::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.96,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "answer_contains_gold_rate": 0.5,
+      "answer_changed_from_full_rate": 0.04,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 2,
+      "avg_patched_doc_count": 4.55,
+      "avg_patched_token_count": 564.77,
+      "avg_patched_token_ratio": 0.7899642675965063,
+      "avg_first_token_kl": 0.34739409364757656,
+      "top1_match_rate": 0.96
+    },
+    "risk_guided_cost_aware_suffix_a0_10::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.96,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "answer_contains_gold_rate": 0.5,
+      "answer_changed_from_full_rate": 0.04,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 2,
+      "avg_patched_doc_count": 4.54,
+      "avg_patched_token_count": 563.98,
+      "avg_patched_token_ratio": 0.7881439910988105,
+      "avg_first_token_kl": 0.34739409385348613,
+      "top1_match_rate": 0.96
+    },
+    "risk_guided_cost_aware_suffix_a0_20::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.95,
+      "gold_exact_match": 0.41,
+      "gold_token_f1": 0.4952315592903828,
+      "answer_contains_gold_rate": 0.49,
+      "answer_changed_from_full_rate": 0.05,
+      "answer_changed_but_gold_correct_count": 2,
+      "answer_changed_and_gold_wrong_count": 3,
+      "avg_patched_doc_count": 4.45,
+      "avg_patched_token_count": 550.59,
+      "avg_patched_token_ratio": 0.7728933158196256,
+      "avg_first_token_kl": 0.46722670704938857,
+      "top1_match_rate": 0.95
+    },
+    "risk_guided_suffix_closure_k1::external_2wiki": {
+      "num_rows": 100,
+      "num_distinct_examples": 100,
+      "answer_equivalence_to_full_prefill": 0.97,
+      "gold_exact_match": 0.41,
+      "gold_token_f1": 0.4952315592903828,
+      "answer_contains_gold_rate": 0.49,
+      "answer_changed_from_full_rate": 0.03,
+      "answer_changed_but_gold_correct_count": 1,
+      "answer_changed_and_gold_wrong_count": 2,
+      "avg_patched_doc_count": 4.58,
+      "avg_patched_token_count": 566.95,
+      "avg_patched_token_ratio": 0.7929906895408386,
+      "avg_first_token_kl": 0.2990551135319635,
+      "top1_match_rate": 0.97
+    }
+  },
+  "kl_answer_mismatch_relation": {
+    "num_rows": 1000,
+    "kl_bins": [
+      {
+        "kl_low": 0.0,
+        "kl_high": 0.01,
+        "num_rows": 729,
+        "answer_mismatch_rate": 0.013717421124828532
+      },
+      {
+        "kl_low": 0.01,
+        "kl_high": 0.05,
+        "num_rows": 40,
+        "answer_mismatch_rate": 0.025
+      },
+      {
+        "kl_low": 0.05,
+        "kl_high": 0.1,
+        "num_rows": 16,
+        "answer_mismatch_rate": 0.25
+      },
+      {
+        "kl_low": 0.1,
+        "kl_high": 0.25,
+        "num_rows": 11,
+        "answer_mismatch_rate": 0.09090909090909091
+      },
+      {
+        "kl_low": 0.25,
+        "kl_high": 0.5,
+        "num_rows": 22,
+        "answer_mismatch_rate": 0.18181818181818182
+      },
+      {
+        "kl_low": 0.5,
+        "kl_high": 1.0,
+        "num_rows": 23,
+        "answer_mismatch_rate": 0.30434782608695654
+      },
+      {
+        "kl_low": 1.0,
+        "kl_high": Infinity,
+        "num_rows": 159,
+        "answer_mismatch_rate": 0.9182389937106918
+      }
+    ],
+    "pearson": {
+      "r": 0.7182031728942003,
+      "pvalue": 2.322250811708101e-159
+    },
+    "spearman": {
+      "rho": 0.6124675160262186,
+      "pvalue": 5.226447038783873e-104
+    }
+  },
+  "patched_ratio_answer_equivalence_pareto": [
+    {
+      "method": "full_prefill",
+      "avg_patched_token_ratio": 0.0,
+      "answer_equivalence_to_full_prefill": 1.0,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "avg_first_token_kl": 0.0
+    },
+    {
+      "method": "prefix_conditioned_naive_global",
+      "avg_patched_token_ratio": 0.0,
+      "answer_equivalence_to_full_prefill": 0.35,
+      "gold_exact_match": 0.32,
+      "gold_token_f1": 0.3923141025641026,
+      "avg_first_token_kl": 4.974028117447457
+    },
+    {
+      "method": "random_suffix_closure_k1_seeded",
+      "avg_patched_token_ratio": 0.5092863647491508,
+      "answer_equivalence_to_full_prefill": 0.72,
+      "gold_exact_match": 0.4,
+      "gold_token_f1": 0.477015873015873,
+      "avg_first_token_kl": 1.8428146635767286
+    },
+    {
+      "method": "query_similarity_cost_aware_suffix_a0_20",
+      "avg_patched_token_ratio": 0.5996915016685002,
+      "answer_equivalence_to_full_prefill": 0.8,
+      "gold_exact_match": 0.36,
+      "gold_token_f1": 0.44254901960784315,
+      "avg_first_token_kl": 1.4987383561190992
+    },
+    {
+      "method": "query_similarity_cost_aware_suffix_a0_05",
+      "avg_patched_token_ratio": 0.61450403789975,
+      "answer_equivalence_to_full_prefill": 0.82,
+      "gold_exact_match": 0.38,
+      "gold_token_f1": 0.46254901960784317,
+      "avg_first_token_kl": 1.3918072104606356
+    },
+    {
+      "method": "query_similarity_cost_aware_suffix_a0_10",
+      "avg_patched_token_ratio": 0.61450403789975,
+      "answer_equivalence_to_full_prefill": 0.82,
+      "gold_exact_match": 0.38,
+      "gold_token_f1": 0.46254901960784317,
+      "avg_first_token_kl": 1.3918072104606356
+    },
+    {
+      "method": "query_similarity_suffix_closure_k1",
+      "avg_patched_token_ratio": 0.7541227585696773,
+      "answer_equivalence_to_full_prefill": 0.92,
+      "gold_exact_match": 0.39,
+      "gold_token_f1": 0.4716601307189543,
+      "avg_first_token_kl": 0.723253337645238
+    },
+    {
+      "method": "risk_guided_cost_aware_suffix_a0_20",
+      "avg_patched_token_ratio": 0.7728933158196256,
+      "answer_equivalence_to_full_prefill": 0.95,
+      "gold_exact_match": 0.41,
+      "gold_token_f1": 0.4952315592903828,
+      "avg_first_token_kl": 0.46722670704938857
+    },
+    {
+      "method": "risk_guided_cost_aware_suffix_a0_10",
+      "avg_patched_token_ratio": 0.7881439910988105,
+      "answer_equivalence_to_full_prefill": 0.96,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "avg_first_token_kl": 0.34739409385348613
+    },
+    {
+      "method": "risk_guided_cost_aware_suffix_a0_05",
+      "avg_patched_token_ratio": 0.7899642675965063,
+      "answer_equivalence_to_full_prefill": 0.96,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "avg_first_token_kl": 0.34739409364757656
+    },
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "avg_patched_token_ratio": 0.7929906895408386,
+      "answer_equivalence_to_full_prefill": 0.97,
+      "gold_exact_match": 0.41,
+      "gold_token_f1": 0.4952315592903828,
+      "avg_first_token_kl": 0.2990551135319635
+    }
+  ],
+  "method_ranking_by_answer_equivalence": [
+    {
+      "method": "full_prefill",
+      "answer_equivalence_to_full_prefill": 1.0,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "avg_patched_token_ratio": 0.0
+    },
+    {
+      "method": "risk_guided_suffix_closure_k1",
+      "answer_equivalence_to_full_prefill": 0.97,
+      "gold_exact_match": 0.41,
+      "gold_token_f1": 0.4952315592903828,
+      "avg_patched_token_ratio": 0.7929906895408386
+    },
+    {
+      "method": "risk_guided_cost_aware_suffix_a0_10",
+      "answer_equivalence_to_full_prefill": 0.96,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "avg_patched_token_ratio": 0.7881439910988105
+    },
+    {
+      "method": "risk_guided_cost_aware_suffix_a0_05",
+      "answer_equivalence_to_full_prefill": 0.96,
+      "gold_exact_match": 0.42,
+      "gold_token_f1": 0.5052315592903828,
+      "avg_patched_token_ratio": 0.7899642675965063
+    },
+    {
+      "method": "risk_guided_cost_aware_suffix_a0_20",
+      "answer_equivalence_to_full_prefill": 0.95,
+      "gold_exact_match": 0.41,
+      "gold_token_f1": 0.4952315592903828,
+      "avg_patched_token_ratio": 0.7728933158196256
+    },
+    {
+      "method": "query_similarity_suffix_closure_k1",
+      "answer_equivalence_to_full_prefill": 0.92,
+      "gold_exact_match": 0.39,
+      "gold_token_f1": 0.4716601307189543,
+      "avg_patched_token_ratio": 0.7541227585696773
+    },
+    {
+      "method": "query_similarity_cost_aware_suffix_a0_05",
+      "answer_equivalence_to_full_prefill": 0.82,
+      "gold_exact_match": 0.38,
+      "gold_token_f1": 0.46254901960784317,
+      "avg_patched_token_ratio": 0.61450403789975
+    },
+    {
+      "method": "query_similarity_cost_aware_suffix_a0_10",
+      "answer_equivalence_to_full_prefill": 0.82,
+      "gold_exact_match": 0.38,
+      "gold_token_f1": 0.46254901960784317,
+      "avg_patched_token_ratio": 0.61450403789975
+    },
+    {
+      "method": "query_similarity_cost_aware_suffix_a0_20",
+      "answer_equivalence_to_full_prefill": 0.8,
+      "gold_exact_match": 0.36,
+      "gold_token_f1": 0.44254901960784315,
+      "avg_patched_token_ratio": 0.5996915016685002
+    },
+    {
+      "method": "random_suffix_closure_k1_seeded",
+      "answer_equivalence_to_full_prefill": 0.72,
+      "gold_exact_match": 0.4,
+      "gold_token_f1": 0.477015873015873,
+      "avg_patched_token_ratio": 0.5092863647491508
+    },
+    {
+      "method": "prefix_conditioned_naive_global",
+      "answer_equivalence_to_full_prefill": 0.35,
+      "gold_exact_match": 0.32,
+      "gold_token_f1": 0.3923141025641026,
+      "avg_patched_token_ratio": 0.0
+    }
+  ],
+  "failed_rows": [],
+  "num_failed_rows": 0,
+  "config_path": "configs/acl_qwen25_7b_2wiki_500.yaml",
+  "dataset_path": "data/external_2wiki_500.jsonl",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "actual_device": "cuda",
+  "torch_dtype": "float16",
+  "prompt_format": "chat_rag",
+  "generation_mode": "manual_position_ids",
+  "max_new_tokens": 16,
+  "stop_on_newline": true,
+  "stop_strings": [
+    "Human:",
+    "[Document",
+    "Question:",
+    "Answer:"
+  ],
+  "selected_methods": [
+    "full_prefill",
+    "prefix_conditioned_naive_global",
+    "query_similarity_suffix_closure_k1",
+    "risk_guided_suffix_closure_k1",
+    "random_suffix_closure_k1_seeded",
+    "query_similarity_cost_aware_suffix_a0_05",
+    "query_similarity_cost_aware_suffix_a0_10",
+    "query_similarity_cost_aware_suffix_a0_20",
+    "risk_guided_cost_aware_suffix_a0_05",
+    "risk_guided_cost_aware_suffix_a0_10",
+    "risk_guided_cost_aware_suffix_a0_20"
+  ],
+  "selector_artifact": null,
+  "resume": true,
+  "outputs": {
+    "answer_eval_outputs": "results/acl_qwen25_7b_2wiki_cost_aware_100/answer_eval_outputs.jsonl",
+    "answer_eval_metrics_csv": "results/acl_qwen25_7b_2wiki_cost_aware_100/answer_eval_metrics.csv",
+    "answer_eval_summary": "results/acl_qwen25_7b_2wiki_cost_aware_100/answer_eval_summary.json",
+    "answer_failure_analysis": "results/acl_qwen25_7b_2wiki_cost_aware_100/answer_failure_analysis.md"
+  }
+}

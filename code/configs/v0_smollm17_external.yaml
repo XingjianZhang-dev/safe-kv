@@ -1,0 +1,48 @@
+seed: 13
+
+model:
+  name: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+  dtype: "float16"
+  device: "cuda"
+  trust_remote_code: true
+
+data:
+  path: "data/external_multihop_100.jsonl"
+  max_examples: null
+  max_examples_per_category: null
+
+generation:
+  max_new_tokens: 16
+  do_sample: false
+  temperature: 0.0
+  stop_on_newline: true
+  stop_strings:
+    - "Human:"
+    - "[Document"
+    - "Question:"
+    - "Answer:"
+  prefill_mode: "manual_position_ids"
+
+experiment:
+  prompt_format: "chat_rag"
+  cache_position_mode: "global"
+
+prompt:
+  boundary_window_tokens: 8
+  adaptive_boundary_window: true
+
+risk:
+  similarity_backend: "tfidf"
+  weights:
+    query_similarity: 0.40
+    entity_overlap: 0.20
+    retrieval_score: 0.15
+    boundary_score: 0.10
+    cross_doc_dependency: 0.10
+    conflict_score: 0.05
+
+recompute:
+  selection_unit: "span"
+  expand_window_tokens: 4
+  allow_budget_overshoot: true
+  max_budget_overshoot_ratio: 0.03

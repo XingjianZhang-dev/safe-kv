@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{ccccc}
+\toprule
+method & avg kl & top1 & top10 & patch ratio \\
+\midrule
+Doc-only & 0.85 & 0.61 & 0.56 & 0.00 \\
+Doc-only local & 1.48 & 0.45 & 0.57 & 0.00 \\
+Prefix-cond. & 0.21 & 0.90 & 0.70 & 0.00 \\
+Prefix-cond. local & 0.29 & 0.80 & 0.69 & 0.00 \\
+Prefix-plus & 1.21 & 0.47 & 0.57 & 0.00 \\
+Prefix-plus local & 1.88 & 0.36 & 0.55 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Full composition ablation, including local/global variants.}
+\label{tab:app-composition}
+\end{table*}

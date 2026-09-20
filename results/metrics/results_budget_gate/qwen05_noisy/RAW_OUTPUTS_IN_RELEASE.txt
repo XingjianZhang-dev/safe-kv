@@ -1,0 +1,6 @@
+Raw per-example output file(s) of this run are not stored in git (size). They are in the GitHub release
+asset safe-kv-raw-outputs-v1.0.0.tar.gz (release tag v1.0.0); `bash scripts/fetch_raw_outputs.sh` restores them into this directory.
+The summary files next to this note are what the paper's tables and figures are built from.
+
+name	size_bytes	sha256
+budget_gate_metrics.csv	6405386	56bf63ab25bb67126f4832a19f82ee72012cf7764f4722fff74ef291ee9bb102

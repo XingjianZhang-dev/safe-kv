@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "num_examples": 100,
+  "num_partial_methods": 4,
+  "num_failures": 0,
+  "failures": [],
+  "one_shot_reference_mismatch_count": 0,
+  "chunked_all_document_ceiling": {
+    "normalized_exact_to_one_shot_rate": 1.0,
+    "postprocessed_string_exact_to_one_shot_rate": 1.0,
+    "generated_token_exact_to_one_shot_rate": 1.0,
+    "mean_patched_token_ratio": 0.9649928201418728
+  },
+  "partial_method_summaries": [
+    {
+      "method": "actual_recompute::hybrid_query_risk_union_suffix_k1",
+      "num_examples": 100,
+      "normalized_exact_to_one_shot_rate": 0.92,
+      "postprocessed_string_exact_to_one_shot_rate": 0.9,
+      "generated_token_exact_to_one_shot_rate": 0.9,
+      "normalized_exact_to_chunked_all_document_rate": 0.92,
+      "postprocessed_string_exact_to_chunked_all_document_rate": 0.9,
+      "generated_token_exact_to_chunked_all_document_rate": 0.9,
+      "mean_patched_token_ratio": 0.7387225170978998
+    },
+    {
+      "method": "actual_recompute::query_similarity_suffix_closure_k2",
+      "num_examples": 100,
+      "normalized_exact_to_one_shot_rate": 0.97,
+      "postprocessed_string_exact_to_one_shot_rate": 0.96,
+      "generated_token_exact_to_one_shot_rate": 0.96,
+      "normalized_exact_to_chunked_all_document_rate": 0.97,
+      "postprocessed_string_exact_to_chunked_all_document_rate": 0.96,
+      "generated_token_exact_to_chunked_all_document_rate": 0.96,
+      "mean_patched_token_ratio": 0.8797508741853396
+    },
+    {
+      "method": "actual_recompute::risk_guided_suffix_closure_k1",
+      "num_examples": 100,
+      "normalized_exact_to_one_shot_rate": 0.81,
+      "postprocessed_string_exact_to_one_shot_rate": 0.78,
+      "generated_token_exact_to_one_shot_rate": 0.78,
+      "normalized_exact_to_chunked_all_document_rate": 0.81,
+      "postprocessed_string_exact_to_chunked_all_document_rate": 0.78,
+      "generated_token_exact_to_chunked_all_document_rate": 0.78,
+      "mean_patched_token_ratio": 0.5786638572894018
+    },
+    {
+      "method": "actual_recompute::risk_guided_suffix_closure_k2",
+      "num_examples": 100,
+      "normalized_exact_to_one_shot_rate": 0.9,
+      "postprocessed_string_exact_to_one_shot_rate": 0.89,
+      "generated_token_exact_to_one_shot_rate": 0.89,
+      "normalized_exact_to_chunked_all_document_rate": 0.9,
+      "postprocessed_string_exact_to_chunked_all_document_rate": 0.89,
+      "generated_token_exact_to_chunked_all_document_rate": 0.89,
+      "mean_patched_token_ratio": 0.7802422354388077
+    }
+  ]
+}

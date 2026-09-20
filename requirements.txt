@@ -1,0 +1,13 @@
+# Pinned environment for the CPU checks and the table/figure generators (Python >= 3.10; tested on 3.13).
+# The GPU runs reported in the paper used torch 2.4.1+cu124 (submitted runs) and torch 2.8.0+cu128 (response-period
+# and localized-baseline runs) with transformers 4.57.6; install the CUDA build of torch 2.8.0 for GPU reproduction.
+torch==2.8.0
+transformers==4.57.6
+tokenizers==0.22.2
+safetensors==0.8.0
+huggingface_hub==0.36.2
+numpy==2.5.3
+datasets==5.0.1
+PyYAML==6.0.3
+pytest==9.1.1
+matplotlib==3.11.2

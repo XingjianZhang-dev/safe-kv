@@ -1,0 +1,24 @@
+{
+  "input": "data/noise_sweep_16_250.jsonl",
+  "output": "../rebuttal_experiments/data/single_nested_n8_zero_layout101.jsonl",
+  "retrieval_mode": "zero",
+  "shuffle_seed": 101,
+  "max_documents": 8,
+  "nested_single_evidence": true,
+  "num_examples": 50,
+  "document_count_distribution": {
+    "8": 50
+  },
+  "earliest_evidence_position_distribution": {
+    "0": 5,
+    "1": 9,
+    "2": 8,
+    "3": 3,
+    "4": 5,
+    "5": 7,
+    "6": 7,
+    "7": 6
+  },
+  "mean_earliest_evidence_position": 3.46,
+  "perfect_gold_score_separation_rate": 0.0
+}

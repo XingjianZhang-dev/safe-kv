@@ -1,0 +1,56 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{ccccccc}
+\toprule
+model & dataset & method & answer equivalence to full prefill & changed wrong rate & patched token ratio & estimated prefill saving \\
+\midrule
+qwen05 & diagnostic\_clean & Entity K2 & 0.97 & 0.01 & 0.54 & 0.46 \\
+qwen05 & diagnostic\_clean & Full & 1.00 & 0.0 & 0.00 & 1.00 \\
+qwen05 & diagnostic\_clean & Oracle doc & 0.97 & 0.01 & 0.46 & 0.54 \\
+qwen05 & diagnostic\_clean & Prefix-cond. & 0.85 & 0.14 & 0.00 & 1.00 \\
+qwen05 & diagnostic\_clean & Query K2 & 0.97 & 0.01 & 0.54 & 0.46 \\
+qwen05 & diagnostic\_clean & Random K2 & 0.96 & 0.03 & 0.53 & 0.47 \\
+qwen05 & diagnostic\_clean & Gate .60 & 0.92 & 0.07 & 0.11 & 0.89 \\
+qwen05 & diagnostic\_noisy & Entity K2 & 0.90 & 0.07 & 0.55 & 0.45 \\
+qwen05 & diagnostic\_noisy & Full & 1.00 & 0.0 & 0.00 & 1.00 \\
+qwen05 & diagnostic\_noisy & Oracle doc & 0.90 & 0.06 & 0.42 & 0.58 \\
+qwen05 & diagnostic\_noisy & Prefix-cond. & 0.69 & 0.23 & 0.00 & 1.00 \\
+qwen05 & diagnostic\_noisy & Query K2 & 0.89 & 0.07 & 0.55 & 0.45 \\
+qwen05 & diagnostic\_noisy & Random K2 & 0.83 & 0.11 & 0.54 & 0.46 \\
+qwen05 & diagnostic\_noisy & Gate .60 & 0.81 & 0.14 & 0.28 & 0.72 \\
+qwen15 & diagnostic\_clean & Entity K2 & 0.96 & 0.03 & 0.54 & 0.46 \\
+qwen15 & diagnostic\_clean & Full & 1.00 & 0.0 & 0.00 & 1.00 \\
+qwen15 & diagnostic\_clean & Oracle doc & 0.96 & 0.03 & 0.46 & 0.54 \\
+qwen15 & diagnostic\_clean & Prefix-cond. & 0.88 & 0.11 & 0.00 & 1.00 \\
+qwen15 & diagnostic\_clean & Query K2 & 0.96 & 0.03 & 0.54 & 0.46 \\
+qwen15 & diagnostic\_clean & Random K2 & 0.93 & 0.06 & 0.53 & 0.47 \\
+qwen15 & diagnostic\_clean & Gate .60 & 0.92 & 0.06 & 0.11 & 0.89 \\
+qwen15 & diagnostic\_noisy & Entity K2 & 0.92 & 0.06 & 0.55 & 0.45 \\
+qwen15 & diagnostic\_noisy & Full & 1.00 & 0.0 & 0.00 & 1.00 \\
+qwen15 & diagnostic\_noisy & Oracle doc & 0.89 & 0.1 & 0.42 & 0.58 \\
+qwen15 & diagnostic\_noisy & Prefix-cond. & 0.74 & 0.2 & 0.00 & 1.00 \\
+qwen15 & diagnostic\_noisy & Query K2 & 0.92 & 0.06 & 0.55 & 0.45 \\
+qwen15 & diagnostic\_noisy & Random K2 & 0.86 & 0.08 & 0.54 & 0.46 \\
+qwen15 & diagnostic\_noisy & Gate .60 & 0.84 & 0.13 & 0.28 & 0.72 \\
+qwen05 & external\_multihop & Entity K2 & 0.50 & 0.43 & 0.41 & 0.59 \\
+qwen05 & external\_multihop & Full & 1.00 & 0.0 & 0.00 & 1.00 \\
+qwen05 & external\_multihop & Oracle doc & 0.47 & 0.47 & 0.42 & 0.58 \\
+qwen05 & external\_multihop & Prefix-cond. & 0.41 & 0.49 & 0.00 & 1.00 \\
+qwen05 & external\_multihop & Query K2 & 0.50 & 0.43 & 0.45 & 0.55 \\
+qwen05 & external\_multihop & Random K2 & 0.55 & 0.39 & 0.39 & 0.61 \\
+qwen05 & external\_multihop & Gate .60 & 0.48 & 0.45 & 0.42 & 0.58 \\
+qwen15 & external\_multihop & Entity K2 & 0.62 & 0.33 & 0.41 & 0.59 \\
+qwen15 & external\_multihop & Full & 1.00 & 0.0 & 0.00 & 1.00 \\
+qwen15 & external\_multihop & Oracle doc & 0.64 & 0.31 & 0.42 & 0.58 \\
+qwen15 & external\_multihop & Prefix-cond. & 0.44 & 0.48 & 0.00 & 1.00 \\
+qwen15 & external\_multihop & Query K2 & 0.62 & 0.32 & 0.45 & 0.55 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Cost accounting with recomputation-budget proxies.}
+\label{tab:app-cost}
+\end{table*}
+
+% Table truncated to 40 rows for appendix readability; source CSV has 56 rows.

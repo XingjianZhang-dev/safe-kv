@@ -1,0 +1,17 @@
+{
+  "input": "data/noise_sweep_16_250.jsonl",
+  "output": "../rebuttal_experiments/data/single_nested_n1_zero_layout101.jsonl",
+  "retrieval_mode": "zero",
+  "shuffle_seed": 101,
+  "max_documents": 1,
+  "nested_single_evidence": true,
+  "num_examples": 50,
+  "document_count_distribution": {
+    "1": 50
+  },
+  "earliest_evidence_position_distribution": {
+    "0": 50
+  },
+  "mean_earliest_evidence_position": 0,
+  "perfect_gold_score_separation_rate": null
+}

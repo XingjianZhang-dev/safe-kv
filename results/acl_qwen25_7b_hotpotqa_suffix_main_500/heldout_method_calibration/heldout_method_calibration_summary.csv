@@ -1,0 +1,4 @@
+target_budget,num_splits,selection_counts,mean_test_answer_equivalence,ci_low_test_answer_equivalence,ci_high_test_answer_equivalence,mean_test_changed_wrong_rate,mean_test_patch_ratio,mean_test_avg_kl
+0.82,200,"{""random_suffix_closure_k2_seeded"": 146, ""risk_guided_suffix_closure_k1"": 36, ""risk_guided_suffix_closure_k2"": 18}",0.9402142857142857,0.9057142857142857,0.9971428571428571,0.05154285714285714,0.8418810623583868,0.24701109905266233
+0.89,200,"{""query_similarity_suffix_closure_k2"": 83, ""random_suffix_closure_k2_seeded"": 32, ""risk_guided_suffix_closure_k1"": 85}",0.9677,0.9057142857142857,0.9971428571428571,0.028071428571428574,0.8764968305257106,0.10265308361749642
+0.95,200,"{""risk_guided_suffix_closure_k1"": 166, ""risk_guided_suffix_closure_k2"": 34}",0.9957571428571428,0.9942857142857143,1.0,0.004242857142857143,0.9011292494421553,0.009567337885735485

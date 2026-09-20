@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrrrr}
+\toprule
+Data & id $=$ pos. & Query K1 & Query K2 & Hybrid K1 & Risk K1 & Risk K2 & Q-K1 tie $\to$ evid. \\
+\midrule
+HotpotQA-500, gold-first & yes & 183/500 & 183/500 & 38/500 & 7/500 & 1/500 & 125/183 \\
+2Wiki-500, gold-first & yes & 191/500 & 174/500 & 50/500 & 6/500 & 0/500 & 179/191 \\
+2Wiki-100, gold-first (Table 3) & yes & 34/100 & 39/100 & 10/100 & 1/100 & 0/100 & 30/34 \\
+HotpotQA-100, score-neutral shuffle 101 & yes & 40/100 & 52/100 & 26/100 & 7/100 & 2/100 & 12/40 \\
+2Wiki-100, score-neutral shuffle 101 & yes & 34/100 & 44/100 & 21/100 & 5/100 & 3/100 & 17/34 \\
+Position sweep (Noise16, 19 docs) & no & 250/250 & 250/250 & 173/250 & 0/250 & 16/250 & 250/250 \\
+Noise16-250 & no & 150/250 & 213/250 & 95/250 & 2/250 & 3/250 & 50/150 \\
+Noisy diagnostic (Mistral rows, first 250) & no & 197/250 & 91/250 & 106/250 & 0/250 & 3/250 & 197/197 \\
+Noise64-50 & no & 30/50 & 41/50 & 20/50 & 1/50 & 1/50 & 10/30 \\
+Nested $N{=}16$, layout 101 & yes & 50/50 & 50/50 & 50/50 & 35/50 & 28/50 & 1/50 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Tie-break audit of the shipped selectors. For each dataset and selector, the middle columns count examples whose suffix-recompute start would change if score ties were broken by descending instead of ascending document id, i.e., examples where the id tie-break decides the start (for hybrid K1, through its query top-1 component). Wherever ids equal positions, the ascending rule always picks the earlier start, i.e., a longer suffix. ``id $=$ pos.'' states whether document ids equal prompt positions in that file. The last column (``Q-K1 tie $\to$ evid.'') counts, among Query-K1 examples with a top-1 tie, how many the ascending-id rule resolves to a gold evidence document. In the synthetic generator ids are assigned before shuffling and evidence documents receive the smallest ids, so a tie there favors evidence; in the external conversions ids equal prompt positions and evidence documents come first, so a tie favors evidence there too; only the score-neutral shuffled variants make the tie-break position-only. The risk selector is rarely tie-decided when retrieval scores are present; on the zero-score nested inputs it is tie-decided in 35 and 28 of 50 examples.}
+\label{tab:app-tie-break}
+\end{table*}

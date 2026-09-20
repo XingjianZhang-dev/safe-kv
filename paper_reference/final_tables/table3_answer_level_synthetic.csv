@@ -1,0 +1,33 @@
+Model,Split,Method,AnsEq,EM,F1,ChgWrong,Patch,KL
+Qwen0.5B,clean,Full prefill,1.00,0.98,0.98,0,0.00,0.000
+Qwen0.5B,clean,Prefix-conditioned,0.85,0.85,0.88,14,0.00,0.206
+Qwen0.5B,clean,Oracle doc patch,0.97,0.99,0.99,1,0.46,0.090
+Qwen0.5B,clean,Query K2,0.97,0.99,0.99,1,0.54,0.077
+Qwen0.5B,clean,Entity K2,0.97,0.99,0.99,1,0.54,0.078
+Qwen0.5B,clean,Safe gate 0.45,0.98,0.98,0.98,1,0.36,0.097
+Qwen0.5B,clean,Safe gate 0.60,0.92,0.92,0.92,7,0.11,0.132
+Qwen0.5B,clean,Random K2,0.96,0.96,0.96,3,0.53,0.089
+Qwen0.5B,noisy,Full prefill,1.00,0.83,0.86,0,0.00,0.000
+Qwen0.5B,noisy,Prefix-conditioned,0.69,0.74,0.78,23,0.00,0.541
+Qwen0.5B,noisy,Oracle doc patch,0.90,0.83,0.86,6,0.42,0.128
+Qwen0.5B,noisy,Query K2,0.89,0.82,0.85,7,0.55,0.084
+Qwen0.5B,noisy,Entity K2,0.90,0.82,0.86,7,0.55,0.083
+Qwen0.5B,noisy,Safe gate 0.45,0.86,0.79,0.82,10,0.54,0.100
+Qwen0.5B,noisy,Safe gate 0.60,0.81,0.76,0.79,14,0.28,0.241
+Qwen0.5B,noisy,Random K2,0.83,0.83,0.86,11,0.54,0.235
+Qwen1.5B,clean,Full prefill,1.00,0.91,0.93,0,0.00,0.000
+Qwen1.5B,clean,Prefix-conditioned,0.88,0.86,0.88,11,0.00,0.174
+Qwen1.5B,clean,Oracle doc patch,0.96,0.89,0.91,3,0.46,0.018
+Qwen1.5B,clean,Query K2,0.96,0.89,0.91,3,0.54,0.016
+Qwen1.5B,clean,Entity K2,0.96,0.89,0.91,3,0.54,0.016
+Qwen1.5B,clean,Safe gate 0.45,0.96,0.89,0.91,3,0.36,0.017
+Qwen1.5B,clean,Safe gate 0.60,0.92,0.88,0.90,6,0.11,0.055
+Qwen1.5B,clean,Random K2,0.93,0.88,0.91,6,0.53,0.050
+Qwen1.5B,noisy,Full prefill,1.00,0.83,0.86,0,0.00,0.000
+Qwen1.5B,noisy,Prefix-conditioned,0.74,0.76,0.80,20,0.00,0.455
+Qwen1.5B,noisy,Oracle doc patch,0.89,0.77,0.80,10,0.42,0.125
+Qwen1.5B,noisy,Query K2,0.92,0.81,0.83,6,0.55,0.120
+Qwen1.5B,noisy,Entity K2,0.92,0.80,0.83,6,0.55,0.119
+Qwen1.5B,noisy,Safe gate 0.45,0.92,0.80,0.83,6,0.54,0.191
+Qwen1.5B,noisy,Safe gate 0.60,0.84,0.75,0.78,13,0.28,0.378
+Qwen1.5B,noisy,Random K2,0.86,0.84,0.87,8,0.54,0.215

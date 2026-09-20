@@ -1,0 +1,13 @@
+method,metric,point,ci_low,ci_high,n_examples
+risk_guided_suffix_closure_k1,answer_equivalence,0.64,0.5,0.76,50
+risk_guided_suffix_closure_k1,gold_em,0.6,0.46,0.72,50
+risk_guided_suffix_closure_k1,gold_f1,0.6613053613053613,0.5427195027195028,0.7737373737373737,50
+risk_guided_suffix_closure_k1,changed_wrong_rate,0.36,0.24,0.5,50
+risk_guided_suffix_closure_k1,patch_ratio,0.5191843881837019,0.4421674801324378,0.5996665519071005,50
+risk_guided_suffix_closure_k1,avg_kl,2.2311312802216934,0.993842634785001,3.6534418843091876,50
+actual_recompute::risk_guided_suffix_closure_k1,answer_equivalence,0.44,0.3,0.58,50
+actual_recompute::risk_guided_suffix_closure_k1,gold_em,0.44,0.3,0.58,50
+actual_recompute::risk_guided_suffix_closure_k1,gold_f1,0.5577036297036296,0.44413133533133536,0.676061494061494,50
+actual_recompute::risk_guided_suffix_closure_k1,changed_wrong_rate,0.54,0.4,0.68,50
+actual_recompute::risk_guided_suffix_closure_k1,patch_ratio,0.5191843881837019,0.4421674801324378,0.5996665519071005,50
+actual_recompute::risk_guided_suffix_closure_k1,avg_kl,3.5102600221620595,1.9167849225352156,5.234684499244236,50

@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "interpretation": "Execution-partition positive controls relative to one-shot full prefill; these are not mathematical upper bounds because exact-answer behavior is non-monotonic under finite precision and greedy near-ties.",
+  "num_runs": 8,
+  "num_failed_validators": 0,
+  "original_order": [
+    {
+      "dataset": "hotpotqa",
+      "num_examples": 500,
+      "donor_normalized_exact": 1.0,
+      "donor_generated_token_exact": 1.0,
+      "actual_normalized_exact": 1.0,
+      "actual_generated_token_exact": 1.0,
+      "donor_actual_same_generated_tokens": 1.0,
+      "mean_recomputed_context_token_ratio": 0.9658823807537263
+    },
+    {
+      "dataset": "2wiki",
+      "num_examples": 500,
+      "donor_normalized_exact": 0.998,
+      "donor_generated_token_exact": 0.998,
+      "actual_normalized_exact": 0.996,
+      "actual_generated_token_exact": 0.996,
+      "donor_actual_same_generated_tokens": 0.998,
+      "mean_recomputed_context_token_ratio": 0.9600986596321174
+    }
+  ],
+  "neutral_order_seed_runs": [
+    {
+      "dataset": "hotpotqa",
+      "order_seed": 101,
+      "num_examples": 100,
+      "actual_generated_token_exact": 1.0,
+      "donor_generated_token_exact": 0.99,
+      "donor_actual_same_generated_tokens": 0.99
+    },
+    {
+      "dataset": "hotpotqa",
+      "order_seed": 202,
+      "num_examples": 100,
+      "actual_generated_token_exact": 0.99,
+      "donor_generated_token_exact": 0.99,
+      "donor_actual_same_generated_tokens": 1.0
+    },
+    {
+      "dataset": "hotpotqa",
+      "order_seed": 303,
+      "num_examples": 100,
+      "actual_generated_token_exact": 0.97,
+      "donor_generated_token_exact": 0.99,
+      "donor_actual_same_generated_tokens": 0.98
+    },
+    {
+      "dataset": "2wiki",
+      "order_seed": 101,
+      "num_examples": 100,
+      "actual_generated_token_exact": 0.99,
+      "donor_generated_token_exact": 0.99,
+      "donor_actual_same_generated_tokens": 0.98
+    },
+    {
+      "dataset": "2wiki",
+      "order_seed": 202,
+      "num_examples": 100,
+      "actual_generated_token_exact": 1.0,
+      "donor_generated_token_exact": 0.99,
+      "donor_actual_same_generated_tokens": 0.99
+    },
+    {
+      "dataset": "2wiki",
+      "order_seed": 303,
+      "num_examples": 100,
+      "actual_generated_token_exact": 0.99,
+      "donor_generated_token_exact": 1.0,
+      "donor_actual_same_generated_tokens": 0.99
+    }
+  ],
+  "neutral_order_actual_generated_token_exact_across_seed": {
+    "hotpotqa_mean": 0.9866666666666667,
+    "hotpotqa_min": 0.97,
+    "hotpotqa_max": 1.0,
+    "2wiki_mean": 0.9933333333333333,
+    "2wiki_min": 0.99,
+    "2wiki_max": 1.0
+  }
+}

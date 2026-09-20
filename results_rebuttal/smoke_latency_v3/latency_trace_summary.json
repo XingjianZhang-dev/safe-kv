@@ -1,0 +1,133 @@
+{
+  "scope": "warm repeated batch-1 time-to-first-logit with one composed cache resident on GPU; SAFE method timings include CPU selector and range planning; excludes cache construction, scheduling, lookup, transfer, token emission, and concurrent-serving effects",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "config_path": "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/configs/acl_qwen25_7b_2wiki_500.yaml",
+  "actual_device": "cuda",
+  "torch_dtype": "float16",
+  "data_path": "/workspace/safekv_acl_submission_files/rebuttal_experiments/data/2wiki_zero_shuffle101.jsonl",
+  "gpu": "NVIDIA L40S",
+  "num_examples": 2,
+  "repeats": 2,
+  "random_seed": 0,
+  "warmup_examples": 1,
+  "per_example_method_warmups": 1,
+  "method_summary": [
+    {
+      "method": "full_prefill",
+      "n": 4,
+      "mean_time_to_first_logit_s": 0.07673331955447793,
+      "median_time_to_first_logit_s": 0.07667611353099346,
+      "p95_time_to_first_logit_s": 0.08432347467169166,
+      "sequential_first_logits_per_s": 13.032148300192272,
+      "avg_context_recomputed_token_ratio": 1.0,
+      "avg_peak_cuda_memory_mb": 14984.207275390625,
+      "avg_incremental_peak_cuda_memory_mb": 310.239013671875,
+      "avg_prompt_length": 881.0,
+      "median_speedup_vs_full_prefill": 1.0,
+      "p95_speedup_vs_full_prefill": 1.0
+    },
+    {
+      "method": "prefix_query",
+      "n": 4,
+      "mean_time_to_first_logit_s": 0.033789409790188074,
+      "median_time_to_first_logit_s": 0.03379933722317219,
+      "p95_time_to_first_logit_s": 0.03564181411638856,
+      "sequential_first_logits_per_s": 29.595071538964397,
+      "avg_context_recomputed_token_ratio": 0.0,
+      "avg_peak_cuda_memory_mb": 14735.374267578125,
+      "avg_incremental_peak_cuda_memory_mb": 61.406005859375,
+      "avg_prompt_length": 881.0,
+      "median_speedup_vs_full_prefill": 2.2685685528302537,
+      "p95_speedup_vs_full_prefill": 2.365858101283308
+    },
+    {
+      "method": "query_suffix_k1",
+      "n": 4,
+      "mean_time_to_first_logit_s": 0.0821254812180996,
+      "median_time_to_first_logit_s": 0.08208341896533966,
+      "p95_time_to_first_logit_s": 0.08924937602132559,
+      "sequential_first_logits_per_s": 12.176488772641864,
+      "avg_context_recomputed_token_ratio": 0.5002949036182298,
+      "avg_peak_cuda_memory_mb": 14890.59765625,
+      "avg_incremental_peak_cuda_memory_mb": 216.62939453125,
+      "avg_prompt_length": 881.0,
+      "median_speedup_vs_full_prefill": 0.9341242664778684,
+      "p95_speedup_vs_full_prefill": 0.9448074421443919
+    },
+    {
+      "method": "risk_suffix_k1",
+      "n": 4,
+      "mean_time_to_first_logit_s": 0.0721161961555481,
+      "median_time_to_first_logit_s": 0.07237680815160275,
+      "p95_time_to_first_logit_s": 0.07361363209784032,
+      "sequential_first_logits_per_s": 13.866510621873216,
+      "avg_context_recomputed_token_ratio": 0.2241176651460262,
+      "avg_peak_cuda_memory_mb": 14819.3896484375,
+      "avg_incremental_peak_cuda_memory_mb": 145.42138671875,
+      "avg_prompt_length": 881.0,
+      "median_speedup_vs_full_prefill": 1.0594016990965567,
+      "p95_speedup_vs_full_prefill": 1.1454872184491158
+    },
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "n": 4,
+      "mean_time_to_first_logit_s": 0.0831509311683476,
+      "median_time_to_first_logit_s": 0.08315535355359316,
+      "p95_time_to_first_logit_s": 0.0901103694923222,
+      "sequential_first_logits_per_s": 12.02632352938294,
+      "avg_context_recomputed_token_ratio": 0.5002949036182298,
+      "avg_peak_cuda_memory_mb": 14890.59765625,
+      "avg_incremental_peak_cuda_memory_mb": 216.62939453125,
+      "avg_prompt_length": 881.0,
+      "median_speedup_vs_full_prefill": 0.9220827072976864,
+      "p95_speedup_vs_full_prefill": 0.9357799235178631
+    },
+    {
+      "method": "risk_suffix_k2",
+      "n": 4,
+      "mean_time_to_first_logit_s": 0.08162745228037238,
+      "median_time_to_first_logit_s": 0.08152986783534288,
+      "p95_time_to_first_logit_s": 0.08993666656315327,
+      "sequential_first_logits_per_s": 12.25078049190142,
+      "avg_context_recomputed_token_ratio": 0.4315530099736124,
+      "avg_peak_cuda_memory_mb": 14875.22509765625,
+      "avg_incremental_peak_cuda_memory_mb": 201.2568359375,
+      "avg_prompt_length": 881.0,
+      "median_speedup_vs_full_prefill": 0.9404665500727656,
+      "p95_speedup_vs_full_prefill": 0.9375872810727308
+    }
+  ],
+  "selector_summary": [
+    {
+      "method": "hybrid_query_risk_union_suffix_k1",
+      "num_examples": 2,
+      "median_of_example_medians_ms": 1.39519575,
+      "p95_of_example_medians_ms": 1.438825725
+    },
+    {
+      "method": "query_similarity_doc_patch_k1",
+      "num_examples": 2,
+      "median_of_example_medians_ms": 0.12817925,
+      "p95_of_example_medians_ms": 0.13897722499999998
+    },
+    {
+      "method": "risk_guided_doc_patch_k1",
+      "num_examples": 2,
+      "median_of_example_medians_ms": 1.2607719999999998,
+      "p95_of_example_medians_ms": 1.30793245
+    },
+    {
+      "method": "risk_guided_doc_patch_k2",
+      "num_examples": 2,
+      "median_of_example_medians_ms": 1.2534542499999999,
+      "p95_of_example_medians_ms": 1.3078842249999998
+    }
+  ],
+  "cache_build_summary": {
+    "scope": "one-shot prefix-conditioned cache materialization; not part of request timing",
+    "mean_s": 0.20565715618431568,
+    "median_s": 0.20565715618431568,
+    "p95_s": 0.2130157982930541,
+    "mean_incremental_peak_cuda_memory_mb": 191.430419921875
+  }
+}

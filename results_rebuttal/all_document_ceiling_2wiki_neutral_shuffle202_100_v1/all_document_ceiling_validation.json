@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "interpretation": "all-document execution-partition positive control; not a mathematical upper bound on exact-answer preservation",
+  "num_rows": 200,
+  "expected_rows": 200,
+  "num_examples": 100,
+  "num_failures": 0,
+  "failures": [],
+  "method_summaries": [
+    {
+      "method": "all_document_patch",
+      "num_examples": 100,
+      "normalized_answer_exact_rate": 1.0,
+      "postprocessed_string_exact_rate": 0.99,
+      "generated_token_exact_rate": 0.99,
+      "mean_first_token_kl": 2.238683226280998e-05,
+      "max_first_token_kl": 0.00047497148625552654,
+      "mean_patched_token_ratio": 0.9598052651079036
+    },
+    {
+      "method": "actual_recompute::all_document_patch",
+      "num_examples": 100,
+      "normalized_answer_exact_rate": 1.0,
+      "postprocessed_string_exact_rate": 1.0,
+      "generated_token_exact_rate": 1.0,
+      "mean_first_token_kl": 3.537444438685005e-05,
+      "max_first_token_kl": 0.0007274126983247697,
+      "mean_patched_token_ratio": 0.9598052651079036
+    }
+  ],
+  "paired_donor_actual": {
+    "num_examples": 100,
+    "same_generated_tokens_rate": 0.99,
+    "same_postprocessed_string_rate": 0.99,
+    "same_normalized_flag_rate": 1.0
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "config_path": "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/configs/acl_qwen25_7b_2wiki_500.yaml",
+  "config_sha256": "6e48727a34235cbbaf1f3090c244aff1608556096285edd8520e19d267b0723a",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "model_dtype": "float16",
+  "max_examples": 2,
+  "probabilities": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "mask_seeds": [
+    13,
+    29,
+    47
+  ],
+  "methods": [
+    "mixed_no_repair",
+    "query_actual_doc_only_k1",
+    "query_actual_downstream_w4_k1",
+    "query_actual_suffix_k1",
+    "risk_actual_suffix_k1",
+    "risk_actual_suffix_k2",
+    "earliest_stale_actual_suffix_oracle"
+  ],
+  "data_specs": [
+    {
+      "label": "N16",
+      "path": "/workspace/safekv_acl_submission_files/rebuttal_experiments/data/single_nested_n16_zero_layout101.jsonl",
+      "sha256": "e60da5b2032bb55747ed004a1867e7c3a3fd75214421168b4b072a90d6918329"
+    }
+  ],
+  "implementation_sha256": {
+    "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/code/scripts/run_staleness_doccount_sweep.py": "208c4681bf4912826b4ba5a699efaf6ea85030fd175f658fbaae55bc02bd95e8",
+    "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/code/scripts/run_answer_eval.py": "07c508165ca920080806feb2ca2afffae8aaa1130a982a580e8fbe5e31b78179",
+    "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/code/safekv/doc_selector.py": "76e65fc672e90f4c9768e19b9e6f2cd4ac84a4ced1187253a03590751b5cb28c",
+    "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/code/safekv/patch_recompute.py": "1796fc59157bcdff3285597424b289116901022e9f05d8e097d16948160d48b8"
+  }
+}

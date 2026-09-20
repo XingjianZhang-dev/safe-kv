@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "config_path": "/workspace/safekv_acl_submission_files/safekv_acl_supplement 2/configs/acl_qwen25_7b_hotpotqa_500.yaml",
+  "config_sha256": "af44b56f3b0ed9af2e7daa47f9964dae21809332d8a0059a2305223a6203c429",
+  "data_path": "/workspace/safekv_acl_submission_files/rebuttal_experiments/data/hotpot_zero_shuffle202.jsonl",
+  "data_sha256": "db2a58f99ec6d891300309940cb98de47086780e4b72acdb57959cf7047c679c",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "model_dtype": "float16",
+  "seed": 13,
+  "random_seed": 0,
+  "max_examples": 100,
+  "max_examples_per_category": null,
+  "methods": [
+    "actual_recompute::query_similarity_suffix_closure_k2",
+    "actual_recompute::risk_guided_suffix_closure_k1",
+    "actual_recompute::risk_guided_suffix_closure_k2",
+    "actual_recompute::hybrid_query_risk_union_suffix_k1"
+  ],
+  "selector_artifact": null,
+  "selector_artifact_sha256": null
+}

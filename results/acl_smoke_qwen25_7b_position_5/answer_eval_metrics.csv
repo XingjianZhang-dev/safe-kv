@@ -1,0 +1,16 @@
+example_id,category,method,generated_answer,full_prefill_answer,gold_answer,normalized_generated_answer,normalized_full_prefill_answer,normalized_gold_answer,answer_equivalence_to_full_prefill,gold_exact_match,gold_token_f1,answer_contains_gold,answer_changed_from_full,answer_changed_and_gold_wrong,patched_doc_count,patched_token_count,patched_token_ratio,first_token_kl_full_to_method,top1_match,prompt_length,query_length
+single_0000_pos_first,single_evidence,full_prefill,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,0.0,True,434,27
+single_0000_pos_first,single_evidence,prefix_conditioned_naive_global,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,2.369313136796336e-07,True,434,27
+single_0000_pos_first,single_evidence,oracle_evidence_doc_patch,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,1,50,0.12285012285012285,2.3691984551987844e-07,True,434,27
+single_0000_pos_early,single_evidence,full_prefill,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,0.0,True,439,27
+single_0000_pos_early,single_evidence,prefix_conditioned_naive_global,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,2.3679785954300314e-07,True,439,27
+single_0000_pos_early,single_evidence,oracle_evidence_doc_patch,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,1,50,0.12135922330097088,1.1769593299959524e-07,True,439,27
+single_0000_pos_middle,single_evidence,full_prefill,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,0.0,True,430,27
+single_0000_pos_middle,single_evidence,prefix_conditioned_naive_global,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,0.0,True,430,27
+single_0000_pos_middle,single_evidence,oracle_evidence_doc_patch,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,1,50,0.12406947890818859,1.1801974153513584e-07,True,430,27
+single_0000_pos_late,single_evidence,full_prefill,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,0.0,True,428,27
+single_0000_pos_late,single_evidence,prefix_conditioned_naive_global,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,0.0,True,428,27
+single_0000_pos_late,single_evidence,oracle_evidence_doc_patch,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,1,50,0.12468827930174564,7.138012279028771e-07,True,428,27
+single_0000_pos_last,single_evidence,full_prefill,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,0.0,True,433,27
+single_0000_pos_last,single_evidence,prefix_conditioned_naive_global,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,0,0,0.0,0.0,True,433,27
+single_0000_pos_last,single_evidence,oracle_evidence_doc_patch,Mira Solen,Mira Solen,Mira Solen,mira solen,mira solen,mira solen,True,True,1.0,True,False,False,1,51,0.12561576354679804,0.0,True,433,27

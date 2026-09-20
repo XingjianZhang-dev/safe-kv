@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local reproduction outputs and model caches (never committed)
+reproduction_runs/
+.hf_cache/
+*.safetensors
+*.bin
+*.pt
+
+# Raw per-example outputs restored from the release tarball (see RAW_OUTPUTS_IN_RELEASE.txt next to each run)
+results/paper_tables/results_paper/heldout_gate_calibration_outputs.jsonl
+results_rebuttal/staleness_doccount_full_50_v3/staleness_doccount_outputs.jsonl
+results_august/run_registry/qwen25_query_attention_hotpotqa_natural_test_n100_v1/query_attention_local_outputs.jsonl
+results_august/run_registry/qwen25_query_attention_hotpotqa_shuffle_test_n100_v1/query_attention_local_outputs.jsonl
+results_august/run_registry/qwen25_query_attention_hotpotqa_bm25_test_n100_v1/query_attention_local_outputs.jsonl
+results/metrics/results_budget_gate/qwen05_clean/budget_gate_metrics.csv
+results/metrics/results_budget_gate/qwen05_external/budget_gate_metrics.csv
+results/metrics/results_budget_gate/qwen05_noisy/budget_gate_metrics.csv
+results/metrics/results_budget_gate/qwen15_clean/budget_gate_metrics.csv
+results/metrics/results_budget_gate/qwen15_external/budget_gate_metrics.csv
+results/metrics/results_budget_gate/qwen15_noisy/budget_gate_metrics.csv
+safe-kv-raw-outputs-*.tar.gz
+RAW_OUTPUTS_MANIFEST.tsv

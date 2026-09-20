@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "reference_results_dir": "/workspace/safekv_acl_submission_files/rebuttal_experiments/actual_vs_copy_2wiki_500_l40s_v2",
+  "candidate_results_dir": "/workspace/safekv_acl_submission_files/rebuttal_experiments/smoke_answer_hardened_2wiki_2_v2",
+  "examples": 2,
+  "methods": 4,
+  "fields_per_row": 9,
+  "field_comparisons": 72,
+  "fields": [
+    "full_prefill_answer",
+    "full_prefill_token_ids",
+    "generated_answer",
+    "generated_token_ids",
+    "selected_doc_ids",
+    "patched_token_count",
+    "patched_token_ratio",
+    "first_token_kl_full_to_method",
+    "answer_equivalence_to_full_prefill"
+  ],
+  "num_differences": 0,
+  "note": "Fresh, non-resumed regression after adding prompt-cache freezing, suffix-contract assertions, and manifest provenance. The answer-forward numerical semantics were intentionally kept unchanged."
+}

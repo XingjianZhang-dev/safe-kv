@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safe-kv"
+version = "0.0.1"
+description = "SAFE-KV v0 feasibility experiment"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+  "torch>=2.0",
+  "transformers>=4.40,<5.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["safekv*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

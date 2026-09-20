@@ -1,0 +1,50 @@
+seed: 13
+
+model:
+  name: "/root/autodl-tmp/models/Qwen2.5-7B-Instruct-modelscope"
+  dtype: "float16"
+  device: "cuda"
+  trust_remote_code: true
+
+data:
+  path: "/root/autodl-tmp/safekv_ipm_baseline/safekv_acl_supplement 2/data/external_2wiki_500.jsonl"
+  max_examples_per_category: null
+
+generation:
+  max_new_tokens: 16
+  do_sample: false
+  temperature: 0.0
+  stop_on_newline: true
+  stop_strings: ["Human:", "[Document", "Question:", "Answer:"]
+  prefill_mode: "manual_position_ids"
+
+experiment:
+  prompt_format: "chat_rag"
+  cache_position_mode: "global"
+  budgets: [0.10, 0.20, 0.40]
+  methods:
+    - prefix_conditioned_naive_global
+    - oracle_evidence_doc_patch
+    - query_similarity_doc_patch_k2
+    - entity_overlap_doc_patch_k2
+    - risk_guided_doc_patch_k2
+    - random_doc_patch_k2_seeded
+
+prompt:
+  boundary_window_tokens: 8
+  adaptive_boundary_window: true
+
+risk:
+  similarity_backend: "tfidf"
+  weights:
+    retrieval_score: 0.25
+    query_similarity: 0.30
+    entity_overlap: 0.20
+    conflict_indicator: 0.15
+    cross_doc_shared_entity: 0.10
+
+recompute:
+  selection_unit: "span"
+  expand_window_tokens: 4
+  allow_budget_overshoot: true
+  max_budget_overshoot_ratio: 0.03

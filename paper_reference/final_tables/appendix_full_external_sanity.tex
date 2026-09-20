@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrrr}
+\toprule
+Data & Method & Ans. eq. & Gold EM & Gold F1 & Changed-wrong & Patch \\
+\midrule
+HotpotQA-500 & Full prefill & 1.000 & 0.544 & 0.708 & 0 & 0.000 \\
+HotpotQA-500 & Prefix-comp. & 0.472 & 0.354 & 0.489 & 241 & 0.000 \\
+HotpotQA-500 & Query suffix K1 & 0.930 & 0.522 & 0.696 & 32 & 0.842 \\
+HotpotQA-500 & Query suffix K2 & 0.958 & 0.534 & 0.704 & 18 & 0.883 \\
+HotpotQA-500 & Random suffix K2 & 0.918 & 0.528 & 0.696 & 35 & 0.814 \\
+HotpotQA-500 & Risk suffix K1 & 0.996 & 0.542 & 0.708 & 2 & 0.892 \\
+HotpotQA-500 & Hybrid suffix K1 & 0.996 & 0.542 & 0.708 & 2 & 0.904 \\
+HotpotQA-500 & Risk suffix K2 & 0.998 & 0.544 & 0.709 & 1 & 0.948 \\
+\midrule
+2Wiki-500 & Full prefill & 1.000 & 0.452 & 0.546 & 0 & 0.000 \\
+2Wiki-500 & Prefix-comp. & 0.378 & 0.312 & 0.386 & 272 & 0.000 \\
+2Wiki-500 & Query suffix K2 & 0.972 & 0.444 & 0.538 & 12 & 0.885 \\
+2Wiki-500 & Random suffix K2 & 0.834 & 0.434 & 0.517 & 66 & 0.711 \\
+2Wiki-500 & Risk suffix K1 & 0.970 & 0.442 & 0.536 & 12 & 0.813 \\
+2Wiki-500 & Margin-adaptive & 0.972 & 0.440 & 0.534 & 12 & 0.838 \\
+2Wiki-500 & Hybrid suffix K1 & 0.974 & 0.442 & 0.536 & 11 & 0.842 \\
+2Wiki-500 & Risk suffix K2 & 0.984 & 0.452 & 0.546 & 6 & 0.929 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Full Qwen2.5-7B external answer-level results.}
+\label{tab:app-external}
+\end{table*}

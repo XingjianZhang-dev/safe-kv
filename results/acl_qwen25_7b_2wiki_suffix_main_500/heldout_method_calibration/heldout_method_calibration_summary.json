@@ -1,0 +1,66 @@
+{
+  "source": "results/acl_qwen25_7b_2wiki_suffix_main_500/answer_eval_outputs.jsonl",
+  "candidate_methods": [
+    "random_suffix_closure_k2_seeded",
+    "query_similarity_suffix_closure_k2",
+    "risk_guided_suffix_closure_k1",
+    "risk_guided_margin_adaptive_suffix_m0_05",
+    "hybrid_query_risk_union_suffix_k1",
+    "risk_guided_suffix_closure_k2"
+  ],
+  "target_budgets": [
+    0.82,
+    0.85,
+    0.89,
+    0.94
+  ],
+  "num_splits": 200,
+  "calibration_fraction": 0.3,
+  "seed": 13,
+  "aggregate": [
+    {
+      "target_budget": 0.82,
+      "num_splits": 200,
+      "selection_counts": "{\"hybrid_query_risk_union_suffix_k1\": 2, \"random_suffix_closure_k2_seeded\": 56, \"risk_guided_suffix_closure_k1\": 142}",
+      "mean_test_answer_equivalence": 0.9319857142857143,
+      "ci_low_test_answer_equivalence": 0.8199285714285715,
+      "ci_high_test_answer_equivalence": 0.98,
+      "mean_test_changed_wrong_rate": 0.054000000000000006,
+      "mean_test_patch_ratio": 0.7865157544441006,
+      "mean_test_avg_kl": 0.2572535056016239
+    },
+    {
+      "target_budget": 0.85,
+      "num_splits": 200,
+      "selection_counts": "{\"hybrid_query_risk_union_suffix_k1\": 53, \"risk_guided_margin_adaptive_suffix_m0_05\": 22, \"risk_guided_suffix_closure_k1\": 125}",
+      "mean_test_answer_equivalence": 0.9704571428571428,
+      "ci_low_test_answer_equivalence": 0.96,
+      "ci_high_test_answer_equivalence": 0.98,
+      "mean_test_changed_wrong_rate": 0.0239,
+      "mean_test_patch_ratio": 0.8238433290077697,
+      "mean_test_avg_kl": 0.0866706492981066
+    },
+    {
+      "target_budget": 0.89,
+      "num_splits": 200,
+      "selection_counts": "{\"hybrid_query_risk_union_suffix_k1\": 44, \"query_similarity_suffix_closure_k2\": 57, \"risk_guided_margin_adaptive_suffix_m0_05\": 19, \"risk_guided_suffix_closure_k1\": 80}",
+      "mean_test_answer_equivalence": 0.9697,
+      "ci_low_test_answer_equivalence": 0.96,
+      "ci_high_test_answer_equivalence": 0.9772142857142856,
+      "mean_test_changed_wrong_rate": 0.025285714285714286,
+      "mean_test_patch_ratio": 0.842286892521024,
+      "mean_test_avg_kl": 0.10113276017983225
+    },
+    {
+      "target_budget": 0.94,
+      "num_splits": 200,
+      "selection_counts": "{\"hybrid_query_risk_union_suffix_k1\": 12, \"query_similarity_suffix_closure_k2\": 20, \"risk_guided_margin_adaptive_suffix_m0_05\": 4, \"risk_guided_suffix_closure_k1\": 16, \"risk_guided_suffix_closure_k2\": 148}",
+      "mean_test_answer_equivalence": 0.9791714285714286,
+      "ci_low_test_answer_equivalence": 0.96,
+      "ci_high_test_answer_equivalence": 0.9886428571428572,
+      "mean_test_changed_wrong_rate": 0.01637142857142857,
+      "mean_test_patch_ratio": 0.907967381313598,
+      "mean_test_avg_kl": 0.049862749220058615
+    }
+  ]
+}

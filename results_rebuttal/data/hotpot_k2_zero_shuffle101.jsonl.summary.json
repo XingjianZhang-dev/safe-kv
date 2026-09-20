@@ -1,0 +1,16 @@
+{
+  "input": "data/external_hotpotqa_500.jsonl",
+  "output": "../rebuttal_experiments/data/hotpot_k2_zero_shuffle101.jsonl",
+  "retrieval_mode": "zero",
+  "shuffle_seed": 101,
+  "max_documents": 2,
+  "num_examples": 500,
+  "document_count_distribution": {
+    "2": 500
+  },
+  "earliest_evidence_position_distribution": {
+    "0": 500
+  },
+  "mean_earliest_evidence_position": 0,
+  "perfect_gold_score_separation_rate": null
+}

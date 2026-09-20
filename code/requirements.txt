@@ -1,0 +1,5 @@
+pytest>=8.0
+PyYAML>=6.0
+torch>=2.0
+transformers>=4.40,<5.0
+datasets>=2.18

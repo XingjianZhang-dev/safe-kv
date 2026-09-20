@@ -1,0 +1,6 @@
+# CPU test log: fresh clone of the repository tree, clean virtual environment built from requirements.txt
+# date: 2026-09-20T02:33:09Z; host: macOS arm64; python: 3.13.5; torch: 2.8.0 (CPU); transformers: 4.57.6
+# command: CUDA_VISIBLE_DEVICES='' PYTHONHASHSEED=0 PYTHONPATH=code python -B -m pytest -q -p no:cacheprovider code/tests
+.............................s.......................................... [ 52%]
+................................................................         [100%]
+135 passed, 1 skipped in 1.65s

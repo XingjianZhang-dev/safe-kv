@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\begin{tabular}{lrrrr}
+\toprule
+Path & Ans. eq. [95\% CI] & Token exact & Gold EM & Changed-wrong \\
+\midrule
+Full prefill & 1.000 & 1.000 & 0.920 & 0 \\
+Donor-copy Risk K1 (diagnostic) & 0.640 [0.50, 0.76] & 0.640 & 0.600 & 18 \\
+Actual-forwarding Risk K1 & 0.440 [0.30, 0.58] & 0.440 & 0.440 & 27 \\
+\bottomrule
+\end{tabular}
+\caption{Noise64 quality gate on the exact 50 examples and suffixes timed in Table~\ref{tab:latency-main} (mean repair ratio 0.519 for both paths; identical selected documents). Donor-copy and actual forwarding differ by +0.20 [0.06, 0.34] in normalized answer preservation (paired bootstrap). The mechanical median speed-up of Risk K1 on this workload therefore does not correspond to a behavior-preserving operating point.}
+\label{tab:app-noise64-gate}
+\end{table*}

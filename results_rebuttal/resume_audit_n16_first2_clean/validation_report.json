@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "num_rows": 210,
+  "expected_rows": 210,
+  "num_unique_keys": 210,
+  "paired_example_count": 2,
+  "num_failures": 0,
+  "failures": [],
+  "diagnostics": {
+    "oracle_first_token_kl_max": 8.339628466969007e-12,
+    "oracle_first_token_kl_mean": 2.470269548269198e-12,
+    "observed_probabilities": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "observed_mask_seeds": [
+      13,
+      29,
+      47
+    ]
+  }
+}

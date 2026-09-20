@@ -1,0 +1,189 @@
+{
+  "num_rows": 1000,
+  "category_counts": {
+    "external_hotpotqa": 500
+  },
+  "method_level": {
+    "actual_recompute::risk_guided_suffix_closure_k1": {
+      "num_rows": 500,
+      "num_distinct_examples": 500,
+      "answer_equivalence_to_full_prefill": 0.998,
+      "gold_exact_match": 0.542,
+      "gold_token_f1": 0.7080522235074868,
+      "answer_contains_gold_rate": 0.64,
+      "answer_changed_from_full_rate": 0.002,
+      "answer_changed_but_gold_correct_count": 0,
+      "answer_changed_and_gold_wrong_count": 1,
+      "avg_patched_doc_count": 4.49,
+      "avg_patched_token_count": 675.298,
+      "avg_patched_token_ratio": 0.8916160607421009,
+      "avg_first_token_kl": 0.00710973764492419,
+      "top1_match_rate": 0.998
+    },
+    "actual_recompute::risk_guided_suffix_closure_k2": {
+      "num_rows": 500,
+      "num_distinct_examples": 500,
+      "answer_equivalence_to_full_prefill": 1.0,
+      "gold_exact_match": 0.544,
+      "gold_token_f1": 0.7093855568408199,
+      "answer_contains_gold_rate": 0.64,
+      "answer_changed_from_full_rate": 0.0,
+      "answer_changed_but_gold_correct_count": 0,
+      "answer_changed_and_gold_wrong_count": 0,
+      "avg_patched_doc_count": 4.852,
+      "avg_patched_token_count": 717.466,
+      "avg_patched_token_ratio": 0.9477929112319956,
+      "avg_first_token_kl": 3.836713450147248e-05,
+      "top1_match_rate": 1.0
+    }
+  },
+  "category_level": {
+    "actual_recompute::risk_guided_suffix_closure_k1::external_hotpotqa": {
+      "num_rows": 500,
+      "num_distinct_examples": 500,
+      "answer_equivalence_to_full_prefill": 0.998,
+      "gold_exact_match": 0.542,
+      "gold_token_f1": 0.7080522235074868,
+      "answer_contains_gold_rate": 0.64,
+      "answer_changed_from_full_rate": 0.002,
+      "answer_changed_but_gold_correct_count": 0,
+      "answer_changed_and_gold_wrong_count": 1,
+      "avg_patched_doc_count": 4.49,
+      "avg_patched_token_count": 675.298,
+      "avg_patched_token_ratio": 0.8916160607421009,
+      "avg_first_token_kl": 0.00710973764492419,
+      "top1_match_rate": 0.998
+    },
+    "actual_recompute::risk_guided_suffix_closure_k2::external_hotpotqa": {
+      "num_rows": 500,
+      "num_distinct_examples": 500,
+      "answer_equivalence_to_full_prefill": 1.0,
+      "gold_exact_match": 0.544,
+      "gold_token_f1": 0.7093855568408199,
+      "answer_contains_gold_rate": 0.64,
+      "answer_changed_from_full_rate": 0.0,
+      "answer_changed_but_gold_correct_count": 0,
+      "answer_changed_and_gold_wrong_count": 0,
+      "avg_patched_doc_count": 4.852,
+      "avg_patched_token_count": 717.466,
+      "avg_patched_token_ratio": 0.9477929112319956,
+      "avg_first_token_kl": 3.836713450147248e-05,
+      "top1_match_rate": 1.0
+    }
+  },
+  "kl_answer_mismatch_relation": {
+    "num_rows": 1000,
+    "kl_bins": [
+      {
+        "kl_low": 0.0,
+        "kl_high": 0.01,
+        "num_rows": 998,
+        "answer_mismatch_rate": 0.0
+      },
+      {
+        "kl_low": 0.01,
+        "kl_high": 0.05,
+        "num_rows": 1,
+        "answer_mismatch_rate": 0.0
+      },
+      {
+        "kl_low": 0.05,
+        "kl_high": 0.1,
+        "num_rows": 0,
+        "answer_mismatch_rate": 0.0
+      },
+      {
+        "kl_low": 0.1,
+        "kl_high": 0.25,
+        "num_rows": 0,
+        "answer_mismatch_rate": 0.0
+      },
+      {
+        "kl_low": 0.25,
+        "kl_high": 0.5,
+        "num_rows": 0,
+        "answer_mismatch_rate": 0.0
+      },
+      {
+        "kl_low": 0.5,
+        "kl_high": 1.0,
+        "num_rows": 0,
+        "answer_mismatch_rate": 0.0
+      },
+      {
+        "kl_low": 1.0,
+        "kl_high": Infinity,
+        "num_rows": 1,
+        "answer_mismatch_rate": 1.0
+      }
+    ],
+    "pearson": {
+      "r": 0.9999941262753473,
+      "pvalue": null
+    },
+    "spearman": null
+  },
+  "patched_ratio_answer_equivalence_pareto": [
+    {
+      "method": "actual_recompute::risk_guided_suffix_closure_k1",
+      "avg_patched_token_ratio": 0.8916160607421009,
+      "answer_equivalence_to_full_prefill": 0.998,
+      "gold_exact_match": 0.542,
+      "gold_token_f1": 0.7080522235074868,
+      "avg_first_token_kl": 0.00710973764492419
+    },
+    {
+      "method": "actual_recompute::risk_guided_suffix_closure_k2",
+      "avg_patched_token_ratio": 0.9477929112319956,
+      "answer_equivalence_to_full_prefill": 1.0,
+      "gold_exact_match": 0.544,
+      "gold_token_f1": 0.7093855568408199,
+      "avg_first_token_kl": 3.836713450147248e-05
+    }
+  ],
+  "method_ranking_by_answer_equivalence": [
+    {
+      "method": "actual_recompute::risk_guided_suffix_closure_k2",
+      "answer_equivalence_to_full_prefill": 1.0,
+      "gold_exact_match": 0.544,
+      "gold_token_f1": 0.7093855568408199,
+      "avg_patched_token_ratio": 0.9477929112319956
+    },
+    {
+      "method": "actual_recompute::risk_guided_suffix_closure_k1",
+      "answer_equivalence_to_full_prefill": 0.998,
+      "gold_exact_match": 0.542,
+      "gold_token_f1": 0.7080522235074868,
+      "avg_patched_token_ratio": 0.8916160607421009
+    }
+  ],
+  "failed_rows": [],
+  "num_failed_rows": 0,
+  "config_path": "configs/acl_qwen25_7b_hotpotqa_500.yaml",
+  "dataset_path": "data/external_hotpotqa_500.jsonl",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "actual_device": "cuda",
+  "torch_dtype": "float16",
+  "prompt_format": "chat_rag",
+  "generation_mode": "manual_position_ids",
+  "max_new_tokens": 16,
+  "stop_on_newline": true,
+  "stop_strings": [
+    "Human:",
+    "[Document",
+    "Question:",
+    "Answer:"
+  ],
+  "selected_methods": [
+    "actual_recompute::risk_guided_suffix_closure_k1",
+    "actual_recompute::risk_guided_suffix_closure_k2"
+  ],
+  "selector_artifact": null,
+  "resume": false,
+  "outputs": {
+    "answer_eval_outputs": "../rebuttal_experiments/actual_recompute_hotpot_500/answer_eval_outputs.jsonl",
+    "answer_eval_metrics_csv": "../rebuttal_experiments/actual_recompute_hotpot_500/answer_eval_metrics.csv",
+    "answer_eval_summary": "../rebuttal_experiments/actual_recompute_hotpot_500/answer_eval_summary.json",
+    "answer_failure_analysis": "../rebuttal_experiments/actual_recompute_hotpot_500/answer_failure_analysis.md"
+  }
+}
