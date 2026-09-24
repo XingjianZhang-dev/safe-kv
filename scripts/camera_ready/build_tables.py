@@ -182,7 +182,7 @@ Method / document-token budget & """ + " & ".join(budgets) + r""" \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\caption{Operational query-attention token-local baseline: full budget curves on HotpotQA (100 examples per order), actual forwarding, Qwen2.5-7B-Instruct, one RTX PRO 6000 Blackwell GPU. Values are normalized answer preservation relative to the all-fresh chunked reference (token-sequence exact shown for the query-attention rows); Context ratio is the recomputed context-token fraction at each document-token budget. Random local uses equal-budget random spans with seeds 13/29/47. The dense-retrieval order run was incomplete (74/100 examples) and is not reported.}
+\caption{Operational query-attention token-local baseline: full budget curves on HotpotQA (100 examples per order), actual forwarding, Qwen2.5-7B-Instruct, one RTX PRO 6000 Blackwell GPU. Values are normalized answer preservation relative to the all-fresh chunked reference (token-sequence exact shown for the query-attention rows); Context ratio is the recomputed context-token fraction at each document-token budget. Random local uses equal-budget random spans with seeds 13/29/47.}
 \label{tab:app-local-full}
 \end{table*}
 """
@@ -404,7 +404,7 @@ Workload (examples $\times$ repeats) & Query K1 & Risk K1 & Risk K2 & Hybrid K1 
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\caption{CPU cost of the paper's selectors in milliseconds (median / p95). The timed region is feature computation, weighted scoring and top-$K$ selection for one selector call on the host CPU (x86\_64; CPU model not recorded); the suffix start is a single minimum over the selected positions and is timed only inside the end-to-end measurements of Table~\ref{tab:app-lat-full}, which include it. Upper block: inside the five L40S latency runs, median and p95 over the 50 per-example medians of 25 repeats. Lower block: the separate selector-only audit on the same host, median and p95 over all calls (Hybrid K1 was not timed there). These numbers bound selector overhead only; they say nothing about answer quality or end-to-end serving cost.}
+\caption{CPU cost of the paper's selectors in milliseconds (median / p95). The timed region is feature computation, weighted scoring and top-$K$ selection for one selector call on the host CPU (x86\_64; CPU model not recorded); the suffix start is a single minimum over the selected positions and is timed only inside the end-to-end measurements of Table~\ref{tab:app-lat-full}, which include it. Upper block: inside the five L40S latency runs, median and p95 over the 50 per-example medians of 25 repeats. Lower block: the separate selector-only audit on the same host, median and p95 over all calls (Hybrid K1 was not timed there).}
 \label{tab:app-plan}
 \end{table*}
 """
@@ -486,7 +486,7 @@ Data & Method & Donor ans.\ eq. & Actual ans.\ eq. & Same generated answer & Don
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\caption{Same-run donor-copy versus actual-forwarding reconciliation on the original gold-evidence-first inputs (500 examples each; identical selected documents and patch ratios in every row; validator passed). This rerun used PyTorch~2.8.0+cu128 on one NVIDIA L40S, whereas Table~\ref{tab:external-main} was produced under PyTorch~2.4.1+cu124; the donor-copy 2Wiki values here (0.978/0.992) therefore differ slightly from the submitted 0.970/0.984 although inputs, selections and patch counts are byte-identical. The audited cause is FP16/SDPA near-tie sensitivity across runtime versions, not a code, data or selector change.}
+\caption{Same-run donor-copy versus actual-forwarding reconciliation on the original gold-evidence-first inputs (500 examples each; identical selected documents and patch ratios in every row; validator passed). This rerun used PyTorch~2.8.0+cu128 on one NVIDIA L40S, whereas Table~\ref{tab:external-main} was produced under PyTorch~2.4.1+cu124; the donor-copy 2Wiki values here (0.978/0.992) therefore differ slightly from the 0.970/0.984 of Table~\ref{tab:external-main} although inputs, selections and patch counts are byte-identical. The difference traces to FP16/SDPA near-tie sensitivity across runtime versions; code, data, and selections are unchanged.}
 \label{tab:app-recon}
 \end{table*}
 """
@@ -523,7 +523,7 @@ Method / document-token budget & 0.20 & 0.30 & 0.45 & 0.60 & Risk-K1-matched \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\caption{Full-reference-informed token-local diagnostic on 2Wiki, score-neutral shuffled order (seed 101), 100 examples. Token positions are ranked by the K/V drift between the composed cache and the full-prefill cache, and the selected K/V states are donor-copied from the full-prefill cache; both steps use the reference, so this diagnostic is nondeployable and is \emph{not} Cache-Craft or a proxy for it. Values are normalized answer preservation. At the Risk-K1-matched context cost the oracle-local minus actual-Risk-K1 paired difference is """ + f"{c['normalized_answer_exact_delta']:+.2f} [{c['normalized_answer_exact_delta_ci95_low']:.2f}, {c['normalized_answer_exact_delta_ci95_high']:.2f}]" + r""" (generated-token exact: """ + f"{c['generated_token_exact_delta']:+.2f} [{c['generated_token_exact_delta_ci95_low']:.2f}, {c['generated_token_exact_delta_ci95_high']:.2f}]" + r"""), a descriptive interval without multiple-comparison correction.}
+\caption{Full-reference-informed token-local diagnostic on 2Wiki, score-neutral shuffled order (seed 101), 100 examples. Token positions are ranked by the K/V drift between the composed cache and the full-prefill cache, and the selected K/V states are donor-copied from the full-prefill cache; both steps use the reference, so this diagnostic is an analysis tool rather than a deployable method. Values are normalized answer preservation. At the Risk-K1-matched context cost the oracle-local minus actual-Risk-K1 paired difference is """ + f"{c['normalized_answer_exact_delta']:+.2f} [{c['normalized_answer_exact_delta_ci95_low']:.2f}, {c['normalized_answer_exact_delta_ci95_high']:.2f}]" + r""" (generated-token exact: """ + f"{c['generated_token_exact_delta']:+.2f} [{c['generated_token_exact_delta_ci95_low']:.2f}, {c['generated_token_exact_delta_ci95_high']:.2f}]" + r"""), a descriptive interval without multiple-comparison correction.}
 \label{tab:app-oracle-local}
 \end{table*}
 """

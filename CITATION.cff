@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use SAFE-KV, its evaluation protocol, or its per-example outputs, please cite the paper below."
+title: "SAFE-KV: Causal Suffix Repair for Behavior-Preserving Non-Prefix KV Cache Reuse in RAG"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Xingjian
+    affiliation: Carnegie Mellon University
+    email: xingjiaz@andrew.cmu.edu
+repository-code: "https://github.com/XingjianZhang-dev/safe-kv"
+license: MIT
+version: 1.0.0
+keywords:
+  - KV cache
+  - retrieval-augmented generation
+  - non-prefix KV cache reuse
+  - efficient inference
+  - large language models
+preferred-citation:
+  type: conference-paper
+  title: "SAFE-KV: Causal Suffix Repair for Behavior-Preserving Non-Prefix KV Cache Reuse in RAG"
+  authors:
+    - family-names: Zhang
+      given-names: Xingjian
+      affiliation: Carnegie Mellon University
+  collection-title: "Findings of the Association for Computational Linguistics: AACL-IJCNLP 2026"
+  publisher:
+    name: Association for Computational Linguistics
+  year: 2026

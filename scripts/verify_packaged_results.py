@@ -131,12 +131,21 @@ def check_expected_files() -> list[str]:
     return errors
 
 
+# Local, never-committed byproducts of a working clone: git metadata, virtual environments at the repository root,
+# and Python bytecode caches (all excluded by .gitignore). They are skipped, not reported.
+LOCAL_TOP_LEVEL = {".git", ".venv", "venv"}
+LOCAL_BYPRODUCTS = {"__pycache__", ".pytest_cache"}
+
+
 def check_forbidden_files() -> list[str]:
     errors = []
-    forbidden_names = {".git", ".DS_Store", "__MACOSX", "__pycache__", ".pytest_cache"}
-    forbidden_suffixes = {".pyc", ".pt", ".bin", ".ckpt", ".safetensors"}
+    forbidden_names = {".DS_Store", "__MACOSX"}
+    forbidden_suffixes = {".pt", ".bin", ".ckpt", ".safetensors"}
     for path in ROOT.rglob("*"):
-        if any(part in forbidden_names for part in path.parts):
+        parts = path.relative_to(ROOT).parts
+        if parts[0] in LOCAL_TOP_LEVEL or any(part in LOCAL_BYPRODUCTS for part in parts) or path.suffix == ".pyc":
+            continue
+        if any(part in forbidden_names for part in parts):
             errors.append(f"forbidden path component: {path.relative_to(ROOT)}")
         if path.is_file() and path.suffix in forbidden_suffixes:
             errors.append(f"forbidden file suffix: {path.relative_to(ROOT)}")

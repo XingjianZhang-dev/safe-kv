@@ -9,8 +9,8 @@ next to those runs and `scripts/fetch_raw_outputs.sh`). Section numbers below re
 - Python 3.10 or newer; `requirements.txt` at the repository root pins the exact versions used for the CPU checks and
   the table/figure generators (torch 2.8.0, transformers 4.57.6, matplotlib 3.11.2, ...); `code/requirements.txt` and
   `code/pyproject.toml` are the range specifications the runs were made with.
-- Submitted runs: NVIDIA L40S-class GPU, PyTorch 2.4.1+cu124, Transformers 4.57.6.
-- Response-period runs (`results_rebuttal/`): one NVIDIA L40S (46 GB), PyTorch 2.8.0+cu128, Transformers 4.57.6,
+- Main runs (`results/`): NVIDIA L40S-class GPU, PyTorch 2.4.1+cu124, Transformers 4.57.6.
+- Actual-forwarding, staleness and latency runs (`results_rebuttal/`): one NVIDIA L40S (46 GB), PyTorch 2.8.0+cu128, Transformers 4.57.6,
   Python 3.12.3, `PYTHONHASHSEED=0`.
 - Localized-baseline runs (`results_august/`): one NVIDIA RTX PRO 6000 Blackwell Server Edition, PyTorch
   2.8.0+cu128, Transformers 4.57.6, Python 3.11.15.
@@ -39,7 +39,7 @@ Expected: `135 passed, 1 skipped` (the skipped test is environment-dependent); t
 
 ## 3. Data
 
-Submitted processed datasets are in `data/` (see `REPRODUCTION.md` for the synthetic generators). Response-period
+Processed datasets of the main runs are in `data/` (see `REPRODUCTION.md` for the synthetic generators). Response-period
 variants are in `results_rebuttal/data/` and were built from `data/` with the shipped code:
 
 ```bash
@@ -69,26 +69,26 @@ gold labels were not used for ranking).
 | Table 2(b) score-neutral shuffled | actual forwarding | `results_rebuttal/neutral_selector_actual_3seed_validation/neutral_selector_{across,by}_seed.csv`; per-run dirs `results_rebuttal/neutral_selector_actual_{hotpot,2wiki}_shuffle{101,202,303}_100/` |
 | Table 3 local vs suffix | donor copy | `results/acl_qwen25_7b_2wiki_downstream_window_100/` |
 | Table 4 and App. M query-attention baseline | token-local actual recompute | `results_august/run_registry/qwen25_query_attention_hotpotqa_{natural,shuffle,bm25}_test_n100_v1/query_attention_local_summary.csv` |
-| Table 5 position sweep | donor copy | `results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv` |
+| Table 5 and Figure 3 position sweep | donor copy | `results/acl_qwen25_7b_position_noise16_50x5_suffix/position_summary.csv` |
 | Table 6 and App. U staleness x document count | actual forwarding | `results_rebuttal/staleness_doccount_full_50_v3/staleness_doccount_summary.csv`, `staleness_paired_bootstrap_summary.csv`, `validation_report.json` |
 | Table 7 and App. K latency | actual forwarding incl. planning | `results_rebuttal/latency_{hotpot_original,2wiki_original,2wiki_neutral_shuffle101,n16_neutral_layout101,noise64}_50_v1/latency_trace_summary.json`, `latency_paired_bootstrap_summary.csv`, `selector_latency.csv`, `validation_report.json` |
 | Noise64 quality gate (App. K) | both | `results_rebuttal/quality_noise64_actual_riskk1_50_v1/` (`answer_eval_summary.json`, `donor_actual_reconciliation.json`, `bootstrap/`) |
 | Selector CPU cost (App. K) | CPU | `selector_latency.csv` in the five latency runs; `results_rebuttal/cpu_selector_audit_l40s_host/latency.csv` |
 | Oracle KV-drift diagnostic (App. M) | oracle donor copy | `results_rebuttal/oracle_kv_drift_2wiki_neutral_shuffle101_100_v3/` |
 | Tie-break audit (App. N) | CPU | `scripts/camera_ready/tie_break_audit.py` on `data/` and `results_rebuttal/data/` |
-| Submission-time prototype latency (App. K, relabelled) | donor copy, no planning | `results/acl_qwen25_7b_2wiki_latency_suffix_50_with_hybrid/`, `results/acl_qwen25_7b_noise64_latency_suffix_20_with_hybrid/` |
+| Early prototype latency (App. K) | donor copy, no planning | `results/acl_qwen25_7b_2wiki_latency_suffix_50_with_hybrid/`, `results/acl_qwen25_7b_noise64_latency_suffix_20_with_hybrid/` |
 | Noise sweep / closure (App. M) | donor copy | `results/acl_qwen25_7b_noise_sweep_{0,8,16}_250/`, `results/acl_qwen25_7b_noise16_{k_sweep,closure,adaptive_suffix,linked_interval}_250/` |
 | Selector diagnostics (App. N) | — | `results/selector_artifacts/selector_quality_{hotpotqa,2wiki}_500.csv` |
 | Mistral operating points (App. N) | donor copy | `results/acl_mistral7b_noisy_suffix_250_balanced/` |
 | Small-model development tables (App. E–G) | — | `results/paper_tables/results_paper/`, `results/metrics/` |
 
-## 5. Regenerating the submitted runs
+## 5. Regenerating the main runs (`results/`)
 
 `python scripts/emit_reproduction_commands.py --kind answer` (or `--kind latency`) prints the exact commands
 inferred from every packaged summary under `results/`; add `--execute` to run them into
 `reproduction_runs/recomputed/`.
 
-## 6. Regenerating the response-period runs
+## 6. Regenerating the actual-forwarding, staleness and latency runs (`results_rebuttal/`)
 
 Set `export PYTHONPATH=code PYTHONHASHSEED=0` and use a new `--results-dir` each time.
 
@@ -141,7 +141,7 @@ python code/scripts/run_rebuttal_cpu_selector_audit.py --out-dir reproduction_ru
   --random-seeds 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
 ```
 
-The exact invocation of every shipped response-period run is also recorded in its `answer_eval_manifest.json`,
+The exact invocation of every shipped `results_rebuttal/` run is also recorded in its `answer_eval_manifest.json`,
 `staleness_doccount_manifest.json`, or `latency_trace_summary.json` where present; the HotpotQA
 `actual_recompute_hotpot_500` directory predates the manifest writer (its raw rows and summary are complete).
 
@@ -164,7 +164,7 @@ python scripts/run_query_attention_local_baseline.py --config configs/ipm_qwen25
 Answer-level runs use greedy decoding, fixed seeds, and the packaged processed examples. Answer metrics match the
 packaged summaries when run with the same model revision and compatible PyTorch/Transformers versions; across
 PyTorch versions FP16/SDPA near-ties can flip a few outputs (the 2Wiki donor-copy rerun under PyTorch 2.8.0 differs
-from the submitted 2.4.1 run on 7 and 5 of 500 outputs for K1 and K2; Appendix H). Latency values vary with GPU
+from the main 2.4.1 run on 7 and 5 of 500 outputs for K1 and K2; Appendix H). Latency values vary with GPU
 model, driver, and load; the paper's conclusions about latency are qualitative and are stated as read off these
 measurements.
 

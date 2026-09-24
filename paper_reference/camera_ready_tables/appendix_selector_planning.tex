@@ -18,6 +18,6 @@ Noise64, 67 docs (40 $\times$ 20) & 0.424 / 0.633 & 3.394 / 3.798 & 3.420 / 3.63
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\caption{CPU cost of the paper's selectors in milliseconds (median / p95). The timed region is feature computation, weighted scoring and top-$K$ selection for one selector call on the host CPU (x86\_64; CPU model not recorded); the suffix start is a single minimum over the selected positions and is timed only inside the end-to-end measurements of Table~\ref{tab:app-lat-full}, which include it. Upper block: inside the five L40S latency runs, median and p95 over the 50 per-example medians of 25 repeats. Lower block: the separate selector-only audit on the same host, median and p95 over all calls (Hybrid K1 was not timed there). These numbers bound selector overhead only; they say nothing about answer quality or end-to-end serving cost.}
+\caption{CPU cost of the paper's selectors in milliseconds (median / p95). The timed region is feature computation, weighted scoring and top-$K$ selection for one selector call on the host CPU (x86\_64; CPU model not recorded); the suffix start is a single minimum over the selected positions and is timed only inside the end-to-end measurements of Table~\ref{tab:app-lat-full}, which include it. Upper block: inside the five L40S latency runs, median and p95 over the 50 per-example medians of 25 repeats. Lower block: the separate selector-only audit on the same host, median and p95 over all calls (Hybrid K1 was not timed there).}
 \label{tab:app-plan}
 \end{table*}

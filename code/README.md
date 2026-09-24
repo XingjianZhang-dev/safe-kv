@@ -1,77 +1,73 @@
-# SAFE-KV v0
+# `safekv`: the package and scripts behind the paper
 
-SAFE-KV is a feasibility experiment for studying semantic drift in non-prefix KV cache composition for retrieval-augmented generation.
+This directory holds the code that produced every run in the paper: the `safekv` package, the experiment scripts, and
+the CPU test suite (135 passed, 1 skipped; `../TEST_LOG.txt`). For a compact implementation of the method, see
+[`../minimal/safekv_minimal.py`](../minimal/safekv_minimal.py); for the command behind each table and figure, see the
+[top-level README](../README.md) and [`../FULL_REPRODUCTION.md`](../FULL_REPRODUCTION.md).
 
-This repository currently implements **Milestone 1 / 1.5 / 2 / 3A / 3B / 3C / 3D / 4A / 4B / 5A / 5B / 6A**:
+## Method names in the result files
 
-- synthetic diagnostic RAG data schemas
-- deterministic dataset generation for five risk categories
-- fixed plain RAG prompt construction
-- title-aware document prompt formatting
-- full-prompt one-pass tokenization with offset-based token/span range mapping
-- fallback offset support for the test tokenizer
-- tests for prompt reconstruction, span validity, and char/token alignment invariants
-- deterministic HuggingFace full-prefill reference inference
-- stratified smoke selection with `data.max_examples_per_category`
-- sidecar full-logit and prompt-pack metadata export
-- optional `chat_rag` rendering through tokenizer chat templates
-- configurable generation stop strings and adaptive boundary windows
-- sequential-prefill cache sanity checks
-- doc-only naive local/global KV composition smoke baselines
-- prefix-controlled naive local/global KV composition smoke baselines
-- prefix-conditioned naive local/global composition ablations
-- configurable composition method selection, bootstrap CIs, compact CSV export, and failure-analysis Markdown
-- oracle full-document and evidence patch diagnostics against the strongest prefix-conditioned baseline
-- patch granularity and causal-closure ablations with budget-matched random controls
-- document-level non-oracle selectors and safe-composition gate sweeps
-- document-selector stress tests with multi-seed random controls, repair-oracle document subsets, budget-normalized summaries, gate random baselines, and a noisy retrieval diagnostic variant
-- answer-level behavior evaluation for full prefill, composition, document patching, and gate methods
+| Name in `answer_eval_*` files | Paper name |
+|---|---|
+| `full_prefill` | full prefill (the reference) |
+| `prefix_conditioned_naive_global` | prefix-conditioned composition (Prefix-comp.) |
+| `risk_guided_suffix_closure_k1`, `_k2` | risk suffix K1 / K2 (SAFE-KV) |
+| `query_similarity_suffix_closure_k1`, `_k2` | query suffix K1 / K2 |
+| `hybrid_query_risk_union_suffix_k1` | hybrid suffix K1 |
+| `random_suffix_closure_k1_seeded`, `_k2_seeded` | random suffix K1 / K2 |
+| `risk_guided_doc_patch_k1` | document-only repair (Doc K1) |
+| `risk_guided_downstream_w2_k1` ... `_w4_k1` | window repair w2–w4 |
+| `oracle_evidence_doc_patch`, `oracle_evidence_doc_suffix_closure_patch` | oracle document patch, oracle suffix repair |
+| `actual_recompute::<method>` | `<method>` with actual suffix forwarding; without the prefix, the donor-copy protocol |
 
-It intentionally does **not** implement a final span-level risk-guided SAFE-KV
-selector or production recompute system yet.
+`answer_equivalence_to_full_prefill` is answer preservation and `avg_patched_token_ratio` the recomputed context ratio.
+A K-suffix method scores every document, takes the top K (ties to the lower document id), and re-encodes from the
+earliest of them to the last document.
 
-## v0 Feasibility Goal
+## Entry points used in the paper
 
-The full v0 experiment will test whether semantic risk signals can identify which document spans should be recomputed so composed-cache inference better preserves full-prefill behavior under a fixed recompute budget.
+| Script | Runs |
+|---|---|
+| `scripts/run_answer_eval.py` | every answer-level run (donor copy; `actual_recompute::*` methods for actual forwarding) |
+| `scripts/build_rebuttal_variants.py` | score-neutral shuffled and nested staleness inputs (`../results_rebuttal/data/`) |
+| `scripts/run_staleness_doccount_sweep.py` | staleness x document-count grid (Tables 6, 33) |
+| `scripts/run_rebuttal_latency_trace.py`, `validate_rebuttal_latency_results.py`, `summarize_latency_paired_bootstrap.py` | L40S latency (Tables 7, 18, 19) |
+| `scripts/bootstrap_answer_eval_ci.py` | paired bootstrap intervals |
+| `scripts/heldout_method_calibration.py` | held-out calibration (Table 16) |
+| `scripts/run_oracle_kv_drift_local_baseline.py` | oracle KV-drift token-local diagnostic (Table 23) |
+| `../results_august/code/scripts/run_query_attention_local_baseline.py` | operational token-local baseline (Tables 4, 22) |
 
-The first milestone is narrower: build a clean, deterministic diagnostic dataset and reliable token-span mapping before any cache mechanics are introduced.
-
-## Repository Layout
+## Package layout
 
 ```text
-safe-kv/
-  configs/
-  data/
-  safekv/
-  scripts/
-  tests/
+code/
+  configs/     configs used by the commands below (every run's config is also in ../configs/)
+  safekv/      the package
+  scripts/     experiment, summary and validation CLIs
+  tests/       CPU test suite
 ```
 
-Important modules:
-
-- `safekv/data_schema.py`: typed schema for diagnostic examples and prompt packs
-- `safekv/build_diagnostic.py`: deterministic synthetic data generator
-- `safekv/prompting.py`: fixed plain RAG prompt builder and offset-based range mapper
+- `safekv/data_schema.py`: typed schema for examples and prompt packs
+- `safekv/build_diagnostic.py`, `build_external.py`: synthetic diagnostic generator and HotpotQA/2Wiki conversion
+- `safekv/prompting.py`: RAG prompt builder (plain and chat) with offset-based document/span ranges
 - `safekv/token_spans.py`: segment-wise tokenizer helpers and document span splitting
-- `safekv/modeling.py`: HuggingFace tokenizer/model loading utilities
+- `safekv/modeling.py`: Hugging Face tokenizer/model loading
 - `safekv/full_prefill.py`: full-prefill forward pass, greedy decoding, and output schema
-- `safekv/cache_ops.py`: legacy-cache conversion, validation, and concatenation helpers
-- `safekv/naive_composition.py`: sequential prefill and naive composition smoke utilities
-- `safekv/patch_recompute.py`: oracle cache-slice patching helpers for Milestone 4A
-- `safekv/patch_granularity.py`: patch granularity method definitions and summary helpers
-- `safekv/doc_selector.py`: document-level scoring, selector, and safe-gate helpers
-- `safekv/doc_selector_stress.py`: multi-seed random baselines, repair-oracle enumeration, and budget-normalized stress summaries
-- `safekv/answer_eval.py`: answer normalization, answer-drift summaries, KL/mismatch analysis, and answer failure reports
-- `scripts/build_diagnostic_data.py`: CLI for writing JSONL diagnostic data
-- `scripts/run_full_prefill.py`: CLI for Milestone 2 reference inference
-- `scripts/run_naive_composition.py`: CLI for Milestone 3A/3B/3C/3D composition checks
-- `scripts/run_patch_recompute.py`: CLI for Milestone 4A oracle patch diagnostics
-- `scripts/run_patch_granularity.py`: CLI for Milestone 4B granularity ablations
-- `scripts/run_doc_selector.py`: CLI for Milestone 5A document selector and gate runs
-- `scripts/run_doc_selector_stress.py`: CLI for Milestone 5B selector validity stress tests
-- `scripts/run_answer_eval.py`: CLI for Milestone 6A answer-level behavior evaluation
+- `safekv/cache_ops.py`: legacy-cache conversion, slicing, validation, and concatenation
+- `safekv/naive_composition.py`: sequential prefill and composition baselines
+- `safekv/patch_recompute.py`: patch-range construction (oracle, random, document, suffix) and cache-slice replacement
+- `safekv/patch_granularity.py`: repair-granularity method definitions and summaries
+- `safekv/doc_selector.py`: retrieval, query, entity and risk document selectors, and the safe-composition gate
+- `safekv/doc_selector_stress.py`: multi-seed random baselines, repair-oracle enumeration, budget-normalized summaries
+- `safekv/answer_eval.py`: answer normalization, answer-drift summaries, KL/mismatch analysis, failure reports
+- `safekv/bootstrap.py`, `heldout_gate.py`, `budget_gate.py`, `cost_accounting.py`: intervals, calibration, gates, cost
 
-## Prompt Format
+## Development-stage pipeline
+
+The sections below document the scripts of the early development runs (Qwen2.5-0.5B/1.5B on synthetic diagnostics;
+Appendix Tables 8–10 and 29–31). Commands are run from `code/`; configs are in `code/configs/`.
+
+### Prompt Format
 
 Document blocks use this format:
 
@@ -101,13 +97,13 @@ tokenizer(full_text, add_special_tokens=False, return_offsets_mapping=True)
 
 Tokenizers without `offset_mapping` must provide an explicit `encode_with_offsets(text)` fallback. The included `RegexTokenizer` does this for unit tests only.
 
-## Setup
+### Setup
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-## Build Diagnostic Data
+### Build Diagnostic Data
 
 From the repository root:
 
@@ -130,13 +126,13 @@ python scripts/build_diagnostic_data.py \
   --out data/diagnostic_100_noisy.jsonl
 ```
 
-## Run Tests
+### Run Tests
 
 ```bash
 python -m pytest
 ```
 
-## Run Full Prefill Smoke
+### Run Full Prefill Smoke
 
 ```bash
 python scripts/run_full_prefill.py --config configs/v0_smoke.yaml
@@ -151,7 +147,7 @@ results/logits/full_prefill/
 results/prompt_packs/
 ```
 
-## Run Naive Composition Smoke
+### Run Naive Composition Smoke
 
 ```bash
 python scripts/run_naive_composition.py --config configs/v0_smoke.yaml
@@ -190,7 +186,7 @@ results/naive_composition_summary.json
 The JSON summary includes fixed-seed bootstrap 95% confidence intervals for
 the main behavior-preservation metrics at method and category-method levels.
 
-## Run Oracle Patch Diagnostics
+### Run Oracle Patch Diagnostics
 
 ```bash
 python scripts/run_patch_recompute.py --config configs/v0_smoke.yaml
@@ -213,7 +209,7 @@ results/patch_recompute_summary.json
 results/patch_failure_analysis.md
 ```
 
-## Run Patch Granularity Ablations
+### Run Patch Granularity Ablations
 
 ```bash
 python scripts/run_patch_granularity.py --config configs/v0_smoke.yaml
@@ -237,7 +233,7 @@ results/patch_granularity_summary.json
 results/patch_granularity_failure_analysis.md
 ```
 
-## Run Document Selector And Gate Ablations
+### Run Document Selector And Gate Ablations
 
 ```bash
 python scripts/run_doc_selector.py --config configs/v0_smoke.yaml
@@ -261,7 +257,7 @@ results/doc_selector_failure_analysis.md
 results/doc_selector_pareto.csv
 ```
 
-## Run Document Selector Stress Tests
+### Run Document Selector Stress Tests
 
 ```bash
 python scripts/run_doc_selector_stress.py \
@@ -301,7 +297,7 @@ python scripts/run_doc_selector_stress.py \
   --num-random-seeds 100
 ```
 
-## Run Answer-Level Evaluation
+### Run Answer-Level Evaluation
 
 Tiny CPU-compatible smoke:
 
@@ -350,13 +346,3 @@ results/answer_failure_analysis.md
 
 For instruct-model experiments, set `experiment.prompt_format: chat_rag`.
 The default remains `plain_rag`.
-
-## Current Scope Boundary
-
-The following are intentionally deferred:
-
-- risk-guided recompute selectors
-- final SAFE-KV method selection
-- full plotting and paper tables
-
-Those belong to later milestones after the oracle patch upper bound is validated.

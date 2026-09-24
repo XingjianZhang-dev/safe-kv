@@ -1,6 +1,6 @@
 # Reproduction Instructions
 
-These commands reproduce the SAFE-KV artifact from the packaged supplement. Commands assume the current directory is `supplement_reproducibility/` unless stated otherwise.
+These commands reproduce the SAFE-KV artifact. Commands assume the current directory is the repository root unless stated otherwise; `FULL_REPRODUCTION.md` is the complete guide.
 
 The original GPU experiments were run on an NVIDIA L40S-class GPU with PyTorch `2.4.1+cu124` and Transformers `4.57.6`. Re-running answer-level experiments requires GPU memory sufficient for the listed models.
 
@@ -142,4 +142,4 @@ If regenerated into the supplement root, copy the resulting `results_paper/` fil
 
 ## Notes on Runtime
 
-Unit tests are CPU-only and should not download models. Full answer-level reproduction downloads public model weights and can take substantial GPU time. The supplement includes summary metrics so reviewers can inspect reported results without rerunning every GPU experiment.
+Unit tests are CPU-only and should not download models. Full answer-level reproduction downloads public model weights and can take substantial GPU time. The supplement includes summary metrics so readers can inspect reported results without rerunning every GPU experiment.

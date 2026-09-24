@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "safe-kv"
-version = "0.0.1"
-description = "SAFE-KV v0 feasibility experiment"
+version = "1.0.0"
+description = "SAFE-KV: causal suffix repair for behavior-preserving non-prefix KV cache reuse in RAG (Findings of AACL-IJCNLP 2026)"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

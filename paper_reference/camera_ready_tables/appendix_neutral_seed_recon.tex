@@ -37,6 +37,6 @@ HotpotQA-500 & Risk suffix K2 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\caption{Same-run donor-copy versus actual-forwarding reconciliation on the original gold-evidence-first inputs (500 examples each; identical selected documents and patch ratios in every row; validator passed). This rerun used PyTorch~2.8.0+cu128 on one NVIDIA L40S, whereas Table~\ref{tab:external-main} was produced under PyTorch~2.4.1+cu124; the donor-copy 2Wiki values here (0.978/0.992) therefore differ slightly from the submitted 0.970/0.984 although inputs, selections and patch counts are byte-identical. The audited cause is FP16/SDPA near-tie sensitivity across runtime versions, not a code, data or selector change.}
+\caption{Same-run donor-copy versus actual-forwarding reconciliation on the original gold-evidence-first inputs (500 examples each; identical selected documents and patch ratios in every row; validator passed). This rerun used PyTorch~2.8.0+cu128 on one NVIDIA L40S, whereas Table~\ref{tab:external-main} was produced under PyTorch~2.4.1+cu124; the donor-copy 2Wiki values here (0.978/0.992) therefore differ slightly from the 0.970/0.984 of Table~\ref{tab:external-main} although inputs, selections and patch counts are byte-identical. The difference traces to FP16/SDPA near-tie sensitivity across runtime versions; code, data, and selections are unchanged.}
 \label{tab:app-recon}
 \end{table*}

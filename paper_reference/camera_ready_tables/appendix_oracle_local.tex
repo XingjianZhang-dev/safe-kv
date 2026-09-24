@@ -15,6 +15,6 @@ Context ratio & 0.192 & 0.288 & 0.432 & 0.576 & 0.622 \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\caption{Full-reference-informed token-local diagnostic on 2Wiki, score-neutral shuffled order (seed 101), 100 examples. Token positions are ranked by the K/V drift between the composed cache and the full-prefill cache, and the selected K/V states are donor-copied from the full-prefill cache; both steps use the reference, so this diagnostic is nondeployable and is \emph{not} Cache-Craft or a proxy for it. Values are normalized answer preservation. At the Risk-K1-matched context cost the oracle-local minus actual-Risk-K1 paired difference is +0.10 [0.01, 0.20] (generated-token exact: +0.09 [0.00, 0.19]), a descriptive interval without multiple-comparison correction.}
+\caption{Full-reference-informed token-local diagnostic on 2Wiki, score-neutral shuffled order (seed 101), 100 examples. Token positions are ranked by the K/V drift between the composed cache and the full-prefill cache, and the selected K/V states are donor-copied from the full-prefill cache; both steps use the reference, so this diagnostic is an analysis tool rather than a deployable method. Values are normalized answer preservation. At the Risk-K1-matched context cost the oracle-local minus actual-Risk-K1 paired difference is +0.10 [0.01, 0.20] (generated-token exact: +0.09 [0.00, 0.19]), a descriptive interval without multiple-comparison correction.}
 \label{tab:app-oracle-local}
 \end{table*}
