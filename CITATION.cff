@@ -23,7 +23,11 @@ preferred-citation:
     - family-names: Zhang
       given-names: Xingjian
       affiliation: Carnegie Mellon University
-  collection-title: "Findings of the Association for Computational Linguistics: AACL-IJCNLP 2026"
+  collection-title: "Findings of the Association for Computational Linguistics: IJCNLP-AACL 2026"
   publisher:
     name: Association for Computational Linguistics
   year: 2026
+  month: 11
+  start: 3063
+  end: 3098
+  url: "https://aclanthology.org/2026.findings-aacl.155/"
