@@ -3,12 +3,13 @@
 <p align="center"><b>Causal Suffix Repair for Behavior-Preserving Non-Prefix KV Cache Reuse in RAG</b></p>
 
 <p align="center">
-Xingjian Zhang · Carnegie Mellon University · <i>Findings of the Association for Computational Linguistics: AACL-IJCNLP 2026</i>
+Xingjian Zhang · Carnegie Mellon University · <i>Findings of the Association for Computational Linguistics: IJCNLP-AACL 2026</i>, pages 3063–3098
 </p>
 
 <p align="center">
+<a href="https://aclanthology.org/2026.findings-aacl.155/"><img alt="ACL Anthology" src="https://img.shields.io/badge/ACL%20Anthology-2026.findings--aacl.155-ed1c24"></a>
 <a href="paper/SAFE-KV_AACL2026_Findings.pdf"><img alt="Paper" src="https://img.shields.io/badge/paper-PDF-b31b1b"></a>
-<a href="#citation"><img alt="Findings of AACL-IJCNLP 2026" src="https://img.shields.io/badge/Findings-AACL--IJCNLP%202026-1f6feb"></a>
+<a href="#citation"><img alt="Findings of IJCNLP-AACL 2026" src="https://img.shields.io/badge/Findings-IJCNLP--AACL%202026-1f6feb"></a>
 <a href="https://github.com/XingjianZhang-dev/safe-kv/releases/tag/v1.0.0"><img alt="Artifact v1.0.0" src="https://img.shields.io/badge/artifact-v1.0.0-6f42c1"></a>
 <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-green"></a>
 <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-blue">
@@ -258,11 +259,16 @@ licenses. See `NOTICE`.
 If you use SAFE-KV, its evaluation protocol, or its per-example outputs, please cite:
 
 ```bibtex
-@inproceedings{zhang2026safekv,
-  title     = {{SAFE-KV}: Causal Suffix Repair for Behavior-Preserving Non-Prefix {KV} Cache Reuse in {RAG}},
+@inproceedings{zhang-2026-safe,
+  title     = {{SAFE}-{KV}: Causal Suffix Repair for Behavior-Preserving Non-Prefix {KV} Cache Reuse in {RAG}},
   author    = {Zhang, Xingjian},
-  booktitle = {Findings of the Association for Computational Linguistics: AACL-IJCNLP 2026},
-  year      = {2026}
+  booktitle = {Findings of the Association for Computational Linguistics: IJCNLP-AACL 2026},
+  month     = nov,
+  year      = {2026},
+  address   = {Hengqin, China},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2026.findings-aacl.155/},
+  pages     = {3063--3098}
 }
 ```
 
